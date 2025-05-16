@@ -1,0 +1,57 @@
+{
+  "services": [
+    {
+      "name": "cozy",
+      "image": "cozy/cozy-stack:1.6.37",
+      "isMain": true,
+      "internalPort": 8080,
+      "environment": {
+        "COUCHDB_HOST": "cozy-couchdb",
+        "COUCHDB_USER": "cozy",
+        "COUCHDB_PASSWORD": "${COZY_COUCHDB_PASSWORD}",
+        "COZY_COUCHDB_URL": "http://cozy:${COZY_COUCHDB_PASSWORD}@cozy-couchdb:5984"
+      },
+      "dependsOn": [
+        "cozy-couchdb"
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/data",
+          "containerPath": "/var/lib/cozy/data"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/config",
+          "containerPath": "/etc/cozy/"
+        }
+      ],
+      "healthCheck": {
+        "interval": "10s",
+        "timeout": "5s",
+        "retries": 3,
+        "startPeriod": "30s",
+        "test": "[ \"$(curl -fsSL http://localhost:8080/status | jq -r .status)\" = \"OK\" ]"
+      }
+    },
+    {
+      "name": "cozy-couchdb",
+      "image": "couchdb:3.3",
+      "environment": {
+        "COUCHDB_USER": "cozy",
+        "COUCHDB_PASSWORD": "${COZY_COUCHDB_PASSWORD}"
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/couchdb",
+          "containerPath": "/opt/couchdb/data"
+        }
+      ],
+      "healthCheck": {
+        "interval": "10s",
+        "timeout": "5s",
+        "retries": 3,
+        "startPeriod": "30s",
+        "test": "curl -f http://cozy:${COZY_COUCHDB_PASSWORD}@localhost:5984/_up"
+      }
+    }
+  ]
+}

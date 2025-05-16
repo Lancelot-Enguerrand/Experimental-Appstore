@@ -1,0 +1,89 @@
+{
+  "name": "Asset RPO",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 11920,
+  "id": "asset-rpo",
+  "tipi_version": 1,
+  "version": "latest",
+  "categories": ["data"],
+  "description": "Asset is a Laravel package that provides a simple way to manage assets in your Laravel application.",
+  "short_desc": "A simple way to manage assets.",
+  "author": "Red-Panda-One",
+  "source": "https://github.com/Red-Panda-One/asset",
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "Database password",
+      "required": false,
+      "min": 30,
+      "max": 30,
+      "env_variable": "ASSET_DB_PASS"
+    },
+    {
+      "type": "random",
+      "label": "Application key",
+      "required": false,
+      "min": 32,
+      "max": 32,
+      "env_variable": "ASSET_APP_KEY"
+    },
+    {
+      "type": "text",
+      "label": "SMTP Host",
+      "hint": "Your SMTP Server",
+      "placeholder": "smtp.example.com",
+      "required": false,
+      "env_variable": "ASSET_MAIL_HOST"
+    },
+    {
+      "type": "text",
+      "label": "SMTP Port",
+      "hint": "Your SMTP Port",
+      "placeholder": "25",
+      "required": false,
+      "env_variable": "ASSET_MAIL__PORT"
+    },
+    {
+      "type": "text",
+      "label": "SMTP Username",
+      "hint": "Your SMTP User/Username",
+      "placeholder": "noreply@example.com",
+      "required": false,
+      "env_variable": "ASSET_MAIL_USERNAME"
+    },
+    {
+      "type": "password",
+      "label": "SMTP Password",
+      "hint": "Your SMTP Password",
+      "required": false,
+      "env_variable": "ASSET_MAIL_PASSWORD"
+    },
+    {
+      "type": "text",
+      "label": "SMTP From Address",
+      "hint": "Make sure the Format is like noreply@example.com",
+      "placeholder": "noreply@example.com",
+      "required": false,
+      "env_variable": "ASSET_MAIL_FROM_ADDRESS"
+    },
+    {
+      "type": "text",
+      "label": "SMTP From Name",
+      "placeholder": "noreply@example.com",
+      "required": false,
+      "env_variable": "ASSET_MAIL_FROM_NAME"
+    },
+    {
+      "type": "text",
+      "label": "Encryption",
+      "placeholder": "none",
+      "required": false,
+      "env_variable": "ASSET_MAIL_ENCRYPTION"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1740563305105,
+  "updated_at": 1740563305105
+}

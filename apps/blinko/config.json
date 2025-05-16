@@ -1,0 +1,35 @@
+{
+  "name": "Blinko",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 8114,
+  "id": "blinko",
+  "tipi_version": 1,
+  "version": "0.52.4",
+  "categories": ["utilities"],
+  "description": "Blinko is an innovative open-source project designed for individuals who want to quickly capture and organize their fleeting thoughts. Blinko allows users to seamlessly jot down ideas the moment they strike, ensuring that no spark of creativity is lost.",
+  "short_desc": "Note taking, to-do and moodboard application",
+  "author": "blinko-space",
+  "source": "https://github.com/blinko-space/blinko",
+  "website": "https://blinko.mintlify.app/introduction",
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "Blinko DB password",
+      "max": 50,
+      "min": 16,
+      "env_variable": "BLINKO_DB_PASSWORD"
+    },
+    {
+      "type": "random",
+      "label": "Blinko Nextauth secret",
+      "max": 32,
+      "min": 32,
+      "env_variable": "BLINKO_NEXTAUTH_SECRET"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1737379503315,
+  "updated_at": 1737379503316
+}

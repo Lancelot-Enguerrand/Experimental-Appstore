@@ -1,0 +1,19 @@
+{
+  "name": "GhostHub",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 7805,
+  "id": "ghosthub",
+  "tipi_version": 1,
+  "version": "latest",
+  "categories": ["media"],
+  "description": "Media server that lets you swipe through your local videos and images in a sleek, mobile-friendly interface with real-time chat and optional host sync",
+  "short_desc": "Tiktok-like media reader",
+  "author": "dBleedingXiko",
+  "source": "https://github.com/BleedingXiko/GhostHub",
+  "form_fields": [],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1737452289124,
+  "updated_at": 1737452289124
+}

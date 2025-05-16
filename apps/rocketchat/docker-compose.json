@@ -1,0 +1,35 @@
+{
+  "services": [
+    {
+      "name": "rocketchat",
+      "image": "registry.rocket.chat/rocketchat/rocket.chat:latest",
+      "isMain": true,
+      "internalPort": 3000,
+      "environment": {
+        "MONGO_URL": "mongodb://rocketchat-mongodb:27017/rocketchat",
+        "MONGO_OPLOG_URL": "mongodb://rocketchat-mongodb:27017/local",
+        "ROOT_URL": "${APP_PROTOCOL:-http}://${APP_DOMAIN}",
+        "PORT": 3000,
+        "DEPLOY_METHOD": "docker",
+        "OVERWRITE_SETTING_Setup_Wizard": "completed"
+      },
+      "dependsOn": ["rocketchat-mongodb"]
+    },
+    {
+      "name": "rocketchat-mongodb",
+      "image": "docker.io/bitnami/mongodb:6.0",
+      "environment": {
+        "MONGODB_PORT_NUMBER": 27017,
+        "MONGODB_ADVERTISED_HOSTNAME": "rocketchat-mongodb",
+        "MONGODB_ENABLE_JOURNAL": true,
+        "ALLOW_EMPTY_PASSWORD": true
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/mongodb",
+          "containerPath": "/bitnami/mongodb"
+        }
+      ]
+    }
+  ]
+}

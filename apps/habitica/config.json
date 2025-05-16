@@ -1,0 +1,50 @@
+{
+  "$schema": "../schema.json",
+  "name": "Habitica",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 8129,
+  "id": "habitica",
+  "tipi_version": 1,
+  "version": "5.36.3",
+  "categories": ["utilities"],
+  "description": "Habitica is a free habit and productivity app that treats your real life like a game",
+  "short_desc": "Gamified habit and productivity app",
+  "author": "HabitRPG",
+  "source": "https://github.com/awinterstein/habitica",
+  "form_fields": [
+    {
+      "type": "boolean",
+      "label": "Invite only",
+      "env_variable": "INVITE_ONLY"
+    },
+    {
+      "type": "text",
+      "label": "SMTP server hostname",
+      "required": false,
+      "env_variable": "SMTP_HOST"
+    },
+    {
+      "type": "text",
+      "label": "SMTP port",
+      "required": false,
+      "env_variable": "SMTP_PORT"
+    },
+    {
+      "type": "text",
+      "label": "SMTP user",
+      "required": false,
+      "env_variable": "SMTP_USER"
+    },
+    {
+      "type": "text",
+      "label": "SMTP password",
+      "required": false,
+      "env_variable": "SMTP_PASSWORD"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1739308886335,
+  "updated_at": 1739308886335
+}

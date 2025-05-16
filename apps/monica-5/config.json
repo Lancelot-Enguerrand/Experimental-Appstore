@@ -1,0 +1,55 @@
+{
+  "name": "Monica (v5)",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 3219,
+  "id": "monica-5",
+  "tipi_version": 1,
+  "version": "main",
+  "categories": ["data", "social"],
+  "description": "Monica is an open-source web application to organize and record your interactions with your loved ones. We call it a PRM, or Personal Relationship Management. Think of it as a CRM (a popular tool used by sales teams in the corporate world) for your friends or family.",
+  "short_desc": "Personal Relationship Management tool",
+  "author": "monicahq",
+  "source": "https://github.com/monicahq/monica",
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Uploadcare public key",
+      "required": false,
+      "env_variable": "MONICA_UPLOADCARE_PUBLIC_KEY",
+      "hint": "Monica v5 solely rely on uploadcare for file storage"
+    },
+    {
+      "type": "text",
+      "label": "Uploadcare private key",
+      "required": false,
+      "env_variable": "MONICA_UPLOADCARE_PRIVATE_KEY"
+    },
+    {
+      "type": "random",
+      "label": "Database password",
+      "required": false,
+      "min": 30,
+      "max": 30,
+      "env_variable": "MONICA_DB_PASS"
+    },
+    {
+      "type": "boolean",
+      "label": "Disable signup",
+      "required": false,
+      "env_variable": "MONICA_DISABLE_SIGNUP"
+    },
+    {
+      "type": "random",
+      "label": "Application key",
+      "required": false,
+      "min": 32,
+      "max": 32,
+      "env_variable": "MONICA_APP_KEY"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1691943801422,
+  "updated_at": 1691943801422
+}

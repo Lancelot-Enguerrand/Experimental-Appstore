@@ -1,0 +1,87 @@
+{
+  "services": [
+    {
+      "name": "asset-rpo",
+      "image": "zurielbax/asset-rpo:latest",
+      "isMain": true,
+      "internalPort": 80,
+      "environment": {
+        "APP_KEY": "${ASSET_APP_KEY}",
+        "DB_HOST": "asset-rpo-db",
+        "DB_USERNAME": "tipi",
+        "DB_PASSWORD": "${ASSET_DB_PASS}",
+        "DB_CONNECTION": "pgsql",
+        "DB_PORT": "5432",
+        "PHP_TZ": "${TZ}",
+        "TIMEZONE": "${TZ}",
+        "PUID": "1000",
+        "PGID": "1000",
+        "APP_NAME": "Asset RPO",
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "${APP_PROTOCOL-http}://${APP_DOMAIN}",
+        "ASSET_URL": "${APP_PROTOCOL-http}://${APP_DOMAIN}",
+        "DB_DATABASE": "asset",
+        "DB_PASSWORD_FILE": "rootpass",
+        "CACHE_STORE": "file",
+        "SESSION_DRIVER": "file",
+        "SESSION_LIFETIME": "240",
+        "SESSION_ENCRYPT": "true",
+        "SESSION_PATH": "/",
+        "SESSION_DOMAIN": "${APP_DOMAIN}",
+        "SANCTUM_STATEFUL_DOMAINS": "${APP_DOMAIN}",
+        "STARTUP_DELAY": "5",
+        "TRUSTED_PROXIES": "*",
+        "MAIL_MAILER": "smtp",
+        "MAIL_HOST": "${ASSET_MAIL_HOST}",
+        "MAIL_PORT": "${ASSET_MAIL_PORT}",
+        "MAIL_USERNAME": "${ASSET_MAIL_USERNAME}",
+        "MAIL_PASSWORD": "${ASSET_MAIL_PASSWORD}",
+        "MAIL_ENCRYPTION": "${ASSET_MAIL_ENCRYPTION:-tls}",
+        "MAIL_FROM_ADDRESS": "${ASSET_MAIL_FROM_ADDRESS:-noreply@rpo.com}",
+        "MAIL_FROM_NAME": "${ASSET_MAIL_FROM_NAME:-Asset RPO}"
+      },
+      "dependsOn": {
+        "asset-rpo-db": {
+          "condition": "service_healthy"
+        }
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/data",
+          "containerPath": "/data"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/conf",
+          "containerPath": "/conf"
+        }
+      ]
+    },
+    {
+      "name": "asset-rpo-db",
+      "image": "postgres:17",
+      "hostname": "asset-rpo-db",
+      "environment": {
+        "TZ": "${TZ}",
+        "POSTGRES_DB": "asset",
+        "POSTGRES_USER": "tipi",
+        "POSTGRES_PASSWORD": "${ASSET_DB_PASS}"
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/db",
+          "containerPath": "/var/lib/postgresql/data"
+        }
+      ],
+      "securityOpt": [
+        "no-new-privileges:true"
+      ],
+      "healthCheck": {
+        "interval": "10s",
+        "timeout": "45s",
+        "retries": 10,
+        "test": "pg_isready -q -d asset -U tipi"
+      }
+    }
+  ]
+}

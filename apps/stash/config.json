@@ -1,0 +1,20 @@
+{
+  "$schema": "../schema.json",
+  "name": "Stash",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 18198,
+  "id": "stash",
+  "tipi_version": 1,
+  "version": "latest",
+  "categories": ["media"],
+  "description": "Self-hosted webapp written in Go which organizes and serves your media.",
+  "short_desc": "Organize and serve media.",
+  "author": "https://github.com/stashapp",
+  "source": "https://github.com/stashapp/stash",
+  "form_fields": [],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1691943801422,
+  "updated_at": 1691943801423
+}
