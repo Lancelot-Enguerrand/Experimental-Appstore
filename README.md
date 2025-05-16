@@ -1,31 +1,25 @@
-# Example App Store Template
+# ⚗ Runtipi Experimental Appstore ⛺️
 
-This repository serves as a template for creating your own custom app store for the Runtipi platform. Use this as a starting point to create and share your own collection of applications.
+> [!CAUTION]  
+> This is a experimental Runtipi App Store.
+> Do not use for production
 
-## Repository Structure
+For a stable appstore go check [here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
-- **apps/**: Contains individual app directories
+There is a variety of apps in testing phase.
+Use at your at your own risk.
 
-  - Each app has its own folder (e.g., `whoami/`) with the following structure:
-    - `config.json`: App configuration file
-    - `docker-compose.json`: Docker setup for the app
-    - `metadata/`: Contains app visuals and descriptions
-      - `description.md`: Markdown description of the app
-      - `logo.jpg`: App logo image
+## Apps available (10)
 
-- **tests/**: Contains test files for the app store
-
-  - `apps.test.ts`: Test suite for validating apps
-
-## Getting Started
-
-This repository is intended to serve as a template for creating your own app store. Follow these steps to get started:
-
-1. Click the "Use this template" button to create a new repository based on this template
-2. Customize the apps or add your own app folders in the `apps/` directory
-3. Test your app store by using it with Runtipi
-
-## Documentation
-
-For detailed instructions on creating your own app store, please refer to the official guide:
-[Create Your Own App Store Guide](https://runtipi.io/docs/guides/create-your-own-app-store)
+| Logo                                                                      | Name                                                     | Description                                                                        | Functionnal |
+| ------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------- | :---------: |
+| <img src="apps/asset-rpo/metadata/logo.jpg" width="64" height="64"> | [Asset RPO](https://github.com/Red-Panda-One/asset)      | A simple way to manage assets.                                                     | ✅          |
+| <img src="apps/blinko/metadata/logo.jpg" width="64" height="64"> | [Blinko](https://github.com/blinko-space/blinko)         | Note taking, to-do and moodboard application                                       | ✅          |
+| <img src="apps/cozy/metadata/logo.jpg" width="64" height="64"> | [Cozy](https://github.com/cozy/cozy-stack)               | All your web services in a private space.                                          | ❌          |
+| <img src="apps/ghosthub/metadata/logo.jpg" width="64" height="64"> | [GhostHub](https://github.com/BleedingXiko/GhostHub)     | Tiktok-like media reader                                                           | ✅          |
+| <img src="apps/habitica/metadata/logo.jpg" width="64" height="64"> | [Habitica](https://github.com/awinterstein/habitica)     | Gamified habit and productivity app                                                | ❌          |
+| <img src="apps/monica-5/metadata/logo.jpg" width="64" height="64"> | [Monica (v5)](https://github.com/monicahq/monica)        | Personal Relationship Management tool                                              | ✅          |
+| <img src="apps/pixelfed/metadata/logo.jpg" width="64" height="64"> | [Pixelfed](https://github.com/pixelfed/pixelfed)        | A free and ethical photo sharing platform, powered by ActivityPub federation.      | ❌          |
+| <img src="apps/postiz/metadata/logo.jpg" width="64" height="64"> | [Postiz](https://github.com/gitroomhq/postiz-app/)       | Postiz is a social media scheduling tool supporting multiple social media channels | ❌          |
+| <img src="apps/rocketchat/metadata/logo.jpg" width="64" height="64"> | [Rocket.Chat](https://github.com/RocketChat/Rocket.Chat) | A secure and private communications platform                                       | ❌          |
+| <img src="apps/stash/metadata/logo.jpg" width="64" height="64"> | [Stash](https://github.com/stashapp/stash)               | Organize and serve media.                                                          | ✅          |
