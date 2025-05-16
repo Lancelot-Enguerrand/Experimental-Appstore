@@ -19,10 +19,10 @@
       "name": "rocketchat-mongodb",
       "image": "docker.io/bitnami/mongodb:6.0",
       "environment": {
-        "MONGODB_PORT_NUMBER": 27017,
+        "MONGODB_PORT_NUMBER": "27017",
         "MONGODB_ADVERTISED_HOSTNAME": "rocketchat-mongodb",
-        "MONGODB_ENABLE_JOURNAL": true,
-        "ALLOW_EMPTY_PASSWORD": true
+        "MONGODB_ENABLE_JOURNAL": "true",
+        "ALLOW_EMPTY_PASSWORD": "true"
       },
       "volumes": [
         {
