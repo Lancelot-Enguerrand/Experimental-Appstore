@@ -20,7 +20,7 @@
         }
       ],
       "healthCheck": {
-        "test": "CMD wget --spider -q http://localhost:7331/",
+        "test": "wget --spider -q http://localhost:7331/",
         "interval": "10s",
         "timeout": "5s",
         "retries": 3,

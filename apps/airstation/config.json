@@ -18,6 +18,7 @@
       "label": "Airstation Secret Key",
       "hint": "Password required to access admin interface",
       "env_variable": "AIRSTATION_SECRET_KEY",
+      "min": 10,
       "required": true
     },
     {
