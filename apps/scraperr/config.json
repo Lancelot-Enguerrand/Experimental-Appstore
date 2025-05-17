@@ -1,9 +1,9 @@
 {
-    "name": "Scraper",
+    "name": "Scraperr",
     "available": true,
     "exposable": true,
     "dynamic_config": true,
-    "port": 3219,
+    "port": 37887,
     "id": "scraperr",
     "tipi_version": 1,
     "version": "1.0.15",
