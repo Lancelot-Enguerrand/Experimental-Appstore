@@ -34,7 +34,7 @@
     },
     {
       "name": "cozy-couchdb",
-      "image": "couchdb:3.3",
+      "image": "couchdb:3.5",
       "environment": {
         "COUCHDB_USER": "cozy",
         "COUCHDB_PASSWORD": "${COZY_COUCHDB_PASSWORD}"
