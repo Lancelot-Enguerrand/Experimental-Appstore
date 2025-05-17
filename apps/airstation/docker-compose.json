@@ -11,7 +11,7 @@
       },
       "volumes": [
         {
-          "hostPath": "${APP_DATA_DIR}/data/airstation-data",
+          "hostPath": "${APP_DATA_DIR}/data/storage",
           "containerPath": "/app/storage"
         },
         {

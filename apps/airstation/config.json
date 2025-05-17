@@ -14,9 +14,11 @@
   "source": "https://github.com/cheatsnake/airstation",
   "form_fields": [
     {
-      "type": "random",
+      "type": "text",
       "label": "Airstation Secret Key",
-      "env_variable": "AIRSTATION_SECRET_KEY"
+      "hint": "Password required to access admin interface",
+      "env_variable": "AIRSTATION_SECRET_KEY",
+      "required": true
     },
     {
       "type": "random",
