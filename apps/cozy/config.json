@@ -5,9 +5,12 @@
   "dynamic_config": true,
   "port": 32625,
   "id": "cozy",
-  "tipi_version": 1,
-  "version": "1.6.37",
-  "categories": ["data", "utilities"],
+  "tipi_version": 2,
+  "version": "3.5",
+  "categories": [
+    "data",
+    "utilities"
+  ],
   "description": "Bring all your web services in the same private space.",
   "short_desc": "All your web services in a private space.",
   "author": "Cozy Cloud",
@@ -22,7 +25,10 @@
       "env_variable": "COZY_COUCHDB_PASSWORD"
     }
   ],
-  "supported_architectures": ["arm64", "amd64"],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
   "created_at": 1741014445555,
-  "updated_at": 1741014445555
+  "updated_at": 1747449477487
 }
