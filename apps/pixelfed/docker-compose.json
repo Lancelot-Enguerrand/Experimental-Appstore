@@ -57,7 +57,7 @@
     },
     {
       "name": "pixelfed-redis",
-      "image": "elestio/redis:7.0",
+      "image": "elestio/redis:7.2",
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/redis",
