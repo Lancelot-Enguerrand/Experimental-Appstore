@@ -1,0 +1,32 @@
+{
+  "name": "Airstation",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 7331,
+  "id": "airstation",
+  "tipi_version": 1,
+  "version": "1.0.0-beta.4",
+  "categories": ["music"],
+  "description": "Airstation is a self-hosted web app for streaming music over the Internet.",
+  "short_desc": "Your own online radio station",
+  "author": "cheatsnake",
+  "source": "https://github.com/cheatsnake/airstation",
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "Airstation Secret Key",
+      "env_variable": "AIRSTATION_SECRET_KEY"
+    },
+    {
+      "type": "random",
+      "label": "Airstation JWT",
+      "max": 32,
+      "min": 32,
+      "env_variable": "AIRSTATION_JWT_SIGN"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1737379503315,
+  "updated_at": 1737379503316
+}

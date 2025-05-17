@@ -1,0 +1,31 @@
+{
+  "services": [
+    {
+      "name": "airstation",
+      "image": "cheatsnake/airstation:1.0.0-beta.4",
+      "ismain": true,
+      "internalPort": 7331,
+      "environment": {
+        "AIRSTATION_SECRET_KEY": "${AIRSTATION_SECRET_KEY}",
+        "AIRSTATION_JWT_SIGN": "${AIRSTATION_JWT_SIGN}"
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/airstation-data",
+          "containerPath": "/app/storage"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/static",
+          "containerPath": "/app/static"
+        }
+      ],
+      "healthCheck": {
+        "test": "CMD wget --spider -q http://localhost:7331/",
+        "interval": "10s",
+        "timeout": "5s",
+        "retries": 3,
+        "start_period": "10s"
+      }
+    }
+  ]
+}
