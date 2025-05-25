@@ -3,7 +3,7 @@
     {
       "name": "airstation",
       "image": "cheatsnake/airstation:1.0.0",
-      "ismain": true,
+      "isMain": true,
       "internalPort": 7331,
       "environment": {
         "AIRSTATION_SECRET_KEY": "${AIRSTATION_SECRET_KEY}",
