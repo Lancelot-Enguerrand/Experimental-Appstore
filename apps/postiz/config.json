@@ -1,6 +1,7 @@
 {
   "name": "Postiz",
   "available": true,
+  "deprecated": true,
   "exposable": true,
   "dynamic_config": true,
   "port": 7921,

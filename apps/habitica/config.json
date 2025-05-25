@@ -1,12 +1,12 @@
 {
   "$schema": "../schema.json",
   "name": "Habitica",
-  "available": true,
+  "available": false,
   "exposable": true,
   "dynamic_config": true,
   "port": 8129,
   "id": "habitica",
-  "tipi_version": 2,
+  "tipi_version": 1,
   "version": "5.36.4",
   "categories": [
     "utilities"

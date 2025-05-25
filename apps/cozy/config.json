@@ -1,6 +1,7 @@
 {
   "name": "Cozy",
   "available": true,
+  "deprecated": true,
   "exposable": true,
   "dynamic_config": true,
   "port": 32625,
