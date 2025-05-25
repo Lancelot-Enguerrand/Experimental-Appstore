@@ -12,5 +12,5 @@ Use at your at your own risk.
 ## Apps available (<!appsCount>)
 
 | Logo | Name | Description | Functionnal | 
-| ---- | ---- | ----------- | ----------- |
+| ---- | ---- | ----------- | :---------: |
 <!appsList>
