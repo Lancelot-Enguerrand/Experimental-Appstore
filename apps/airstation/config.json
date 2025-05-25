@@ -6,7 +6,7 @@
   "port": 7331,
   "id": "airstation",
   "tipi_version": 1,
-  "version": "1.0.0-beta.4",
+  "version": "1.0.0",
   "categories": ["music"],
   "description": "Airstation is a self-hosted web app for streaming music over the Internet.",
   "short_desc": "Your own online radio station",
