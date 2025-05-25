@@ -1,7 +1,8 @@
 {
   "$schema": "../schema.json",
   "name": "Habitica",
-  "available": false,
+  "available": true,
+  "deprecated": true,
   "exposable": true,
   "dynamic_config": true,
   "port": 8129,
