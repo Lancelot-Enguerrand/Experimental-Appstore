@@ -1,16 +1,8 @@
-<br>
-<p align="center">
-  <a href="https://github.com/cheatsnake/airstation">
-    <img src="https://github.com/cheatsnake/airstation/raw/refs/heads/master/docs/images/logo.png" alt="logo" height="128">
-  </a>
-</p>
-
 <h2 align="center">Airstation</h2>
 <p align="center">Your own online radio station</p>
 <p align="center">
-🔍 <a href="https://github.com/cheatsnake/airstation/docs/overview.md">Overview</a>
-&nbsp; ⚙️ <a href="https://github.com/cheatsnake/airstation/docs/installation.md">Installation</a>
-&nbsp; 🗺️ <a href="https://github.com/cheatsnake/airstation/docs/roadmap.md">Roadmap</a>
+🔍 <a href="https://github.com/cheatsnake/airstation/tree/master/docs/overview.md">Overview</a>
+&nbsp; 🗺️ <a href="https://github.com/cheatsnake/airstation/tree/master/docs/roadmap.md">Roadmap</a>
 &nbsp; 🚨 <a href="https://github.com/cheatsnake/airstation/issues/new">Bug report</a>
 </p>
 <br />
