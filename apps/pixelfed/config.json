@@ -1,11 +1,12 @@
 {
   "name": "Pixelfed",
   "available": true,
+  "deprecated": true,
   "exposable": true,
   "dynamic_config": true,
   "port": 3219,
   "id": "pixelfed",
-  "tipi_version": 2,
+  "tipi_version": 1,
   "version": "7.2",
   "categories": [
     "photography",

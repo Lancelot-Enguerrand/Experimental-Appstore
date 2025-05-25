@@ -1,6 +1,7 @@
 {
   "name": "Rocket.Chat",
   "available": true,
+  "deprecated": true,
   "exposable": true,
   "dynamic_config": true,
   "port": 18120,

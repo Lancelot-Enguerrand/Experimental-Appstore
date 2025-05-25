@@ -7,6 +7,7 @@ type App = {
   description: string;
   source: string;
   port: number;
+  working: string;
 };
 
 const appsDir = `${__dirname}/../apps`;
@@ -23,15 +24,18 @@ const getAppsList = async () => {
       const appConfig = fs.readFileSync(`${__dirname}/../apps/${app}/config.json`, "utf8");
       const appConfigJson = JSON.parse(appConfig);
 
+      var appWorking = "❌"
       if (!appConfigJson.deprecated) {
-        apps[app] = {
-          id: appConfigJson.id,
-          name: appConfigJson.name,
-          description: appConfigJson.short_desc,
-          source: appConfigJson.source,
-          port: appConfigJson.port,
-        };
+          appWorking = "✅";
       }
+      apps[app] = {
+        id: appConfigJson.id,
+        name: appConfigJson.name,
+        description: appConfigJson.short_desc,
+        source: appConfigJson.source,
+        port: appConfigJson.port,
+        working: appWorking
+      };
     } catch (e) {
       console.error(`Error parsing config for ${app}`);
     }
@@ -41,7 +45,7 @@ const getAppsList = async () => {
 };
 
 const appToReadme = async (app: App) => {
-  return `| <img src="apps/${app.id}/metadata/logo.jpg" width="64" height="64"> | [${app.name}](${app.source}) | ${app.description} | ❌ |`;
+  return `| <img src="apps/${app.id}/metadata/logo.jpg" height="64"> | [${app.name}](${app.source}) | ${app.description} | ${app.working} |`;
 };
 
 const writeToReadme = (appsList: string, count: number) => {
