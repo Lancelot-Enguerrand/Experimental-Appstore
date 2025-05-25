@@ -12,7 +12,7 @@ Use at your at your own risk.
 ## Apps available (12)
 
 | Logo                                                      | Name                                                     | Description                                                                        | Functionnal |
-| --------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------- |
+| --------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------- | :---------: |
 | <img src="apps/airstation/metadata/logo.jpg" height="64"> | [Airstation](https://github.com/cheatsnake/airstation)   | Your own online radio station                                                      | ✅          |
 | <img src="apps/asset-rpo/metadata/logo.jpg" height="64">  | [Asset RPO](https://github.com/Red-Panda-One/asset)      | A simple way to manage assets.                                                     | ✅          |
 | <img src="apps/blinko/metadata/logo.jpg" height="64">     | [Blinko](https://github.com/blinko-space/blinko)         | Note taking, to-do and moodboard application                                       | ✅          |
