@@ -1,0 +1,17 @@
+{
+  "name": "CTFreak",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 6700,
+  "id": "ctfreak",
+  "tipi_version": 1,
+  "version": "1.27.1",
+  "categories": ["media"],
+  "description": "Simple task scheduler",
+  "author": "https://jyp.software/fr",
+  "form_fields": [],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1748368269955,
+  "updated_at": 1748368269955
+}
