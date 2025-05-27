@@ -10,6 +10,7 @@
   "categories": ["media"],
   "description": "Simple task scheduler",
   "author": "https://jyp.software/fr",
+  "source": "https://ctfreak.com/";
   "form_fields": [],
   "supported_architectures": ["arm64", "amd64"],
   "created_at": 1748368269955,
