@@ -1,0 +1,19 @@
+{
+  "services": [
+    {
+      "name": "ctfreak",
+      "image": "jypsoftware/ctfreak:1.27.1",
+      "isMain": true,
+      "environment": {
+        "TZ": "${TZ}"
+      },
+      "internalPort": 6700,
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/data",
+          "containerPath": "/data"
+        }
+      ]
+    }
+  ]
+}

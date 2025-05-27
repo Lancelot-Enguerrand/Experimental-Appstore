@@ -1,0 +1,11 @@
+## On-premise IT task scheduler
+- 💻 SSH Remote executions
+- 🪪 SSO via OpenID Connect
+- 📱 Fast, Simple & Mobile first UI
+- 🔔 Notifications (Slack, Teams, ...)
+- 📚 Centralized logs
+- 🧑‍💻 REST API
+- 🪝 Incoming webhooks
+- 📖 Ansible integration
+- 🔎 File explorer
+- 🪴 Low memory and CPU usage
