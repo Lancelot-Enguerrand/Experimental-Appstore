@@ -5,9 +5,11 @@
   "dynamic_config": true,
   "port": 8114,
   "id": "blinko",
-  "tipi_version": 1,
-  "version": "0.52.4",
-  "categories": ["utilities"],
+  "tipi_version": 2,
+  "version": "1.0.2",
+  "categories": [
+    "utilities"
+  ],
   "description": "Blinko is an innovative open-source project designed for individuals who want to quickly capture and organize their fleeting thoughts. Blinko allows users to seamlessly jot down ideas the moment they strike, ensuring that no spark of creativity is lost.",
   "short_desc": "Note taking, to-do and moodboard application",
   "author": "blinko-space",
@@ -29,7 +31,10 @@
       "env_variable": "BLINKO_NEXTAUTH_SECRET"
     }
   ],
-  "supported_architectures": ["arm64", "amd64"],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
   "created_at": 1737379503315,
-  "updated_at": 1737379503316
+  "updated_at": 1748400014852
 }
