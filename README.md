@@ -1,15 +1,15 @@
 # ⚗ Runtipi Experimental Appstore ⛺️
-This is an appstore for [Runtipi](https://runtipi.io), welcoming unexpected apps.
+This is an appstore for [Runtipi](https://runtipi.io), welcoming unexpected apps that won't fit common standards.
 
 This appstore in **5** points :
 - 🌱 Apps here are mostly young projects or beta 
 - 💡 New ideas are welcome
+- 🧪 Can explode at any moment
 - 🙈 Broken apps stay hidden
-- ✅ You can safely add this repo to your appstores
 - 🤫 *QA department has been layed off*
 
 > [!TIP]  
-> For a stable appstore go check [here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
+> For an appstore with high quality stable apps, [check here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
 ## Apps available ✨ <!appsCount> ✨
 
