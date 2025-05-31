@@ -39,7 +39,8 @@ const getAppsList = async () => {
           description: appConfigJson.short_desc,
           source: appConfigJson.source,
           port: appConfigJson.port
-      };
+        };
+      }
     } catch (e) {
       console.error(`Error parsing config for ${app}`);
     }
