@@ -13,7 +13,7 @@
     "social"
   ],
   "description": "A free and ethical photo sharing platform, powered by ActivityPub federation.",
-  "short_desc": "A free and ethical photo sharing platform, powered by ActivityPub federation.",
+  "short_desc": "¨Photo sharing platform",
   "author": "pixelfed",
   "source": "https://github.com/pixelfed/pixelfeda",
   "form_fields": [

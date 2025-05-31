@@ -12,7 +12,7 @@
     "social"
   ],
   "description": "Rocket.Chat is an email and team chat service presented as an alternative to Slack.",
-  "short_desc": "A secure and private communications platform",
+  "short_desc": "Secure and private communications platform",
   "author": "RocketChat",
   "source": "https://github.com/RocketChat/Rocket.Chat",
   "form_fields": [],
