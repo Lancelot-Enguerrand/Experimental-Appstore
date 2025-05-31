@@ -32,7 +32,7 @@ const getAppsList = async () => {
           source: appConfigJson.source,
           port: appConfigJson.port
         };
-      } else {
+      } else if (appConfigJson.deprecated) {
         appsNotReady[app] = {
           id: appConfigJson.id,
           name: appConfigJson.name,
