@@ -12,7 +12,7 @@
     "social"
   ],
   "description": "Postiz is a social media scheduling tool supporting multiple social media channels: Instagram, Facebook, TikTok, Reddit, LinkedIn, X, Threads, BlueSky, Mastodon, YouTube, Pinterest, Dribbble, Slack, and Discord.",
-  "short_desc": "Postiz is a social media scheduling tool supporting multiple social media channels",
+  "short_desc": "Social media scheduling tool",
   "author": "https://github.com/gitroomhq",
   "source": "https://github.com/gitroomhq/postiz-app/",
   "form_fields": [
