@@ -71,8 +71,11 @@ const main = async () => {
 
   for (let i = 0; i < appKeys.length; i++) {
     const appFinal = await appToReadme(apps[appKeys[i]]);
-    const appNotReadyFinal = await appToReadme(appsNotReady[appKeysNotReady[i]]);
     appsList = `${appsList}${appFinal}\n`;
+  }
+
+  for (let i = 0; i < appKeysNotReady.length; i++) {
+    const appNotReadyFinal = await appToReadme(appsNotReady[appKeysNotReady[i]]);
     appsNotReadyList = `${appsNotReadyList}${appNotReadyFinal}\n`;
   }
 
