@@ -50,7 +50,7 @@ const getAppsList = async () => {
 };
 
 const appToReadme = async (app: App) => {
-  return `| <img src="apps/${app.id}/metadata/logo.jpg" width="64" style="border-radius: 5%;"> | [${app.name}](${app.source}) | ${app.description} |`;
+  return `| <img src="apps/${app.id}/metadata/logo.jpg" width="64" style="border-radius: 15%;"> | [${app.name}](${app.source}) | ${app.description} |`;
 };
 
 const writeToReadme = (appsList: string, count: number, appsNotReadyList: string, countNotReady: number) => {
