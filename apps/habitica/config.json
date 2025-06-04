@@ -7,8 +7,8 @@
   "dynamic_config": true,
   "port": 8129,
   "id": "habitica",
-  "tipi_version": 2,
-  "version": "8.0",
+  "tipi_version": 3,
+  "version": "5.36.5",
   "categories": [
     "utilities"
   ],
@@ -52,5 +52,5 @@
     "amd64"
   ],
   "created_at": 1739308886335,
-  "updated_at": 1748227290068
+  "updated_at": 1749004820620
 }
