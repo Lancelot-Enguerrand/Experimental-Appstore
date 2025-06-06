@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "blinko",
-      "image": "blinkospace/blinko:1.0.5",
+      "image": "blinkospace/blinko:1.0.7",
       "isMain": true,
       "internalPort": 1111,
       "environment": {
