@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/node": "^22.14.1"
+    "@types/node": "^24.0.0"
   },
   "dependencies": {
     "@runtipi/common": "^0.8.0",
