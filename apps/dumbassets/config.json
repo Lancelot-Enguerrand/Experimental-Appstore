@@ -1,25 +1,25 @@
 {
-    "schema": "https://schemas.runtipi.io/app-info.json",
-    "name": "DumbAssets",
-    "available": true,
-    "exposable": true,
-    "dynamic_config": true,
-    "port": 41321,
-    "id": "dumbassets",
-    "tipi_version": 1,
-    "version": "1.0.0",
-    "categories": [
-        "utilities"
-    ],
-    "description": "A stupid simple asset tracker for keeping track of your physical assets, their components, and applicable warranties and routine maintenance.",
-    "short_desc": "Hierarchical assets tracker",
-    "author": "DumbWare",
-    "source": "https://github.com/DumbWareio/DumbAssets",
-    "form_fields": [],
-    "supported_architectures": [
-      "arm64",
-      "amd64"
-    ],
-    "created_at": 1749074400888,
-    "updated_at": 1749074400999
-  }
+  "schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "DumbAssets",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 41321,
+  "id": "dumbassets",
+  "tipi_version": 2,
+  "version": "1.0.11",
+  "categories": [
+    "utilities"
+  ],
+  "description": "A stupid simple asset tracker for keeping track of your physical assets, their components, and applicable warranties and routine maintenance.",
+  "short_desc": "Hierarchical assets tracker",
+  "author": "DumbWare",
+  "source": "https://github.com/DumbWareio/DumbAssets",
+  "form_fields": [],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1749074400888,
+  "updated_at": 1749782416943
+}

@@ -3,7 +3,7 @@
     "services": [
       {
         "name": "dumbassets",
-        "image": "dumbwareio/dumbassets:1.0.0",
+        "image": "dumbwareio/dumbassets:1.0.11",
         "isMain": true,
         "internalPort": 3000,
         "environment": {
