@@ -2,7 +2,7 @@
     "services": [
       {
         "name": "scraperr",
-        "image": "jpyles0524/scraperr:1.1.1",
+        "image": "jpyles0524/scraperr:1.1.3",
         "isMain": true,
         "internalPort": 3000,
         "command": [
