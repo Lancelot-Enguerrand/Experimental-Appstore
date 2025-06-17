@@ -1,0 +1,37 @@
+{
+    "schema": "https://schemas.runtipi.io/dynamic-compose.json",
+    "services": [
+    {
+      "name": "kanbn",
+      "image": "ghcr.io/kanbn/kan:0.2.0",
+      "isMain": true,
+      "internalPort": 3000,
+      "environment": {
+        "NEXT_PUBLIC_BASE_URL": "${APP_PROTOCOL:-http}://${APP_DOMAIN}",
+        "BETTER_AUTH_SECRET": "${KANBN_AUTH_SECRET}",
+        "POSTGRES_URL": "postgresql://kan:${KANBN_DB_PASSWORD}@kanbn-db:5432/kan_db",
+        "NEXT_PUBLIC_ALLOW_CREDENTIALS": "true"
+      },
+      "dependsOn": {
+        "kanbn-db": {
+          "condition": "service_started"
+        }
+      }
+    },
+    {
+      "name": "kanbn-db",
+      "image": "postgres:15",
+      "environment": {
+        "POSTGRES_DB": "kan_db",
+        "POSTGRES_USER": "kan",
+        "POSTGRES_PASSWORD": "${KANBN_DB_PASSWORD}"
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/db",
+          "containerPath": "/var/lib/postgresql/data"
+        }
+      ]
+    }
+  ]
+}
