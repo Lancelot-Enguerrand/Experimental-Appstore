@@ -13,7 +13,7 @@
         "NEXT_PUBLIC_ALLOW_CREDENTIALS": "true"
       },
       "dependsOn": {
-        "postgres": {
+        "kanbn-db": {
           "condition": "service_started"
         }
       }
