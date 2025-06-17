@@ -1,0 +1,26 @@
+{
+    "schmema": "https://schemas.runtipi.io/dynamic-compose.json",
+    "services": [
+      {
+        "name": "ersatztv",
+        "image": "jasongdove/ersatztv:v25.1.0",
+        "isMain": true,
+        "internalPort": 8409,
+        "environment": {
+          "TZ": "$[TZ}"
+        },
+        "volumes": [
+          {
+            "hostPath": "${APP_DATA_DIR}/data/config",
+            "containerPath": "/root/.local/share/ersatztv"
+          },
+          {
+            "hostPath": "${ROOT_FOLDER_HOST}/media:",
+            "containerPath": "/media",
+            "readOnly": true
+          }
+        ]
+      }
+    ]
+  }
+  
