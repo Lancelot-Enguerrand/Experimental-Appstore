@@ -22,7 +22,6 @@ This appstore in **5** points :
 |   <img src="apps/blinko/metadata/logo.jpg" width="64" style="border-radius: 15%;">   | [Blinko](https://github.com/blinko-space/blinko)       | Note taking, to-do and moodboard application |
 |  <img src="apps/ctfreak/metadata/logo.jpg" width="64" style="border-radius: 15%;">   | [CTFreak](https://ctfreak.com/)                        | Simple task scheduler                        |
 | <img src="apps/dumbassets/metadata/logo.jpg" width="64" style="border-radius: 15%;"> | [DumbAssets](https://github.com/DumbWareio/DumbAssets) | Hierarchical assets tracker                  |
-|  <img src="apps/ersatztv/metadata/logo.jpg" width="64" style="border-radius: 15%;">  | [ErsatzTV](https://github.com/DumbWareio/DumbAssets)   | Hierarchical assets tracker                  |
 |  <img src="apps/ghosthub/metadata/logo.jpg" width="64" style="border-radius: 15%;">  | [GhostHub](https://github.com/BleedingXiko/GhostHub)   | Tiktok-like media reader                     |
 |    <img src="apps/jpjr/metadata/logo.jpg" width="64" style="border-radius: 15%;">    | [JPJR](https://github.com/lfpoulain/jpjr)              | Je prends, je rends                          |
 |   <img src="apps/kanbn/metadata/logo.jpg" width="64" style="border-radius: 15%;">    | [kan.bn](https://github.com/kanbn/kan)                 | Project management alternative to Trello.    |
