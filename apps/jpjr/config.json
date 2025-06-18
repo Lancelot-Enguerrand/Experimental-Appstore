@@ -1,0 +1,44 @@
+{
+  "schema": "https://schemas.runtipi.io/config.json",
+  "name": "JPJR",
+  "id": "jpjr",
+  "available": true,
+  "short_desc": "Je prends, je rends",
+  "author": "Les frères Poulain",
+  "port": 9152,
+  "categories": [
+    "utilities"
+  ],
+  "description": "JPJR est une petite application web développée avec Flask pour gérer un inventaire d'objets et suivre les emprunts. Elle intègre une interface d'administration, une API JSON et des commandes vocales optionnelles via OpenAI.",
+  "tipi_version": 1,
+  "version": "latest",
+  "source": "https://github.com/lfpoulain/jpjr",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1745082405284,
+  "updated_at": 1745674974072,
+  "dynamic_config": true,
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "OPENAI Key",
+      "env_variable": "JPJR_OPENAI_API_KEY",
+      "required": false
+    },
+    {
+      "type": "random",
+      "label": "JPJR_DB_PASSWORD",
+      "min": 32,
+      "env_variable": "JPJR_DB_PASSWORD"
+    },
+    {
+      "type": "random",
+      "label": "JPJR_SECRET_KEY",
+      "min": 32,
+      "env_variable": "JPJR_SECRET_KEY"
+    }
+  ]
+}

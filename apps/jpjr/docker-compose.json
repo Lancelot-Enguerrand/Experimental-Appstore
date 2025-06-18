@@ -1,0 +1,45 @@
+{
+  "schema": "https://schemas.runtipi.io/dynamic-compose.json",
+  "services": [
+    {
+      "name": "jpjr",
+      "image": "ghcr.io/lancelot-enguerrand/jpjr:latest",
+      "isMain": true,
+      "internalPort": "5001",
+      "environment": {
+        "SECRET_KEY": "${JPJR_SECRET_KEY}",
+        "OPENAI_API_KEY": "${JPJR_OPENAI_API_KEY}",
+        "DB_TYPE": "postgresql",
+        "DB_HOST": "jpjr-db",
+        "DB_NAME": "jpjrdb",
+        "DB_USER": "admin",
+        "DB_PASSWORD": "${JPJR_DB_PASSWORD}",
+        "DB_PORT": "5432"
+      },
+      "dependsOn": [
+        "jpjr-db"
+      ]
+    },
+    {
+      "name": "jpjr-db",
+      "image": "postgres:17-alpine",
+      "environment": {
+        "POSTGRES_PASSWORD": "${JPJR_DB_PASSWORD}",
+        "POSTGRES_USER": "admin",
+        "POSTGRES_DB": "jpjrdb"
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/db",
+          "containerPath": "/var/lib/postgresql/data"
+        }
+      ],
+      "healthCheck": {
+        "test": "pg_isready -h localhost -U admin -d jpjrdb",
+        "interval": "30s",
+        "timeout": "5s",
+        "retries": 10
+      }
+    }
+  ]
+}
