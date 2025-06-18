@@ -6,7 +6,6 @@
   "short_desc": "Je prends, je rends",
   "author": "Les frères Poulain",
   "port": 9152,
-  "https": true,
   "categories": [
     "utilities"
   ],
