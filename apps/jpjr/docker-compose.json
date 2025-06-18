@@ -9,6 +9,7 @@
       "environment": {
         "SECRET_KEY": "${JPJR_SECRET_KEY}",
         "OPENAI_API_KEY": "${JPJR_OPENAI_API_KEY}",
+        "USE_SSL": "false"
         "DB_TYPE": "postgresql",
         "DB_HOST": "jpjr-db",
         "DB_NAME": "jpjrdb",
