@@ -6,8 +6,8 @@
   "dynamic_config": true,
   "port": 32625,
   "id": "cozy",
-  "tipi_version": 2,
-  "version": "3.5",
+  "tipi_version": 3,
+  "version": "1.6.38",
   "categories": [
     "data",
     "utilities"
@@ -31,5 +31,5 @@
     "amd64"
   ],
   "created_at": 1741014445555,
-  "updated_at": 1747449477487
+  "updated_at": 1750473554671
 }
