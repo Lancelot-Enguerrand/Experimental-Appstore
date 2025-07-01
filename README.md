@@ -13,7 +13,7 @@ This appstore in **5** points :
 > [!TIP]  
 > For an appstore with high quality stable apps, [check here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
-## Apps available ✨ 12 ✨
+## Apps available ✨ 11 ✨
 
 |                                         Logo                                         | Name                                                   | Description                                  |
 | :----------------------------------------------------------------------------------: | ------------------------------------------------------ | -------------------------------------------- |
