@@ -3,7 +3,7 @@
   "services": [
     {
       "name": "jpjr",
-      "image": "ghcr.io/lancelot-enguerrand/jpjr:latest",
+      "image": "ghcr.io/lfpoulain/jpjr:2025-06-25",
       "isMain": true,
       "internalPort": "5001",
       "environment": {
