@@ -11,16 +11,13 @@
   ],
   "description": "JPJR est une petite application web développée avec Flask pour gérer un inventaire d'objets et suivre les emprunts. Elle intègre une interface d'administration, une API JSON et des commandes vocales optionnelles via OpenAI.",
   "tipi_version": 1,
-  "version": "latest",
+  "version": "2025-06-25",
   "source": "https://github.com/lfpoulain/jpjr",
   "exposable": true,
   "supported_architectures": [
     "arm64",
     "amd64"
   ],
-  "created_at": 1745082405284,
-  "updated_at": 1745674974072,
-  "dynamic_config": true,
   "form_fields": [
     {
       "type": "text",
@@ -40,5 +37,8 @@
       "min": 32,
       "env_variable": "JPJR_SECRET_KEY"
     }
-  ]
+  ],
+   "created_at": 1745082405284,
+  "updated_at": 1745674974072,
+  "dynamic_config": true
 }
