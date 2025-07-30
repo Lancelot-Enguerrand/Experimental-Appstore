@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "habitica",
-      "image": "docker.io/awinterstein/habitica-server:5.37.2",
+      "image": "docker.io/awinterstein/habitica-server:5.38.0",
       "isMain": true,
       "internalPort": 3000,
       "environment": {
