@@ -19,7 +19,7 @@ This appstore in **5** points :
 
 <br><br>
 > [!WARNING]
-> The following apps don't have any guarantee to work at all
+> The following apps don't have any guarantee to work at all, either now or at any point in the future.
 ## 🚧 Apps not ready 🔨 (<!appsNotReadyCount>)
 
 | Logo | Name | Description |
