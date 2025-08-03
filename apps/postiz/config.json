@@ -6,8 +6,8 @@
   "dynamic_config": true,
   "port": 7921,
   "id": "postiz",
-  "tipi_version": 29,
-  "version": "v2.1.0",
+  "tipi_version": 30,
+  "version": "v2.1.1",
   "categories": [
     "social"
   ],
@@ -209,5 +209,5 @@
     "amd64"
   ],
   "created_at": 1735732547457,
-  "updated_at": 1754102696077
+  "updated_at": 1754189751406
 }
