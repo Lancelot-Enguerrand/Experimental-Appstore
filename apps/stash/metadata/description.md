@@ -1,6 +1,6 @@
 # Stash
 
-### **Stash is a self-hosted webapp written in Go which organizes and serves your porn.**
+### **Stash is a self-hosted webapp written in Go which organizes and serves your media.**
 * Stash gathers information about videos in your collection from the internet, and is extensible through the use of community-built plugins for a large number of content producers and sites.
 * Stash supports a wide variety of both video and image formats.
 * You can tag videos and find them later.
@@ -29,11 +29,14 @@ There is a [directory of community-created themes](https://docs.stashapp.cc/them
 You can also change the Stash interface to fit your desired style with various snippets from [Custom CSS snippets](https://docs.stashapp.cc/themes/custom-css-snippets).
 
 # Support (FAQ)
-
-Check out documentation on [Stash-Docs](https://docs.stashapp.cc) for information about the software, questions, guides, add-ons and more. 
+Check out documentation on [Stash-Docs](https://docs.stashapp.cc) for information about the software, questions, guides, add-ons and more.
 
 For more help you can:
 * Check the in-app documentation, in the top right corner of the app (it's also mirrored on [Stash-Docs](https://docs.stashapp.cc/in-app-manual))
 * Join the [Matrix space](https://matrix.to/#/#stashapp:unredacted.org)
 * Join the [Discord server](https://discord.gg/2TsNFKt), where the community can offer support.
 * Start a [discussion on GitHub](https://github.com/stashapp/stash/discussions)
+
+# Additionnal Notes
+Stash is initially focused on adult content but the app can fit your needs for various other media.
+If you're not sure, give it a try.
