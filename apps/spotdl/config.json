@@ -7,7 +7,7 @@
   "id": "spotdl",
   "tipi_version": 1,
   "version": "v4.3.1",
-  "categories": ["development"],
+  "categories": ["media", "music"],
   "description": "Music downloader for Spotify.",
   "short_desc": "Music downloader for Spotify.",
   "author": "spotDL",
