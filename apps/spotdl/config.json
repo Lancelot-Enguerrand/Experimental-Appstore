@@ -1,0 +1,19 @@
+{
+  "name": "Spotify Downloader",
+  "port": 53141,
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "id": "spotdl",
+  "tipi_version": 1,
+  "version": "v4.3.1",
+  "categories": ["development"],
+  "description": "Music downloader for Spotify.",
+  "short_desc": "Music downloader for Spotify.",
+  "author": "spotDL",
+  "source": "https://github.com/spotDL/spotify-downloader",
+  "form_fields": [],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1755002322111,
+  "updated_at": 1755002322115
+}
