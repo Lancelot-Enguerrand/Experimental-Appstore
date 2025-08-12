@@ -13,21 +13,22 @@ This appstore in **5** points :
 > [!TIP]  
 > For an appstore with high quality stable apps, [check here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
-## Apps available ✨ 11 ✨
+## Apps available ✨ 12 ✨
 
-|                           Logo                           | Name                                                   | Description                                  |
-| :------------------------------------------------------: | ------------------------------------------------------ | -------------------------------------------- |
-| <img src="apps/airstation/metadata/logo.jpg" width="64"> | [Airstation](https://github.com/cheatsnake/airstation) | Your own online radio station                |
-| <img src="apps/asset-rpo/metadata/logo.jpg" width="64">  | [Asset RPO](https://github.com/Red-Panda-One/asset)    | A simple way to manage assets.               |
-|   <img src="apps/blinko/metadata/logo.jpg" width="64">   | [Blinko](https://github.com/blinko-space/blinko)       | Note taking, to-do and moodboard application |
-|  <img src="apps/ctfreak/metadata/logo.jpg" width="64">   | [CTFreak](https://ctfreak.com/)                        | Simple task scheduler                        |
-| <img src="apps/dumbassets/metadata/logo.jpg" width="64"> | [DumbAssets](https://github.com/DumbWareio/DumbAssets) | Hierarchical assets tracker                  |
-|  <img src="apps/ghosthub/metadata/logo.jpg" width="64">  | [GhostHub](https://github.com/BleedingXiko/GhostHub)   | Tiktok-like media reader                     |
-|    <img src="apps/jpjr/metadata/logo.jpg" width="64">    | [JPJR](https://github.com/lfpoulain/jpjr)              | Je prends, je rends                          |
-|   <img src="apps/kanbn/metadata/logo.jpg" width="64">    | [kan.bn](https://github.com/kanbn/kan)                 | Project management alternative to Trello.    |
-|  <img src="apps/monica-5/metadata/logo.jpg" width="64">  | [Monica (v5)](https://github.com/monicahq/monica)      | Personal Relationship Management tool        |
-|  <img src="apps/scraperr/metadata/logo.jpg" width="64">  | [Scraperr](https://github.com/jaypyles/Scraperr)       | Web scraping tool                            |
-|   <img src="apps/stash/metadata/logo.jpg" width="64">    | [Stash](https://github.com/stashapp/stash)             | Organize and serve media.                    |
+|                           Logo                           | Name                                                               | Description                                  |
+| :------------------------------------------------------: | ------------------------------------------------------------------ | -------------------------------------------- |
+| <img src="apps/airstation/metadata/logo.jpg" width="64"> | [Airstation](https://github.com/cheatsnake/airstation)             | Your own online radio station                |
+| <img src="apps/asset-rpo/metadata/logo.jpg" width="64">  | [Asset RPO](https://github.com/Red-Panda-One/asset)                | A simple way to manage assets.               |
+|   <img src="apps/blinko/metadata/logo.jpg" width="64">   | [Blinko](https://github.com/blinko-space/blinko)                   | Note taking, to-do and moodboard application |
+|  <img src="apps/ctfreak/metadata/logo.jpg" width="64">   | [CTFreak](https://ctfreak.com/)                                    | Simple task scheduler                        |
+| <img src="apps/dumbassets/metadata/logo.jpg" width="64"> | [DumbAssets](https://github.com/DumbWareio/DumbAssets)             | Hierarchical assets tracker                  |
+|  <img src="apps/ghosthub/metadata/logo.jpg" width="64">  | [GhostHub](https://github.com/BleedingXiko/GhostHub)               | Tiktok-like media reader                     |
+|    <img src="apps/jpjr/metadata/logo.jpg" width="64">    | [JPJR](https://github.com/lfpoulain/jpjr)                          | Je prends, je rends                          |
+|   <img src="apps/kanbn/metadata/logo.jpg" width="64">    | [kan.bn](https://github.com/kanbn/kan)                             | Project management alternative to Trello.    |
+|  <img src="apps/monica-5/metadata/logo.jpg" width="64">  | [Monica (v5)](https://github.com/monicahq/monica)                  | Personal Relationship Management tool        |
+|  <img src="apps/scraperr/metadata/logo.jpg" width="64">  | [Scraperr](https://github.com/jaypyles/Scraperr)                   | Web scraping tool                            |
+|   <img src="apps/spotdl/metadata/logo.jpg" width="64">   | [Spotify Downloader](https://github.com/spotDL/spotify-downloader) | Music downloader for Spotify.                |
+|   <img src="apps/stash/metadata/logo.jpg" width="64">    | [Stash](https://github.com/stashapp/stash)                         | Organize and serve media.                    |
 
 <br><br>
 
