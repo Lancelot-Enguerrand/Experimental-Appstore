@@ -1,0 +1,32 @@
+{
+  "services": [
+    {
+      "name": "spotdl",
+      "image": "spotdl/spotify-downloader:v4.3.1",
+      "isMain": true,
+      "internalPort": 8800,
+      "entrypoint": [
+        "uv",
+        "run",
+        "--project",
+        "/app",
+        "spotdl",
+        "web",
+        "--host",
+        "0.0.0.0",
+        "--web-use-output-dir",
+        "--config"
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/spotdl",
+          "containerPath": "/root/.spotdl"
+        },
+        {
+          "hostPath": "${ROOT_FOLDER_HOST}/media/data/music",
+          "containerPath": "/music"
+        }
+      ]
+    }
+  ]
+}
