@@ -13,7 +13,7 @@ This appstore in **5** points :
 > [!TIP]  
 > For an appstore with high quality stable apps, [check here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
-## Apps available ✨ 12 ✨
+## Apps available ✨ 13 ✨
 
 |                           Logo                           | Name                                                               | Description                                  |
 | :------------------------------------------------------: | ------------------------------------------------------------------ | -------------------------------------------- |
@@ -29,6 +29,7 @@ This appstore in **5** points :
 |  <img src="apps/scraperr/metadata/logo.jpg" width="64">  | [Scraperr](https://github.com/jaypyles/Scraperr)                   | Web scraping tool                            |
 |   <img src="apps/spotdl/metadata/logo.jpg" width="64">   | [Spotify Downloader](https://github.com/spotDL/spotify-downloader) | Music downloader for Spotify.                |
 |   <img src="apps/stash/metadata/logo.jpg" width="64">    | [Stash](https://github.com/stashapp/stash)                         | Organize and serve media.                    |
+| <img src="apps/tasktrove/metadata/logo.jpg" width="64">  | [TaskTrove](https://github.com/dohsimpson/TaskTrove)               | Task Manager                                 |
 
 <br><br>
 
