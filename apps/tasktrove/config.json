@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "TaskTrove",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 41114,
+  "id": "tasktrove",
+  "tipi_version": 1,
+  "version": "v0.1.0",
+  "categories": [
+    "data",
+    "utilities"
+  ],
+  "description": "TaskTrove is a comprehensive task management solution designed to help individuals and teams organize their work efficiently.",
+  "short_desc": "Task Manager",
+  "author": "https://github.com/dohsimpson",
+  "source": "https://github.com/dohsimpson/TaskTrove",
+  "form_fields": [],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1755453844444,
+  "updated_at": 1755453844835
+}
