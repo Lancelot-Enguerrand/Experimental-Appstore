@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "Fluffy Chat",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 8133,
+  "id": "fluffychat",
+  "tipi_version": 1,
+  "version": "2.0.0",
+  "categories": [
+    "social"
+  ],
+  "description": "Open source, nonprofit and cute [matrix] client written in Flutter",
+  "short_desc": "Fluffy Matrix Client",
+  "author": "https://github.com/krille-chan",
+  "source": "https://github.com/krille-chan/fluffychat",
+  "form_fields": [],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1755453844444,
+  "updated_at": 1755453844835
+}
