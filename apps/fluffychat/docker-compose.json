@@ -5,9 +5,9 @@
       "image": "aceberg/fluffychat:2.0.0",
       "isMain": true,
       "internalPort": 80
-      ]
     }
   ]
 }
+
 
 
