@@ -1,7 +1,7 @@
 {
   "services": [
     {
-      "name": "habittrove",
+      "name": "tasktrove",
       "image": "ghcr.io/dohsimpson/tasktrove:v0.1.0",
       "isMain": true,
       "internalPort": 3000,
