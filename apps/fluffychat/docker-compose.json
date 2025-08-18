@@ -4,14 +4,10 @@
       "name": "fluffychat",
       "image": "aceberg/fluffychat:2.0.0",
       "isMain": true,
-      "internalPort": 80,
-      "volumes": [
-        {
-          "hostPath": "${APP_DATA_DIR}/data/app",
-          "containerPath": "/usr/share/nginx/html"
-        }
+      "internalPort": 80
       ]
     }
   ]
 }
+
 
