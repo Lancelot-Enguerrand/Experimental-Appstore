@@ -88,10 +88,11 @@
       ],
       "entrypoint": "/bin/sh -c \" /usr/bin/mc config host add ente http://minio:9000 ${ENTE_MINIO_ACCESS_KEY} ${ENTE_MINIO_SECRET_KEY}; /usr/bin/mc mb --ignore-existing ente/default; exit 0;\"",
       "dependsOn": {
-        "ente_minio": {
+        "ente-minio": {
           "condition": "service_started"
         }
       }
     }
   ]
 }
+
