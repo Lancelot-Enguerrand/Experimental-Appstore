@@ -5,6 +5,8 @@
   "dynamic_config": true,
   "port": 51419,
   "id": "ente",
+  "uid": 1000,
+  "gid": 1000,
   "tipi_version": 1,
   "version": "latest",
   "categories": [
