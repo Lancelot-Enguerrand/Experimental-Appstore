@@ -47,7 +47,7 @@
     },
     {
       "name": "ente-minio",
-      "image": "${TZ}",
+      "image": "minio/minio",
       "command": [
         "server",
         "/data",
@@ -95,4 +95,5 @@
     }
   ]
 }
+
 
