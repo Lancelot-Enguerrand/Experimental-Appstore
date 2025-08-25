@@ -1,0 +1,47 @@
+{
+  "name": "Ente",
+  "available": false,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 514195,
+  "id": "blinko",
+  "tipi_version": 1,
+  "version": "latest",
+  "categories": [
+    "photography"
+  ],
+  "description": "Store, share and discover your photos memories with end-to-end encryption",
+  "short_desc": "Photos Manager",
+  "author": "Ente",
+  "source": "https://github.com/11notes/docker-ente",
+  "website": "https://ente.io",
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "Ente DB password",
+      "max": 50,
+      "min": 16,
+      "env_variable": "ENTE_POSTGRES_PASSWORD"
+    },
+    {
+      "type": "random",
+      "label": "Ente Minio access key",
+      "max": 32,
+      "min": 32,
+      "env_variable": "ENTE_MINIO_ACCESS_KEY"
+    },
+    {
+      "type": "random",
+      "label": "Ente Minio secret key",
+      "max": 32,
+      "min": 32,
+      "env_variable": "ENTE_MINIO_SECRET_KEY"
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1756135666530,
+  "updated_at": 1756135666666
+}
