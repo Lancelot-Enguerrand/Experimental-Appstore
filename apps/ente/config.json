@@ -3,7 +3,7 @@
   "available": false,
   "exposable": true,
   "dynamic_config": true,
-  "port": 514195,
+  "port": 51419,
   "id": "blinko",
   "tipi_version": 1,
   "version": "latest",
