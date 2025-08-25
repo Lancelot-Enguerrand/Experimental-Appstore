@@ -1,6 +1,6 @@
 {
   "name": "Ente",
-  "available": false,
+  "available": true,
   "exposable": true,
   "dynamic_config": true,
   "port": 51419,
