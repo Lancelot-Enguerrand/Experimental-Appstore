@@ -32,16 +32,8 @@
       },
       "volumes": [
         {
-          "hostPath": "${APP_DATA_DIR}/data/db/etc",
-          "containerPath": "/postgres/etc"
-        },
-        {
-          "hostPath": "${APP_DATA_DIR}/data/db/var",
-          "containerPath": "/postgres/var"
-        },
-        {
-          "hostPath": "${APP_DATA_DIR}/data/db/backup",
-          "containerPath": "/postgres/backup"
+          "hostPath": "${APP_DATA_DIR}/data/db",
+          "containerPath": "/postgres"
         }
       ]
     },
@@ -95,6 +87,7 @@
     }
   ]
 }
+
 
 
 
