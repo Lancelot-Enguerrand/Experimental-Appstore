@@ -32,22 +32,14 @@
       },
       "volumes": [
         {
-          "hostPath": "${APP_DATA_DIR}/data/db/etc",
-          "containerPath": "/postgres/etc"
-        },
-        {
-          "hostPath": "${APP_DATA_DIR}/data/db/var",
-          "containerPath": "/postgres/var"
-        },
-        {
-          "hostPath": "${APP_DATA_DIR}/data/db/backup",
-          "containerPath": "/postgres/backup"
+          "hostPath": "${APP_DATA_DIR}/data/db",
+          "containerPath": "/postgres"
         }
       ]
     },
     {
       "name": "ente-minio",
-      "image": "${TZ}",
+      "image": "minio/minio",
       "command": [
         "server",
         "/data",
@@ -86,12 +78,16 @@
           "containerPath": "/root/.mc"
         }
       ],
-      "entrypoint": "/bin/sh -c \" /usr/bin/mc config host add ente http://minio:9000 ${ENTE_MINIO_ACCESS_KEY} ${ENTE_MINIO_SECRET_KEY}; /usr/bin/mc mb --ignore-existing ente/default; exit 0;\"",
+      "entrypoint": "/bin/sh -c \" /usr/bin/mc config host add ente http://minio:9000 ${MINIO_ACCESS_KEY} ${MINIO_SECRET_KEY}; /usr/bin/mc mb --ignore-existing ente/default; exit 0;\"",
       "dependsOn": {
-        "ente_minio": {
+        "ente-minio": {
           "condition": "service_started"
         }
       }
     }
   ]
 }
+
+
+
+
