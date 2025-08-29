@@ -20,8 +20,7 @@
       "type": "random",
       "label": "Cobalt JWT Secret",
       "env_variable": "COBALT_JWT_SECRET",
-      "min": 32,
-      "required": true
+      "min": 32
     }
   ],
   "supported_architectures": [
