@@ -1,9 +1,8 @@
 # Cobalt
 Cobalt is a media downloader that doesn't piss you off. it's friendly, efficient, and doesn't have ads, trackers, paywalls or other nonsense.
+> This version does have a WebUI, you will have to use the API.
 
-paste the link, get the file, move on. that simple, just how it should be.
-
-## Cookies
+### Cookies
 To add your own cookies you can use this template `data/config/cookies.example.json` and save it as `cookies.json`.
 
 ### Documentation
