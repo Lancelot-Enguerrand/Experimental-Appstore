@@ -1,0 +1,21 @@
+{
+  "services": [
+    {
+      "name": "cobalt",
+      "image": "ghcr.io/imputnet/cobalt:11.4.2",
+      "isMain": true,
+      "internalPort": 9000,
+      "environment": {
+        "API_URL": "${COBALT_API_URL}",
+        "COOKIE_PATH": "/config/cookies.json",
+        "JWT_SECRET": "${COBALT_JWT_SECRET}"
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/config",
+          "containerPath": "/config"
+        }
+      ]
+    }
+  ]
+}
