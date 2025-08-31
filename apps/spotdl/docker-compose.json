@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "spotdl",
-      "image": "spotdl/spotify-downloader:v4.4.1",
+      "image": "spotdl/spotify-downloader:v4.4.2",
       "isMain": true,
       "internalPort": 8800,
       "entrypoint": [
