@@ -13,7 +13,7 @@ This appstore in **5** points :
 > [!TIP]  
 > For an appstore with high quality stable apps, [check here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
-## Apps available ✨ 16 ✨
+## Apps available ✨ 15 ✨
 
 |                           Logo                           | Name                                                               | Description                                  |
 | :------------------------------------------------------: | ------------------------------------------------------------------ | -------------------------------------------- |
@@ -23,7 +23,6 @@ This appstore in **5** points :
 |   <img src="apps/cobalt/metadata/logo.jpg" width="64">   | [Cobalt](https://github.com/imputnet/cobalt)                       | Media Downloader                             |
 |  <img src="apps/ctfreak/metadata/logo.jpg" width="64">   | [CTFreak](https://ctfreak.com/)                                    | Simple task scheduler                        |
 | <img src="apps/dumbassets/metadata/logo.jpg" width="64"> | [DumbAssets](https://github.com/DumbWareio/DumbAssets)             | Hierarchical assets tracker                  |
-|    <img src="apps/ente/metadata/logo.jpg" width="64">    | [Ente](https://github.com/11notes/docker-ente)                     | Photos Manager                               |
 | <img src="apps/fluffychat/metadata/logo.jpg" width="64"> | [Fluffy Chat](https://github.com/krille-chan/fluffychat)           | Fluffy Matrix Client                         |
 |  <img src="apps/ghosthub/metadata/logo.jpg" width="64">  | [GhostHub](https://github.com/BleedingXiko/GhostHub)               | Tiktok-like media reader                     |
 |    <img src="apps/jpjr/metadata/logo.jpg" width="64">    | [JPJR](https://github.com/lfpoulain/jpjr)                          | Je prends, je rends                          |
@@ -39,11 +38,12 @@ This appstore in **5** points :
 > [!WARNING]
 > The following apps don't have any guarantee to work at all, either now or at any point in the future.
 
-## 🚧 Apps not ready 🔨 (5)
+## 🚧 Apps not ready 🔨 (6)
 
 |                           Logo                           | Name                                                     | Description                                |
 | :------------------------------------------------------: | -------------------------------------------------------- | ------------------------------------------ |
 |    <img src="apps/cozy/metadata/logo.jpg" width="64">    | [Cozy](https://github.com/cozy/cozy-stack)               | All your web services in a private space.  |
+|    <img src="apps/ente/metadata/logo.jpg" width="64">    | [Ente](https://github.com/11notes/docker-ente)           | Photos Manager                             |
 |  <img src="apps/habitica/metadata/logo.jpg" width="64">  | [Habitica](https://github.com/awinterstein/habitica)     | Gamified habit and productivity app        |
 |  <img src="apps/pixelfed/metadata/logo.jpg" width="64">  | [Pixelfed](https://github.com/pixelfed/pixelfeda)        | ¨Photo sharing platform                    |
 |   <img src="apps/postiz/metadata/logo.jpg" width="64">   | [Postiz](https://github.com/gitroomhq/postiz-app/)       | Social media scheduling tool               |
