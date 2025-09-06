@@ -5,8 +5,8 @@
   "dynamic_config": true,
   "port": 32119,
   "id": "cobalt",
-  "tipi_version": 1,
-  "version": "11.4.2",
+  "tipi_version": 2,
+  "version": "11.4.3",
   "categories": [
     "media",
     "data"
@@ -28,5 +28,5 @@
     "amd64"
   ],
   "created_at": 1756475549999,
-  "updated_at": 1756475550000
+  "updated_at": 1757125941336
 }
