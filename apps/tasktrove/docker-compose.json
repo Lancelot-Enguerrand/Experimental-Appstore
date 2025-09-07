@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "tasktrove",
-      "image": "ghcr.io/dohsimpson/tasktrove:v0.3.0",
+      "image": "ghcr.io/dohsimpson/tasktrove:v0.4.0",
       "isMain": true,
       "internalPort": 3000,
       "volumes": [
