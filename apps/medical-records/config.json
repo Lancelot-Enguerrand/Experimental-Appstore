@@ -23,15 +23,15 @@
   "form_fields": [
     {
       "type": "random",
-      "label": "MEDRECORDS_DB_PASSWORD",
+      "label": "Medrecords database passwords",
       "min": 32,
-      "env_variable": "JPJR_DB_PASSWORD"
+      "env_variable": "MEDRECORDS_DB_PASSWORD"
     },
     {
       "type": "random",
-      "label": "MEDRECORDS_SECRET_KEY",
+      "label": "Medrecords Secret Key",
       "min": 32,
-      "env_variable": "JPJR_SECRET_KEY"
+      "env_variable": "MEDRECORDS_DB_PASSWORD_KEY"
     }
   ],
   "created_at": 1745082405284,
