@@ -4,7 +4,7 @@
     {
       "name": "medical-records",
       "image": "ghcr.io/afairgiant/personal-medical-records-keeper/medical-records:v0.28.1",
-      "isMain": "true",
+      "isMain": true,
       "internalPort": 8000,
       "environment": {
         "DB_HOST": "medical-records-db",
