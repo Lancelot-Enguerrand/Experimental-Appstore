@@ -1,0 +1,39 @@
+{
+  "schema": "https://schemas.runtipi.io/config.json",
+  "name": "Medical Records",
+  "id": "medical-records",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "tipi_version": 1,
+  "version": "v0.28.1",
+  "short_desc": "Medical Records Management System",
+  "description": "A medical records management system with React frontend and FastAPI backend.",
+  "source": "https://github.com/afairgiant/Personal-Medical-Records-Keeper",
+  "author": "afairgiant",
+  "port": 1354,
+  "categories": [
+    "utilities",
+    "data"
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "MEDRECORDS_DB_PASSWORD",
+      "min": 32,
+      "env_variable": "JPJR_DB_PASSWORD"
+    },
+    {
+      "type": "random",
+      "label": "MEDRECORDS_SECRET_KEY",
+      "min": 32,
+      "env_variable": "JPJR_SECRET_KEY"
+    }
+  ],
+  "created_at": 1745082405284,
+  "updated_at": 1745674974072
+}

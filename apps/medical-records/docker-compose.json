@@ -1,0 +1,67 @@
+{
+  "schema": "https://schemas.runtipi.io/dynamic-compose.json",
+  "services": [
+    {
+      "name": "medical-records",
+      "image": "ghcr.io/afairgiant/personal-medical-records-keeper/medical-records:v0.28.1",
+      "isMain": "true",
+      "internalPort": 8000,
+      "environment": {
+        "DB_HOST": "medical-records-db",
+        "DB_PORT": 5432,
+        "DB_NAME": "medrecords",
+        "DB_USER": "medapp",
+        "DB_PASSWORD": "${MEDRECORDS_DB_PASSWORD}",
+        "SECRET_KEY": "${MEDRECORDS_SECRET_KEY}",
+        "TZ": "${TZ}",
+        "LOG_LEVEL": "INFO"
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/uploads",
+          "containerPath": "/app/uploads"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/ogs",
+          "containerPath": "/app/logs"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/backups",
+          "containerPath": "/app/backups"
+        }
+      ],
+      "healthCheck": {
+        "test": "CMD curl -f http://localhost:8000/health",
+        "interval": "30s",
+        "timeout": "10s",
+        "retries": 3
+      },
+      "dependsOn": {
+        "medical-records-db": {
+          "condition": "service_healthy"
+        }
+      }
+    },
+    {
+      "name": "medical-records-db",
+      "image": "postgres:15.8-alpine",
+      "environment": {
+        "POSTGRES_DB": "medrecords",
+        "POSTGRES_USER": "medapp",
+        "POSTGRES_PASSWORD": "${MEDRECORDS_DB_PASSWORD}"
+      },
+      "volumes": [
+        {
+          "hostPath": "postgres_data",
+          "containerPath": "/var/lib/postgresql/data"
+        }
+      ],
+      "healthCheck": {
+        "test": "pg_isready -U medapp -d medrecords",
+        "interval": "10s",
+        "timeout": "5s",
+        "retries": 5
+      }
+    }
+  ]
+}
