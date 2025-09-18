@@ -29,18 +29,7 @@
           "hostPath": "${APP_DATA_DIR}/data/backups",
           "containerPath": "/app/backups"
         }
-      ],
-      "healthCheck": {
-        "test": "CMD curl -f http://localhost:8000/health",
-        "interval": "30s",
-        "timeout": "10s",
-        "retries": 3
-      },
-      "dependsOn": {
-        "medical-records-db": {
-          "condition": "service_healthy"
-        }
-      }
+      ]
     },
     {
       "name": "medical-records-db",
@@ -55,13 +44,7 @@
           "hostPath": "${APP_DATA_DIR}/data/db",
           "containerPath": "/var/lib/postgresql/data"
         }
-      ],
-      "healthCheck": {
-        "test": "pg_isready -h localhost $$POSTGRES_USER -d $$POSTGRES_DB",
-        "interval": "10s",
-        "timeout": "5s",
-        "retries": 5
-      }
+      ]
     }
   ]
 }
