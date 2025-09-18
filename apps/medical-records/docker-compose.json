@@ -57,7 +57,7 @@
         }
       ],
       "healthCheck": {
-        "test": "pg_isready -U medapp -d medrecords",
+        "test": "pg_isready -h localhost $$POSTGRES_USER -d $$POSTGRES_DB",
         "interval": "10s",
         "timeout": "5s",
         "retries": 5
