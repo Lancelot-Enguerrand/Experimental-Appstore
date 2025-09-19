@@ -32,8 +32,22 @@
       "label": "Medrecords Secret Key",
       "min": 32,
       "env_variable": "MEDRECORDS_DB_PASSWORD_KEY"
+    },
+    {
+      "type": "number",
+      "label": "UID",
+      "help": "User ID used by the container",
+      "placeholder": "1000",
+      "env_variable": "MEDRECORDS_PUID"
+    },
+    {
+      "type": "number",
+      "label": "PGID",
+      "help": "User group used by the container",
+      "placeholder": "1000",
+      "env_variable": "MEDRECORDS_PGID"
     }
   ],
-  "created_at": 1745082405284,
-  "updated_at": 1745674974072
+  "created_at": 1758273499999,
+  "updated_at": 1758273500000
 }
