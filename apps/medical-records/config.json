@@ -1,0 +1,53 @@
+{
+  "schema": "https://schemas.runtipi.io/config.json",
+  "name": "Medical Records",
+  "id": "medical-records",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "tipi_version": 1,
+  "version": "v0.28.1",
+  "short_desc": "Medical Records Management System",
+  "description": "A medical records management system with React frontend and FastAPI backend.",
+  "source": "https://github.com/afairgiant/Personal-Medical-Records-Keeper",
+  "author": "afairgiant",
+  "port": 1354,
+  "categories": [
+    "utilities",
+    "data"
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "Medrecords database passwords",
+      "min": 32,
+      "env_variable": "MEDRECORDS_DB_PASSWORD"
+    },
+    {
+      "type": "random",
+      "label": "Medrecords Secret Key",
+      "min": 32,
+      "env_variable": "MEDRECORDS_DB_PASSWORD_KEY"
+    },
+    {
+      "type": "number",
+      "label": "UID",
+      "help": "User ID used by the container",
+      "placeholder": "1000",
+      "env_variable": "MEDRECORDS_PUID"
+    },
+    {
+      "type": "number",
+      "label": "PGID",
+      "help": "User group used by the container",
+      "placeholder": "1000",
+      "env_variable": "MEDRECORDS_PGID"
+    }
+  ],
+  "created_at": 1758273499999,
+  "updated_at": 1758273500000
+}
