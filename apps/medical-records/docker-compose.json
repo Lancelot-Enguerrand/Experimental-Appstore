@@ -3,7 +3,7 @@
   "services": [
     {
       "name": "medical-records",
-      "image": "ghcr.io/afairgiant/personal-medical-records-keeper/medical-records:v0.28.1",
+      "image": "ghcr.io/afairgiant/personal-medical-records-keeper/medical-records:v0.29.0",
       "isMain": true,
       "internalPort": 8000,
       "environment": {
