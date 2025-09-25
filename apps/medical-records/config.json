@@ -5,8 +5,8 @@
   "available": true,
   "exposable": true,
   "dynamic_config": true,
-  "tipi_version": 1,
-  "version": "v0.28.1",
+  "tipi_version": 2,
+  "version": "v0.29.0",
   "short_desc": "Medical Records Management System",
   "description": "A medical records management system with React frontend and FastAPI backend.",
   "source": "https://github.com/afairgiant/Personal-Medical-Records-Keeper",
@@ -49,5 +49,5 @@
     }
   ],
   "created_at": 1758273499999,
-  "updated_at": 1758273500000
+  "updated_at": 1758681350980
 }
