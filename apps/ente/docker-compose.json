@@ -25,7 +25,7 @@
     },
     {
       "name": "ente-db",
-      "image": "11notes/postgres:16",
+      "image": "11notes/postgres:17",
       "environment": {
         "TZ": "${TZ}",
         "POSTGRES_PASSWORD": "${ENTE_POSTGRES_PASSWORD}"
