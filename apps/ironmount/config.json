@@ -5,7 +5,7 @@
   "dynamic_config": true,
   "port": 4096,
   "id": "ironmount",
-  "tipi_version": 1,
+  "tipi_version": 2,
   "version": "v0.0.1",
   "categories": ["data", "utilities"],
   "description": "Ironmount is an easy to use web interface to manage your remote storage and mount them as local volumes on your server.",
