@@ -5,15 +5,21 @@
   "dynamic_config": true,
   "port": 4096,
   "id": "ironmount",
-  "tipi_version": 2,
-  "version": "v0.0.1",
-  "categories": ["data", "utilities"],
+  "tipi_version": 3,
+  "version": "v0.1.0",
+  "categories": [
+    "data",
+    "utilities"
+  ],
   "description": "Ironmount is an easy to use web interface to manage your remote storage and mount them as local volumes on your server.",
   "short_desc": "Storage Mount Manager",
   "author": "nicotsx",
   "source": "https://github.com/nicotsx/ironmount",
   "form_fields": [],
-  "supported_architectures": ["arm64", "amd64"],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
   "created_at": 1691943801422,
-  "updated_at": 1759353999999
+  "updated_at": 1759545055839
 }
