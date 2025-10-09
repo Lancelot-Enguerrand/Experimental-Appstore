@@ -5,8 +5,8 @@
   "exposable": true,
   "dynamic_config": true,
   "id": "spotdl",
-  "tipi_version": 4,
-  "version": "v4.4.2",
+  "tipi_version": 5,
+  "version": "v4.4.3",
   "categories": [
     "media",
     "music"
@@ -21,5 +21,5 @@
     "amd64"
   ],
   "created_at": 1755002322111,
-  "updated_at": 1756607860442
+  "updated_at": 1759977364916
 }
