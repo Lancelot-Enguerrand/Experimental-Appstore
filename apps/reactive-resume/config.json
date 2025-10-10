@@ -1,0 +1,80 @@
+{
+  "name": "Reactive Resume",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 9998,
+  "id": "reactive-resume",
+  "tipi_version": 1,
+  "version": "v4.5.2",
+  "categories": [
+    "utilities",
+    "social"
+  ],
+  "description": "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume",
+  "short_desc": "Resume Builder",
+  "author": "AmruthPillai",
+  "source": "https://github.com/AmruthPillai/Reactive-Resume",
+  "form_fields": [
+    {
+      "type": "email",
+      "label": "Admin email",
+      "required": true,
+      "env_variable": "PIXELFED_ADMIN_EMAIL"
+    },
+    {
+      "type": "boolean",
+      "label": "Open registration",
+      "required": true,
+      "env_variable": "PIXELFED_OPEN_REGISTRATION"
+    },
+    {
+      "type": "boolean",
+      "label": "Enforce email verification",
+      "required": true,
+      "env_variable": "PIXELFED_ENFORCE_EMAIL_VERIFICATION"
+    },
+    {
+      "type": "random",
+      "label": "Database password",
+      "required": false,
+      "min": 30,
+      "max": 30,
+      "env_variable": "REACTIVE-RESUME_DB_PASSWORD"
+    },
+    {
+      "type": "random",
+      "label": "ReactiveResume access token",
+      "min": 30,
+      "max": 30,
+      "env_variable": "REACTIVE-RESUME_ACCESS_TOKEN"
+    },
+    {
+      "type": "random",
+      "label": "ReactiveResume refresh token",
+      "min": 30,
+      "max": 30,
+      "env_variable": "REACTIVE-RESUME_REFRESH_TOKEN"
+    },
+    {
+      "type": "random",
+      "label": "Chrome token",
+      "min": 30,
+      "max": 30,
+      "env_variable": "REACTIVE-RESUME_CHROME_TOKEN"
+    },
+    {
+      "type": "random",
+      "label": "Minio password",
+      "min": 30,
+      "max": 30,
+      "env_variable": "REACTIVE-RESUME_MINIO_PASSWORD"
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1737452289124,
+  "updated_at": 1747449481975
+}

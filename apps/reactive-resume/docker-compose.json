@@ -1,0 +1,88 @@
+{
+  "services": [
+    {
+      "name": "reactive-resume",
+      "image": "ghrc.io/amruthpillai/reactive-resume:v4.5.2",
+      "isMain": true,
+      "internalPort": 3000,
+      "environment": {
+        "PORT": 3000,
+        "NODE_ENV": "production",
+        "PUBLIC_URL": "http://${APP_DOMAIN}:3000",
+        "STORAGE_URL": "http://${INTERNAL_IP}:9999/default",
+        "CHROME_TOKEN": "${REACTIVE-RESUME_CHROME_TOKEN}",
+        "CHROME_URL": "ws://reactive-resume-chrome:3000",
+        "DATABASE_URL": "postgresql://postgres:${REACTIVE-RESUME_DB_PASSWORD}@reactive-resume-db:5432/postgres",
+        "ACCESS_TOKEN_SECRET": "${REACTIVE-RESUME_ACCESS_TOKEN}",
+        "REFRESH_TOKEN_SECRET": "${REACTIVE-RESUME_REFRESH_TOKEN}",
+        "MAIL_FROM": "noreply@localhost",
+        "STORAGE_ENDPOINT": "minio",
+        "STORAGE_PORT": 9000,
+        "STORAGE_BUCKET": "default",
+        "STORAGE_ACCESS_KEY": "minioadmin",
+        "STORAGE_SECRET_KEY": "${REACTIVE-RESUME_MINIO_SECRET}",
+        "STORAGE_USE_SSL": "false",
+        "STORAGE_SKIP_BUCKET_CHECK": "false"
+      },
+      "dependsOn": {
+        "postgres": {
+          "condition": "service_started"
+        },
+        "minio": {
+          "condition": "service_started"
+        },
+        "chrome": {
+          "condition": "service_started"
+        }
+      }
+    },
+    {
+      "name": "reactive-resume-db",
+      "image": "postgres:16-alpine",
+      "environment": {
+        "POSTGRES_DB": "postgres",
+        "POSTGRES_USER": "postgres",
+        "POSTGRES_PASSWORD": "${REACTIVE-RESUME_DB_PASSWORD}"
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/postgres_data",
+          "containerPath": "/var/lib/postgresql/data"
+        }
+      ]
+    },
+    {
+      "name": "reactive-resume-minio",
+      "image": "minio/minio:latest",
+      "command": "server /data",
+      "environment": {
+        "MINIO_ROOT_USER": "minioadmin",
+        "MINIO_ROOT_PASSWORD": "${REACTIVE-RESUME_MINIO_SECRET}"
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/minio",
+          "containerPath": "/data"
+        }
+      ],
+      "addPorts": [{
+      "containerPort": 9000,
+      "hostPort": 9999
+    }]
+    },
+    {
+      "name": "chrome",
+      "image": "ghcr.io/browserless/chromium:v2.18.0",
+      "environment": {
+        "TIMEOUT": 10000,
+        "CONCURRENT": 10,
+        "TOKEN": "${REACTIVE-RESUME_CHROME_TOKEN}",
+        "EXIT_ON_HEALTH_FAILURE": "true",
+        "PRE_REQUEST_HEALTH_CHECK": "true"
+      },
+      "extraHosts": [
+        "host.docker.internal:host-gateway"
+      ]
+    }
+  ]
+}
