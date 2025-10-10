@@ -3,7 +3,7 @@
     "services": [
     {
       "name": "kanbn",
-      "image": "ghcr.io/kanbn/kan:0.4.4",
+      "image": "ghcr.io/kanbn/kan:0.4.5",
       "isMain": true,
       "internalPort": 3000,
       "environment": {

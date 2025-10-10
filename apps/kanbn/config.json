@@ -10,8 +10,8 @@
     "utilities"
   ],
   "description": "The open-source project management alternative to Trello.",
-  "tipi_version": 13,
-  "version": "0.4.4",
+  "tipi_version": 14,
+  "version": "0.4.5",
   "source": "https://github.com/kanbn/kan",
   "exposable": true,
   "supported_architectures": [
@@ -19,7 +19,7 @@
     "amd64"
   ],
   "created_at": 1745082405284,
-  "updated_at": 1759027129423,
+  "updated_at": 1760063786979,
   "dynamic_config": true,
   "form_fields": [
     {
