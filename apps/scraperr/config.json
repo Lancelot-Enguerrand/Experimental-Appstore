@@ -5,8 +5,8 @@
   "dynamic_config": true,
   "port": 37887,
   "id": "scraperr",
-  "tipi_version": 10,
-  "version": "1.1.6",
+  "tipi_version": 11,
+  "version": "1.1.7",
   "categories": [
     "data"
   ],
@@ -20,5 +20,5 @@
     "amd64"
   ],
   "created_at": 1691943801422,
-  "updated_at": 1752461419312
+  "updated_at": 1760323206041
 }
