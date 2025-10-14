@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "cozy",
-      "image": "cozy/cozy-stack:1.6.39",
+      "image": "cozy/cozy-stack:1.6.40",
       "isMain": true,
       "internalPort": 8080,
       "environment": {
