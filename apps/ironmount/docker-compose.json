@@ -16,20 +16,18 @@
         },
         {
           "hostPath": "/var/lib/ironmount/volumes/",
-          "containerPath": "/var/lib/ironmount/volumes"
+          "containerPath": "/var/lib/ironmount/volumes",
+          "bind": {
+            "propagation": "rshared"
+          }
         },
         {
           "hostPath": "${APP_DATA_DIR}/data/ironmount",
           "containerPath": "/data"
         }
       ],
-      "devices": [
-        "/dev/fuse:/dev/fuse"
-      ],
-      "capAdd": [
-        "SYS_ADMIN"
-      ]
+      "devices": ["/dev/fuse:/dev/fuse"],
+      "capAdd": ["SYS_ADMIN"]
     }
   ]
-
 }
