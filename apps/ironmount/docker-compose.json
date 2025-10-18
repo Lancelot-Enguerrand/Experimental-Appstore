@@ -15,8 +15,8 @@
           "containerPath": "/run/docker/plugins"
         },
         {
-          "hostPath": "/var/lib/docker/volumes/",
-          "containerPath": "/var/lib/docker/volumes"
+          "hostPath": "/var/lib/ironmount/volumes/",
+          "containerPath": "/var/lib/ironmount/volumes"
         },
         {
           "hostPath": "${APP_DATA_DIR}/data/ironmount",
@@ -31,4 +31,5 @@
       ]
     }
   ]
+
 }
