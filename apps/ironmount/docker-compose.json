@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "ironmount",
-      "image": "ghcr.io/nicotsx/ironmount:v0.2.0",
+      "image": "ghcr.io/nicotsx/ironmount:v0.3.0",
       "isMain": true,
       "internalPort": 4096,
       "volumes": [
@@ -15,8 +15,8 @@
           "containerPath": "/run/docker/plugins"
         },
         {
-          "hostPath": "/var/lib/docker/volumes/",
-          "containerPath": "/var/lib/docker/volumes"
+          "hostPath": "/var/lib/ironmount/volumes/",
+          "containerPath": "/var/lib/ironmount/volumes"
         },
         {
           "hostPath": "${APP_DATA_DIR}/data/ironmount",
@@ -31,4 +31,5 @@
       ]
     }
   ]
+
 }
