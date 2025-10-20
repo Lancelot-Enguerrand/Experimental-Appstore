@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "pixelfed",
-      "image": "elestio/pixelfed:v0.12.5",
+      "image": "elestio/pixelfed:v0.12.6",
       "isMain": true,
       "internalPort": 80,
       "environment": {
