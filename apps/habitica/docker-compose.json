@@ -19,7 +19,7 @@
     },
     {
       "name": "habitica-mongodb",
-      "image": "docker.io/mongo:8.0",
+      "image": "docker.io/mongo:8.2",
       "hostname": "habitica-mongodb",
       "volumes": [
         {
