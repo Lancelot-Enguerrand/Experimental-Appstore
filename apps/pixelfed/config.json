@@ -6,8 +6,8 @@
   "dynamic_config": true,
   "port": 3219,
   "id": "pixelfed",
-  "tipi_version": 1,
-  "version": "7.2",
+  "tipi_version": 2,
+  "version": "v0.12.6",
   "categories": [
     "photography",
     "social"
@@ -63,5 +63,5 @@
     "amd64"
   ],
   "created_at": 1737452289124,
-  "updated_at": 1747449481975
+  "updated_at": 1762137735330
 }
