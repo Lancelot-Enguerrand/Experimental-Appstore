@@ -6,8 +6,8 @@
   "dynamic_config": true,
   "port": 41114,
   "id": "tasktrove",
-  "tipi_version": 11,
-  "version": "v0.9.0",
+  "tipi_version": 12,
+  "version": "v0.9.1",
   "categories": [
     "data",
     "utilities"
@@ -22,5 +22,5 @@
     "amd64"
   ],
   "created_at": 1755453844444,
-  "updated_at": 1761964814774
+  "updated_at": 1762224018796
 }
