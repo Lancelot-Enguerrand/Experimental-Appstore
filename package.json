@@ -17,7 +17,7 @@
   "dependencies": {
     "@runtipi/common": "^0.8.0",
     "bun": "^1.2.10",
-    "zod-validation-error": "^3.4.0"
+    "zod-validation-error": "^5.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
