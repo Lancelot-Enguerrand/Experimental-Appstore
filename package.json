@@ -15,7 +15,7 @@
     "@types/node": "^24.0.0"
   },
   "dependencies": {
-    "@runtipi/common": "^0.8.0",
+    "@runtipi/common": "^1.0.0",
     "bun": "^1.2.10",
     "zod-validation-error": "^5.0.0"
   },
