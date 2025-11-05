@@ -1,8 +1,10 @@
 {
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
   "services": [
     {
       "name": "ironmount",
-      "image": "ghcr.io/nicotsx/ironmount:v0.3.0",
+      "image": "ghcr.io/nicotsx/ironmount:v0.4.0",
       "isMain": true,
       "internalPort": 4096,
       "volumes": [
@@ -15,10 +17,19 @@
           "containerPath": "/run/docker/plugins"
         },
         {
+          "hostPath": "/proc",
+          "containerPath": "/host/proc",
+          "readOnly": true
+        },
+        {
+          "hostPath": "/var/lib/repositories/",
+          "containerPath": "/var/lib/repositories"
+        },
+        {
           "hostPath": "/var/lib/ironmount/volumes/",
           "containerPath": "/var/lib/ironmount/volumes",
           "bind": {
-            "propagation": "rshared"
+            "propagation": "rslave"
           }
         },
         {
@@ -27,7 +38,7 @@
         }
       ],
       "devices": ["/dev/fuse:/dev/fuse"],
-      "capAdd": ["SYS_ADMIN"]
+      "privileged": true
     }
   ]
 }
