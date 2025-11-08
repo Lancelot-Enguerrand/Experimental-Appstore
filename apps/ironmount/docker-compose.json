@@ -4,41 +4,17 @@
   "services": [
     {
       "name": "ironmount",
-      "image": "ghcr.io/nicotsx/ironmount:v0.4.0",
+      "image": "ghcr.io/nicotsx/ironmount:v0.5.0",
       "isMain": true,
       "internalPort": 4096,
       "volumes": [
         {
-          "hostPath": "/var/run/docker.sock",
-          "containerPath": "/var/run/docker.sock"
-        },
-        {
-          "hostPath": "/run/docker/plugins",
-          "containerPath": "/run/docker/plugins"
-        },
-        {
-          "hostPath": "/proc",
-          "containerPath": "/host/proc",
-          "readOnly": true
-        },
-        {
-          "hostPath": "/var/lib/repositories/",
-          "containerPath": "/var/lib/repositories"
-        },
-        {
-          "hostPath": "/var/lib/ironmount/volumes/",
-          "containerPath": "/var/lib/ironmount/volumes",
-          "bind": {
-            "propagation": "rslave"
-          }
-        },
-        {
-          "hostPath": "${APP_DATA_DIR}/data/ironmount",
-          "containerPath": "/data"
+          "hostPath": "/var/lib/ironmount/",
+          "containerPath": "/var/lib/ironmount"
         }
       ],
       "devices": ["/dev/fuse:/dev/fuse"],
-      "privileged": true
+      "capAdd": ["SYS_ADMIN"]
     }
   ]
 }
