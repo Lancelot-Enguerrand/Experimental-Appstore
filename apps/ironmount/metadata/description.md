@@ -1,40 +1,161 @@
+# ⚠️ Upgrade note ⚠️
+If your upgrading from a version prior to **v0.5**, you should restart from scratch.
+There is no migration process.
+
+If you want to keep some functionnality, you will need to update your user-config as indicated below.
+
+Keep in mind, this is still a beta.
+
 <div align="center">
   <h1>Ironmount</h1>
-  <h3>Keep your volumes in check!<br />One interface to manage all your storage</h3>
+  <h3>Powerful backup automation for your remote storage<br />Encrypt, compress, and protect your data with ease</h3>
   <figure>
     <img src="https://github.com/nicotsx/ironmount/blob/main/screenshots/volume-details.png?raw=true" alt="Demo" />
     <figcaption>
       <p align="center">
-        Volume details view with usage statistics and health check status
+        Backup management with scheduling and monitoring
       </p>
     </figcaption>
   </figure>
 </div>
 
+> ⚠️ WARNING ⚠️
+> Ironmount is still in version 0.x.x and is subject to major changes from version to version. [@nicotsx](https://github.com/nicotsx) is developing the core features and collecting feedbacks. Expect bugs! Please open issues or feature requests
+
 ## Intro
 
-Ironmount is an easy to use web interface to manage your remote storage and mount them as local volumes on your server. Docker as a first class citizen, Ironmount allows you to easily mount your remote storage directly into your containers with few lines of code.
+Ironmount is a backup automation platform that helps you protect your data across multiple storage backends. Built on top of Restic, it provides an intuitive web interface to schedule, manage, and monitor encrypted backups of your remote storage. With support for Docker integration, Ironmount makes it easy to backup your container volumes automatically.
 
 ### Features
 
-- ✅&nbsp; Support for multiple protocols: NFS, SMB, WebDAV, Directory
-- 📡&nbsp; Mount your remote storage as local folders
-- 🐳&nbsp; Docker integration: mount your remote storage directly into your containers via a docker volume syntax
-- 🔍&nbsp; Keep an eye on your mounts with health checks and automatic remounting on error
-- 📊&nbsp; Monitor your mounts usage with detailed statistics and graphs
+- 💾&nbsp; **Automated backups** with encryption, compression and retention policies powered by Restic
+- 📅&nbsp; **Flexible scheduling** using cron expressions for automated backup jobs
+- 🔐&nbsp; **End-to-end encryption** ensuring your data is always protected
+- 📦&nbsp; **Snapshot management** with retention policies to optimize storage usage
+- 📊&nbsp; **Monitoring and statistics** to track backup health and storage usage
+- ✅&nbsp; **Multi-protocol support**: Backup from NFS, SMB, WebDAV, or local directories
+- 🔍&nbsp; **Health checks** and automatic recovery to ensure backup reliability
 
-### Coming soon
 
-- 🔐&nbsp; User authentication and role management
-- 💾&nbsp; Automated backups and snapshots with encryption, strategies and retention policies
-- 🔄&nbsp; Re-exporting your mounts to other protocols (e.g. mount an NFS server as an SMB share with fine-grained permissions)
-- ☁️&nbsp; Integration with cloud storage providers (e.g. AWS S3, Google Drive, Dropbox)
-- 🔀&nbsp; Storage sharding and replication for high availability and performance
+## Adding your first volume
+
+Ironmount supports multiple volume backends including NFS, SMB, WebDAV, and local directories. A volume represents the source data you want to back up and monitor.
+
+To add your first volume, navigate to the "Volumes" section in the web interface and click on "Create volume". Fill in the required details such as volume name, type, and connection settings.
+
+If you want to track a local directory on the same server where Ironmount is running, you'll first need to mount that directory into the Ironmount container. You can do this by adding a volume mapping in your `docker-compose.yml` file. For example, to mount `/path/to/your/directory` from the host to `/mydata` in the container, you would add the following line under the `volumes` section:
+
+```diff
+services:
+  ironmount:
+    volumes:
++     - /path/to/your/directory:/mydata
+```
+
+After updating the `User configuration` restart Ironmount to apply the changes:
+
+Now, when adding a new volume in the Ironmount web interface, you can select "Directory" as the volume type and search for your mounted path (e.g., `/mydata`) as the source path.
+
+![Preview](https://github.com/nicotsx/ironmount/blob/main/screenshots/add-volume.png?raw=true)
+
+## Creating a repository
+
+A repository is where your backups will be securely stored encrypted. Ironmount currently supports S3-compatible storage backends and local directories for storing your backup repositories.
+
+Repositories are optimized for storage efficiency and data integrity, leveraging Restic's deduplication and encryption features.
+
+To create a repository, navigate to the "Repositories" section in the web interface and click on "Create repository". Fill in the required details such as repository name, type, and connection settings. If you choose a local directory as the repository type, your backups will be stored at `/var/lib/ironmount/repositories/<repository-name>`.
+
+## Your first backup job
+
+Once you have added a volume and created a repository, you can create your first backup job. A backup job defines the schedule and parameters for backing up a specific volume to a designated repository.
+
+When creating a backup job, you can specify the following settings:
+- **Schedule**: Define how often the backup should run (e.g., daily, weekly)
+- **Retention Policy**: Set rules for how long backups should be retained (e.g., keep daily backups for 7 days, weekly backups for 4 weeks)
+- **Paths**: Specify which files or directories to include in the backup
+
+After configuring the backup job, save it and Ironmount will automatically execute the backup according to the defined schedule.
+You can monitor the progress and status of your backup jobs in the "Backups" section of the web interface.
+
+![Preview](https://github.com/nicotsx/ironmount/blob/main/screenshots/backups-list.png?raw=true)
+
+## Restoring data
+
+Ironmount allows you to easily restore your data from backups. To restore data, navigate to the "Backups" section and select the backup job from which you want to restore data. You can then choose a specific backup snapshot and select the files or directories you wish to restore. The data you select will be restored to their original location.
+
+![Preview](https://github.com/nicotsx/ironmount/blob/main/screenshots/restoring.png?raw=true)
+
+## Propagating mounts to host
+
+Ironmount is capable of propagating mounted volumes from within the container to the host system. This is particularly useful when you want to access the mounted data directly from the host to use it with other applications or services.
+
+In order to enable this feature, you need to run Ironmount with privileged mode and mount /proc from the host. Here is an example of how to set this up with Runtipi `User configuration` file:
+
+```diff
+services:
+  ironmount:
++   privileged: true
+    volumes:
++     - /proc:/host/proc
+```
+
+Restart Ironmount to apply the changes:
+
+## Docker plugin
+
+Ironmount can also be used as a Docker volume plugin, allowing you to mount your volumes directly into other Docker containers. This enables seamless integration with your containerized applications.
+
+In order to enable this feature, you need to run Ironmount with privileged mode and mount several items from the host. Here is an example of how to set this up in your Runtipi `User configuration` file:
+
+```diff
+services:
+  ironmount:
++   privileged: true
+    volumes:
++     - /proc:/host/proc
++     - /run/docker/plugins:/run/docker/plugins
++     - /var/run/docker.sock:/var/run/docker.sock
+```
+
+Restart Ironmount to apply the changes:
+
+Your Ironmount volumes will now be available as Docker volumes that you can mount into other containers using the `--volume` flag:
+
+```bash
+docker run -v im-nfs:/path/in/container nginx:latest
+```
+
+Or update any of your Runtipi app `User configuration` :
+
+```yaml
+services:
+  myservice:
+    volumes:
+      - im-nfs:/path/in/container
+volumes:
+  im-nfs:
+    external: true
+```
+
+The volume name format is `im-<volume-name>` where `<volume-name>` is the name you assigned to the volume in Ironmount. You can verify that the volume is available by running:
+
+```bash
+docker volume ls
+```
 
 ## Docker volume usage
 
-![Preview](https://github.com/nicotsx/ironmount/blob/main/screenshots/docker-instructions.png?raw=true)
+![Preview](https://github.com/nicotsx/ironmount/blob/main/screenshots/backups.png?raw=true)
 
-## Volume creation
+## Third-Party Software
+This project includes the following third-party software components:
 
-![Preview](https://github.com/nicotsx/ironmount/blob/main/screenshots/volume-creation.png?raw=true)
+### Restic
+Ironmount includes [Restic](https://github.com/restic/restic) for backup functionality.
+- **License**: BSD 2-Clause License
+- **Copyright**: Copyright (c) 2014, Alexander Neumann <alexander@bumpern.de>
+- **Status**: Included unchanged
+- **License Text**: See [LICENSES/BSD-2-Clause-Restic.txt](LICENSES/BSD-2-Clause-Restic.txt)
+
+For a complete list of third-party software licenses and attributions, please refer to the [NOTICES.md](NOTICES.md) file.
