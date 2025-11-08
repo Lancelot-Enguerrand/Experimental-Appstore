@@ -1,14 +1,16 @@
 {
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
   "services": [
     {
       "name": "airstation",
       "image": "cheatsnake/airstation:1.2.1",
       "isMain": true,
       "internalPort": 7331,
-      "environment": {
-        "AIRSTATION_SECRET_KEY": "${AIRSTATION_SECRET_KEY}",
-        "AIRSTATION_JWT_SIGN": "${AIRSTATION_JWT_SIGN}"
-      },
+      "environment": [
+          { "key": "AIRSTATION_SECRET_KEY", "value": "${AIRSTATION_SECRET_KEY}" },
+          { "key": "AIRSTATION_JWT_SIGN", "value": "${AIRSTATION_JWT_SIGN}" }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/storage",

@@ -5,7 +5,7 @@
   "dynamic_config": true,
   "port": 7805,
   "id": "ghosthub",
-  "tipi_version": 1,
+  "tipi_version": 2,
   "version": "latest",
   "categories": ["media"],
   "description": "Media server that lets you swipe through your local videos and images in a sleek, mobile-friendly interface with real-time chat and optional host sync",
@@ -15,5 +15,6 @@
   "form_fields": [],
   "supported_architectures": ["arm64", "amd64"],
   "created_at": 1737452289124,
-  "updated_at": 1737452289124
+  "updated_at": 1762615555555,
+  "min_tipi_version": "4.5.0"
 }

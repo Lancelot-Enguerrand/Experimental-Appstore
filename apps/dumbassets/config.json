@@ -6,7 +6,7 @@
   "dynamic_config": true,
   "port": 41321,
   "id": "dumbassets",
-  "tipi_version": 2,
+  "tipi_version": 3,
   "version": "1.0.11",
   "categories": [
     "utilities"
@@ -21,5 +21,6 @@
     "amd64"
   ],
   "created_at": 1749074400888,
-  "updated_at": 1749782416943
+  "updated_at": 1762615555555,
+  "min_tipi_version": "4.5.0"
 }

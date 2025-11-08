@@ -1,15 +1,17 @@
 {
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
   "services": [
     {
       "name": "cobalt",
       "image": "ghcr.io/imputnet/cobalt:11.4.3",
       "isMain": true,
       "internalPort": 9000,
-      "environment": {
-        "API_URL": "${APP_PROTOCOL:-http}://${APP_DOMAIN}",
-        "COOKIE_PATH": "/config/cookies.json",
-        "JWT_SECRET": "${COBALT_JWT_SECRET}"
-      },
+      "environment": [
+        { "key": "API_URL", "value": "${APP_PROTOCOL:-http}://${APP_DOMAIN}" },
+        { "key": "COOKIE_PATH", "value": "/config/cookies.json" },
+        { "key": "JWT_SECRET", "value": "${COBALT_JWT_SECRET}" }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/config",

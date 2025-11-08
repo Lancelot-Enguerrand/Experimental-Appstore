@@ -1,22 +1,23 @@
 {
-  "schema": "https://schemas.runtipi.io/dynamic-compose.json",
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
   "services": [
     {
       "name": "jpjr",
       "image": "ghcr.io/lfpoulain/jpjr:2025-06-25",
       "isMain": true,
       "internalPort": "5001",
-      "environment": {
-        "SECRET_KEY": "${JPJR_SECRET_KEY}",
-        "OPENAI_API_KEY": "${JPJR_OPENAI_API_KEY}",
-        "USE_SSL": "false",
-        "DB_TYPE": "postgresql",
-        "DB_HOST": "jpjr-db",
-        "DB_NAME": "jpjrdb",
-        "DB_USER": "admin",
-        "DB_PASSWORD": "${JPJR_DB_PASSWORD}",
-        "DB_PORT": "5432"
-      },
+      "environment": [
+          { "key": "SECRET_KEY", "value": "${JPJR_SECRET_KEY}" },
+          { "key": "OPENAI_API_KEY", "value": "${JPJR_OPENAI_API_KEY}" },
+          { "key": "USE_SSL", "value": "false" },
+          { "key": "DB_TYPE", "value": "postgresql" },
+          { "key": "DB_HOST", "value": "jpjr-db" },
+          { "key": "DB_NAME", "value": "jpjrdb" },
+          { "key": "DB_USER", "value": "admin" },
+          { "key": "DB_PASSWORD", "value": "${JPJR_DB_PASSWORD}" },
+          { "key": "DB_PORT", "value": "5432" }
+      ],
       "dependsOn": [
         "jpjr-db"
       ]
@@ -24,11 +25,11 @@
     {
       "name": "jpjr-db",
       "image": "postgres:17-alpine",
-      "environment": {
-        "POSTGRES_PASSWORD": "${JPJR_DB_PASSWORD}",
-        "POSTGRES_USER": "admin",
-        "POSTGRES_DB": "jpjrdb"
-      },
+      "environment": [
+          { "key": "POSTGRES_PASSWORD", "value": "${JPJR_DB_PASSWORD}" },
+          { "key": "POSTGRES_USER", "value": "admin" },
+          { "key": "POSTGRES_DB", "value": "jpjrdb" }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/db",

@@ -1,23 +1,24 @@
 {
-  "schema": "https://schemas.runtipi.io/dynamic-compose.json",
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
   "services": [
     {
       "name": "medical-records",
       "image": "ghcr.io/afairgiant/personal-medical-records-keeper/medical-records:v0.29.0",
       "isMain": true,
       "internalPort": 8000,
-      "environment": {
-        "PUID": "${MEDRECORDS_PUID-1000}",
-        "PGID": "${MEDRECORDS_PGID-1000}",
-        "DB_HOST": "medical-records-db",
-        "DB_PORT": 5432,
-        "DB_NAME": "medrecords",
-        "DB_USER": "medapp",
-        "DB_PASSWORD": "${MEDRECORDS_DB_PASSWORD}",
-        "SECRET_KEY": "${MEDRECORDS_SECRET_KEY}",
-        "TZ": "${TZ}",
-        "LOG_LEVEL": "INFO"
-      },
+      "environment": [
+          { "key": "PUID", "value": "${MEDRECORDS_PUID-1000}" },
+          { "key": "PGID", "value": "${MEDRECORDS_PGID-1000}" },
+          { "key": "DB_HOST", "value": "medical-records-db" },
+          { "key": "DB_PORT", "value": 5432 },
+          { "key": "DB_NAME", "value": "medrecords" },
+          { "key": "DB_USER", "value": "medapp" },
+          { "key": "DB_PASSWORD", "value": "${MEDRECORDS_DB_PASSWORD}" },
+          { "key": "SECRET_KEY", "value": "${MEDRECORDS_SECRET_KEY}" },
+          { "key": "TZ", "value": "${TZ}" },
+          { "key": "LOG_LEVEL", "value": "INFO" }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/uploads",
@@ -36,11 +37,11 @@
     {
       "name": "medical-records-db",
       "image": "postgres:15.8-alpine",
-      "environment": {
-        "POSTGRES_DB": "medrecords",
-        "POSTGRES_USER": "medapp",
-        "POSTGRES_PASSWORD": "${MEDRECORDS_DB_PASSWORD}"
-      },
+      "environment": [
+          { "key": "POSTGRES_DB", "value": "medrecords" },
+          { "key": "POSTGRES_USER", "value": "medapp" },
+          { "key": "POSTGRES_PASSWORD", "value": "${MEDRECORDS_DB_PASSWORD}" }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/db",

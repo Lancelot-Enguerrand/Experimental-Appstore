@@ -1,15 +1,17 @@
 {
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
   "services": [
     {
       "name": "stash",
       "image": "stashapp/stash:latest",
-      "environment": {
-        "STASH_STASH": "/data/",
-        "STASH_GENERATED": "/generated/",
-        "STASH_METADATA": "/metadata/",
-        "STASH_CACHE": "/cache/",
-        "STASH_PORT": "9999"
-      },
+      "environment": [
+          { "key": "STASH_STASH", "value": "/data/" },
+          { "key": "STASH_GENERATED", "value": "/generated/" },
+          { "key": "STASH_METADATA", "value": "/metadata/" },
+          { "key": "STASH_CACHE", "value": "/cache/" },
+          { "key": "STASH_PORT", "value": "9999" }
+      ],
       "isMain": true,
       "internalPort": 9999,
       "volumes": [
@@ -20,33 +22,27 @@
         },
         {
           "hostPath": "${APP_DATA_DIR}/data/config",
-          "containerPath": "/root/.stash",
-          "readOnly": false
+          "containerPath": "/root/.stash"
         },
         {
           "hostPath": "${APP_DATA_DIR}/data/data",
-          "containerPath": "/data",
-          "readOnly": false
+          "containerPath": "/data"
         },
         {
           "hostPath": "${APP_DATA_DIR}/data/metadata",
-          "containerPath": "/metadata",
-          "readOnly": false
+          "containerPath": "/metadata"
         },
         {
           "hostPath": "${APP_DATA_DIR}/data/cache",
-          "containerPath": "/cache",
-          "readOnly": false
+          "containerPath": "/cache"
         },
         {
           "hostPath": "${APP_DATA_DIR}/data/blobs",
-          "containerPath": "/blobs",
-          "readOnly": false
+          "containerPath": "/blobs"
         },
         {
           "hostPath": "${APP_DATA_DIR}/data/generated",
-          "containerPath": "/generated",
-          "readOnly": false
+          "containerPath": "/generated"
         }
       ],
       "logging": {

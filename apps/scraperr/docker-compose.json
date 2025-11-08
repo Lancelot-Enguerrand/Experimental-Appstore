@@ -1,36 +1,38 @@
 {
-    "services": [
-      {
-        "name": "scraperr",
-        "image": "jpyles0524/scraperr:1.1.7",
-        "isMain": true,
-        "internalPort": 3000,
-        "command": [
-          "npm",
-          "run",
-          "start"
-        ],
-        "environment": {
-          "NEXT_PUBLIC_API_URL": "http://scraperr-api:8000",
-          "SERVER_URL": "http://scraperr-api:8000"
-        }
-      },
-      {
-        "name": "scraperr-api",
-        "image": "jpyles0524/scraperr_api:1.1.7",
-        "environment": {
-          "LOG_LEVEL": "INFO"
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",  
+  "services": [
+    {
+      "name": "scraperr",
+      "image": "jpyles0524/scraperr:1.1.7",
+      "isMain": true,
+      "internalPort": 3000,
+      "command": [
+        "npm",
+        "run",
+        "start"
+      ],
+      "environment": [
+          { "key": "NEXT_PUBLIC_API_URL", "value": "http://scraperr-api:8000" },
+          { "key": "SERVER_URL", "value": "http://scraperr-api:8000" }
+      ]
+    },
+    {
+      "name": "scraperr-api",
+      "image": "jpyles0524/scraperr_api:1.1.7",
+      "environment": [
+        { "key": "LOG_LEVEL", "value": "INFO" }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/data",
+          "containerPath": "/project/app/data"
         },
-        "volumes": [
-          {
-            "hostPath": "${APP_DATA_DIR}/data/data",
-            "containerPath": "/project/app/data"
-          },
-          {
-            "hostPath": "${APP_DATA_DIR}/data/media",
-            "containerPath": "/project/app/media"
-          }
-        ]
-      }
-    ]
-  }
+        {
+          "hostPath": "${APP_DATA_DIR}/data/media",
+          "containerPath": "/project/app/media"
+        }
+      ]
+    }
+  ]
+}

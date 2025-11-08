@@ -6,7 +6,7 @@
   "dynamic_config": true,
   "port": 18198,
   "id": "stash",
-  "tipi_version": 1,
+  "tipi_version": 2,
   "version": "latest",
   "categories": ["media"],
   "description": "Self-hosted webapp written in Go which organizes and serves your media.",
@@ -16,5 +16,6 @@
   "form_fields": [],
   "supported_architectures": ["arm64", "amd64"],
   "created_at": 1691943801422,
-  "updated_at": 1691943801423
+  "updated_at": 1762615555555,
+  "min_tipi_version": "4.5.0"
 }

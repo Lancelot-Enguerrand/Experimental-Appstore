@@ -1,3 +1,16 @@
+# ⚠️ ​Deprecation notice ⚠️​
+This app won't receive anymore updates through the experimental appstore.
+ 
+### Alternative
+> To receive new updates you can use this appstore : https://github.com/steveiliop56/runtipi-appstore
+
+**NB**: For data transfer be careful to this path change :
+| Actual data path                 | New data path                  |
+| -------------------------------- | ------------------------------ |
+| `${APP_DATA_DIR}/data/db`        | `${APP_DATA_DIR}/data/postgres`|
+
+---
+
 ![github-background](https://github.com/user-attachments/assets/f728f52e-bf67-4357-9ba2-c24c437488e3)
 
 <div align="center">
@@ -79,12 +92,6 @@ See our [roadmap](https://kan.bn/kan/roadmap) for upcoming features.
 ## Contributing 🤝
 
 We welcome contributions! Please read our [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
-
-## Contributors 👥
-
-<a href="https://github.com/kanbn/kan/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=kanbn/kan" />
-</a>
 
 ## License 📝
 

@@ -2,25 +2,18 @@
   "schema": "https://schemas.runtipi.io/config.json",
   "name": "kan.bn",
   "id": "kanbn",
-  "available": true,
+  "available": false,
+  "deprecated": true,
+  "dynamic_config": true,
+  "exposable": true,
   "short_desc": "Project management alternative to Trello.",
   "author": "kanbn",
   "port": 11114,
-  "categories": [
-    "utilities"
-  ],
+  "categories": ["utilities"],
   "description": "The open-source project management alternative to Trello.",
-  "tipi_version": 16,
-  "version": "0.4.7",
+  "tipi_version": 17,
+  "version": "main",
   "source": "https://github.com/kanbn/kan",
-  "exposable": true,
-  "supported_architectures": [
-    "arm64",
-    "amd64"
-  ],
-  "created_at": 1745082405284,
-  "updated_at": 1762051304072,
-  "dynamic_config": true,
   "form_fields": [
     {
       "type": "random",
@@ -34,5 +27,9 @@
       "min": 32,
       "env_variable": "KANBN_AUTH_SECRET"
     }
-  ]
+  ],
+  "supported_architectures": [ "arm64", "amd64"],
+  "created_at": 1745082405284,
+  "updated_at": 1762615555555,
+  "min_tipi_version": "4.5.0"
 }

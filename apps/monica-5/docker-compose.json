@@ -1,21 +1,23 @@
 {
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
   "services": [
     {
       "name": "monica-5",
       "image": "ghcr.io/monicahq/monica-next:main",
       "isMain": true,
       "internalPort": 80,
-      "environment": {
-        "APP_KEY": "${MONICA_APP_KEY}",
-        "APP_DISABLE_SIGNUP": "${MONICA_DISABLE_SIGNUP}",
-        "APP_URL": "${APP_PROTOCOL-http}://${APP_DOMAIN}",
-        "DB_CONNECTION": "mysql",
-        "DB_HOST": "monica-5-db",
-        "DB_USERNAME": "usermonica",
-        "DB_PASSWORD": "${MONICA_DB_PASS}",
-        "UPLOADCARE_PUBLIC_KEY": "${MONICA_UPLOADCARE_PUBLIC_KEY}",
-        "UPLOADCARE_PRIVATE_KEY": "${MONICA_UPLOADCARE_PRIVATE_KEY}"
-      },
+      "environment": [
+          { "key": "APP_KEY", "value": "${MONICA_APP_KEY}" },
+          { "key": "APP_DISABLE_SIGNUP", "value": "${MONICA_DISABLE_SIGNUP}" },
+          { "key": "APP_URL", "value": "${APP_PROTOCOL-http}://${APP_DOMAIN}" },
+          { "key": "DB_CONNECTION", "value": "mysql" },
+          { "key": "DB_HOST", "value": "monica-5-db" },
+          { "key": "DB_USERNAME", "value": "usermonica" },
+          { "key": "DB_PASSWORD", "value": "${MONICA_DB_PASS}" },
+          { "key": "UPLOADCARE_PUBLIC_KEY", "value": "${MONICA_UPLOADCARE_PUBLIC_KEY}" },
+          { "key": "UPLOADCARE_PRIVATE_KEY", "value": "${MONICA_UPLOADCARE_PRIVATE_KEY}" }
+      ],
       "dependsOn": ["monica-5-db"],
       "volumes": [
         {
@@ -27,13 +29,13 @@
     {
       "name": "monica-5-db",
       "image": "mariadb:11",
-      "environment": {
-        "TZ": "${TZ}",
-        "MARIADB_RANDOM_ROOT_PASSWORD": "true",
-        "MARIADB_DATABASE": "monica",
-        "MARIADB_USER": "usermonica",
-        "MARIADB_PASSWORD": "${MONICA_DB_PASS}"
-      },
+      "environment": [
+          { "key": "TZ", "value": "${TZ}" },
+          { "key": "MARIADB_RANDOM_ROOT_PASSWORD", "value": "true" },
+          { "key": "MARIADB_DATABASE", "value": "monica" },
+          { "key": "MARIADB_USER", "value": "usermonica" },
+          { "key": "MARIADB_PASSWORD", "value": "${MONICA_DB_PASS}" }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/mysql",

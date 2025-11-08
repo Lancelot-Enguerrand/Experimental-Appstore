@@ -1,15 +1,17 @@
 {
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
   "services": [
     {
       "name": "ghosthub",
       "image": "dhux/ghosthub:latest",
       "isMain": true,
       "internalPort": 5000,
-      "environment": {
-        "PORT": "5000",
-        "FLASK_CONFIG": "production",
-        "DOCKER_ENV": "true"
-      },
+      "environment": [
+          { "key": "PORT", "value": "5000" },
+          { "key": "FLASK_CONFIG", "value": "production" },
+          { "key": "DOCKER_ENV", "value": "true" }
+      ],
       "volumes": [
         {
           "hostPath": "${ROOT_FOLDER_HOST}/media",

@@ -1,17 +1,19 @@
 {
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
   "services": [
     {
       "name": "blinko",
       "image": "blinkospace/blinko:1.6.5",
       "isMain": true,
       "internalPort": 1111,
-      "environment": {
-        "NODE_ENV": "production",
-        "NEXTAUTH_URL": "${APP_PROTOCOL-http}://${APP_DOMAIN}",
-        "NEXT_PUBLIC_BASE_URL": "${APP_PROTOCOL-http}://${APP_DOMAIN}",
-        "NEXTAUTH_SECRET": "${BLINKO_NEXTAUTH_SECRET}",
-        "DATABASE_URL": "postgresql://tipi:${BLINKO_DB_PASSWORD}@blinko-db:5432/blinko"
-      },
+      "environment": [
+          { "key": "NODE_ENV", "value": "production" },
+          { "key": "NEXTAUTH_URL", "value": "${APP_PROTOCOL-http}://${APP_DOMAIN}" },
+          { "key": "NEXT_PUBLIC_BASE_URL", "value": "${APP_PROTOCOL-http}://${APP_DOMAIN}" },
+          { "key": "NEXTAUTH_SECRET", "value": "${BLINKO_NEXTAUTH_SECRET}" },
+          { "key": "DATABASE_URL", "value": "postgresql://tipi:${BLINKO_DB_PASSWORD}@blinko-db:5432/blinko" }
+      ],
       "dependsOn": {
         "blinko-db": {
           "condition": "service_healthy"
@@ -34,12 +36,12 @@
     {
       "name": "blinko-db",
       "image": "postgres:14",
-      "environment": {
-        "POSTGRES_DB": "blinko",
-        "POSTGRES_USER": "tipi",
-        "POSTGRES_PASSWORD": "${BLINKO_DB_PASSWORD}",
-        "TZ": "${TZ}"
-      },
+      "environment": [
+          { "key": "POSTGRES_DB", "value": "blinko" },
+          { "key": "POSTGRES_USER", "value": "tipi" },
+          { "key": "POSTGRES_PASSWORD", "value": "${BLINKO_DB_PASSWORD}" },
+          { "key": "TZ", "value": "${TZ}" }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/db",

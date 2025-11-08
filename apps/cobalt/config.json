@@ -5,12 +5,9 @@
   "dynamic_config": true,
   "port": 32119,
   "id": "cobalt",
-  "tipi_version": 2,
+  "tipi_version": 3,
   "version": "11.4.3",
-  "categories": [
-    "media",
-    "data"
-  ],
+  "categories": [ "media", "data" ],
   "description": "Cobalt is a media downloader that doesn't piss you off. it's friendly, efficient, and doesn't have ads, trackers, paywalls or other nonsense.",
   "short_desc": "Media Downloader",
   "author": "imputnet",
@@ -23,10 +20,8 @@
       "min": 32
     }
   ],
-  "supported_architectures": [
-    "arm64",
-    "amd64"
-  ],
+  "supported_architectures": [ "arm64", "amd64"],
   "created_at": 1756475549999,
-  "updated_at": 1757125941336
+  "updated_at": 1762615555555,
+  "min_tipi_version": "4.5.0"
 }

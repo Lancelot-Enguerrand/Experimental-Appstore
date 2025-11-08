@@ -1,11 +1,11 @@
 {
   "schema": "https://schemas.runtipi.io/config.json",
-  "name": "Medical Records",
+  "name": "Medikeep",
   "id": "medical-records",
   "available": true,
   "exposable": true,
   "dynamic_config": true,
-  "tipi_version": 2,
+  "tipi_version": 3,
   "version": "v0.29.0",
   "short_desc": "Medical Records Management System",
   "description": "A medical records management system with React frontend and FastAPI backend.",
@@ -49,5 +49,6 @@
     }
   ],
   "created_at": 1758273499999,
-  "updated_at": 1758681350980
+  "updated_at": 1762615555555,
+  "min_tipi_version": "4.5.0"
 }

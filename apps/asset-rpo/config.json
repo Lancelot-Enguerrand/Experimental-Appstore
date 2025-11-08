@@ -5,7 +5,7 @@
   "dynamic_config": true,
   "port": 11920,
   "id": "asset-rpo",
-  "tipi_version": 1,
+  "tipi_version": 2,
   "version": "latest",
   "categories": ["data"],
   "description": "Asset is a Laravel package that provides a simple way to manage assets in your Laravel application.",
@@ -85,5 +85,6 @@
   ],
   "supported_architectures": ["arm64", "amd64"],
   "created_at": 1740563305105,
-  "updated_at": 1740563305105
+  "updated_at": 1762615555555,
+  "min_tipi_version": "4.5.0"
 }
