@@ -5,8 +5,8 @@
   "dynamic_config": true,
   "port": 4096,
   "id": "ironmount",
-  "tipi_version": 10,
-  "version": "v0.6.0",
+  "tipi_version": 11,
+  "version": "v0.6.2",
   "categories": [
     "data",
     "utilities"
@@ -21,6 +21,6 @@
     "amd64"
   ],
   "created_at": 1691943801422,
-  "updated_at": 1762701478958,
+  "updated_at": 1762828879175,
   "min_tipi_version": "4.5.0"
 }
