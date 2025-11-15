@@ -36,7 +36,7 @@ const getAppsList = async () => {
         appsNotReady[app] = {
           id: appConfigJson.id,
           name: appConfigJson.name,
-          description: appConfigJson.short_desc,
+          description: appConfigJson.description,
           source: appConfigJson.source,
           port: appConfigJson.port
         };
