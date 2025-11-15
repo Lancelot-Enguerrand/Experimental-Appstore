@@ -1,4 +1,4 @@
-# ⚗ Runtipi Experimental Appstore ⛺️
+# ⛺️ Runtipi Experimental Appstore ⚗
 This is an appstore for [Runtipi](https://runtipi.io), welcoming unexpected apps that won't fit common standards.
 
 This appstore in **5** points :
@@ -17,14 +17,30 @@ This appstore in **5** points :
 | :--: | ---- | ----------- |
 <!appsList>
 
-<br><br>
-> [!WARNING]
-> The following apps don't have any guarantee to work at all, either now or at any point in the future.
-## 🚧 Apps deprecated 🪦 (<!appsNotReadyCount>)
+<br>
 
-| Logo | Name | Description |
-| :--: | ---- | ----------- |
+## 🪦 Apps deprecated
+
+ The following apps won't receive anymore updates here, check the linked appstore in the details for a continuous support.
+
+| Logo | Name | Details |
+| :--: | ---- | ------- |
 <!appsNotReadyList>
+
+---
+
+### How to use ?
+> [!IMPORTANT]
+> You need a **[Runtipi](https://runtipi.io)** installation.
+
+1. Log into your dashoard
+
+2. Go to **Settings** -> **App Stores**
+
+3. Click on **Add App Store** then copy and paste this in Appstore URL : 
+*`https://github.com/Lancelot-Enguerrand/Experimental-Appstore`*
+
+4. *You can use the name you like but I suggest using `Experimental`*
 
 ### Requests
 If you want to suggest an app, feel free to ask.
@@ -33,4 +49,5 @@ I cannot guarantee to make it work but I may at least try.
 ### Contribution
 This is more a personal laboratory but I won't refuse collaboration.
 > [!NOTE]
-> If an app catch your interest and you want to maintain it yourself, let me know.
+> If an app catch your interest and you want to maintain it, let me know.
+> I will add a link to your appstore.
