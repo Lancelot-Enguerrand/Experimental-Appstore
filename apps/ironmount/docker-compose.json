@@ -4,13 +4,18 @@
   "services": [
     {
       "name": "ironmount",
-      "image": "ghcr.io/nicotsx/ironmount:v0.9.0",
+      "image": "ghcr.io/nicotsx/ironmount:v0.10.0",
       "isMain": true,
       "internalPort": 4096,
       "volumes": [
         {
           "hostPath": "/var/lib/ironmount/",
           "containerPath": "/var/lib/ironmount"
+        },
+        {
+          "hostPath": "/etc/localtime",
+          "containerPath": "/etc/localtime",
+          "readOnly": true
         }
       ],
       "devices": ["/dev/fuse:/dev/fuse"],
