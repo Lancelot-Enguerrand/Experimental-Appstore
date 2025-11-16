@@ -11,6 +11,11 @@
         {
           "hostPath": "/var/lib/ironmount/",
           "containerPath": "/var/lib/ironmount"
+        },
+        {
+          "hostPath": "/etc/localtime",
+          "containerPath": "/etc/localtime",
+          "readOnly": true
         }
       ],
       "devices": ["/dev/fuse:/dev/fuse"],
