@@ -1,4 +1,18 @@
-# ⚠️ Upgrade note ⚠️
+# ⚠️ Deprecation note ⚠️ - November 2025
+**Ironmount** project had to change his name which implies a breaking change : https://github.com/nicotsx/zerobyte/releases/tag/v0.12.0 
+
+Welcome to **Zerobyte** *(available in the Experimental Appstore)*
+
+## How to Migrate
+1. Stop Ironmount
+2. Rename your `/var/lib/ironmount` folder : 
+``` sh
+sudo mv /var/lib/ironmount /var/lib/zerobyte
+```
+3. Install Zerobyte 
+---
+
+##  Upgrade note - before v0.5
 If your upgrading from a version prior to **v0.5**, you should restart from scratch.
 There is no migration process.
 
@@ -90,8 +104,9 @@ Ironmount allows you to easily restore your data from backups. To restore data, 
 
 Ironmount is capable of propagating mounted volumes from within the container to the host system. This is particularly useful when you want to access the mounted data directly from the host to use it with other applications or services.
 
-In order to enable this feature, you need to run Ironmount with privileged mode and mount /proc from the host. Here is an example of how to set this up with Runtipi `User configuration` file:
+In order to enable this feature, you need to run Ironmount with privileged mode and mount /proc from the host. 
 
+You can edit your Runtipi `user-config` file:
 ```diff
 services:
   ironmount:
@@ -106,8 +121,9 @@ Restart Ironmount to apply the changes:
 
 Ironmount can also be used as a Docker volume plugin, allowing you to mount your volumes directly into other Docker containers. This enables seamless integration with your containerized applications.
 
-In order to enable this feature, you need to run Ironmount with privileged mode and mount several items from the host. Here is an example of how to set this up in your Runtipi `User configuration` file:
+In order to enable this feature, you need to run Ironmount with privileged mode and mount several items from the host.
 
+You can edit your Runtipi `user-config` file:
 ```diff
 services:
   ironmount:
@@ -117,8 +133,7 @@ services:
 +     - /run/docker/plugins:/run/docker/plugins
 +     - /var/run/docker.sock:/var/run/docker.sock
 ```
-
-Restart Ironmount to apply the changes:
+*Restart Ironmount to apply the changes.*
 
 Your Ironmount volumes will now be available as Docker volumes that you can mount into other containers using the `--volume` flag:
 
@@ -126,7 +141,7 @@ Your Ironmount volumes will now be available as Docker volumes that you can moun
 docker run -v im-nfs:/path/in/container nginx:latest
 ```
 
-Or update any of your Runtipi app `User configuration` :
+Or update any of your Runtipi app `user-config` :
 
 ```yaml
 services:

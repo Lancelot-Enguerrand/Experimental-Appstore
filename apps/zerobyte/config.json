@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "Zerobyte",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 4096,
+  "id": "zerobyte",
+  "tipi_version": 1,
+  "version": "v0.12.0",
+  "categories": [
+    "data",
+    "utilities"
+  ],
+  "description": "Powerful backup automation for your remote storage. Encrypt, compress, and protect your data with ease.",
+  "short_desc": "Backup Automation",
+  "author": "nicotsx",
+  "source": "https://github.com/nicotsx/zerobyte",
+  "form_fields": [],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1763733333333,
+  "updated_at": 1763733333334,
+  "min_tipi_version": "4.5.0"
+}

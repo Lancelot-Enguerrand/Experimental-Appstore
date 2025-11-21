@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schemas.runtipi.io/app-info.json",
   "name": "Cobalt",
   "available": true,
   "exposable": true,

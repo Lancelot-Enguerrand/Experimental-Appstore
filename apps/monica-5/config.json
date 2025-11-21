@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schemas.runtipi.io/app-info.json",
   "name": "Monica (v5)",
   "available": true,
   "exposable": true,
