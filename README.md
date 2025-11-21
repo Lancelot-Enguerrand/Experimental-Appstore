@@ -25,7 +25,6 @@ This appstore in **5** points :
 |   <img src="apps/dumbassets/metadata/logo.jpg" width="64">    | [DumbAssets](https://github.com/DumbWareio/DumbAssets)             | Hierarchical assets tracker                  |
 |   <img src="apps/fluffychat/metadata/logo.jpg" width="64">    | [Fluffy Chat](https://github.com/krille-chan/fluffychat)           | Fluffy Matrix Client                         |
 |    <img src="apps/ghosthub/metadata/logo.jpg" width="64">     | [GhostHub](https://github.com/BleedingXiko/GhostHub)               | Tiktok-like media reader                     |
-|    <img src="apps/ironmount/metadata/logo.jpg" width="64">    | [Ironmount](https://github.com/nicotsx/ironmount)                  | Storage Mount Manager                        |
 |      <img src="apps/jpjr/metadata/logo.jpg" width="64">       | [JPJR](https://github.com/lfpoulain/jpjr)                          | Je prends, je rends                          |
 | <img src="apps/medical-records/metadata/logo.jpg" width="64"> | [Medikeep](https://github.com/afairgiant/Medikeep)                 | Medical Records Management System            |
 |    <img src="apps/monica-5/metadata/logo.jpg" width="64">     | [Monica (v5)](https://github.com/monicahq/monica)                  | Personal Relationship Management tool        |
@@ -33,6 +32,7 @@ This appstore in **5** points :
 |     <img src="apps/spotdl/metadata/logo.jpg" width="64">      | [Spotify Downloader](https://github.com/spotDL/spotify-downloader) | Music downloader for Spotify.                |
 |      <img src="apps/stash/metadata/logo.jpg" width="64">      | [Stash](https://github.com/stashapp/stash)                         | Organize and serve media.                    |
 |    <img src="apps/tasktrove/metadata/logo.jpg" width="64">    | [TaskTrove](https://github.com/dohsimpson/TaskTrove)               | Task Manager                                 |
+|    <img src="apps/zerobyte/metadata/logo.jpg" width="64">     | [Zerobyte](https://github.com/nicotsx/zerobyte)                    | Backup Automation                            |
 
 <br>
 
@@ -40,9 +40,10 @@ This appstore in **5** points :
 
 The following apps won't receive anymore updates here, check the linked appstore in the details for a continuous support.
 
-|                        Logo                         | Name                                   | Details                                                           |
-| :-------------------------------------------------: | -------------------------------------- | ----------------------------------------------------------------- |
-| <img src="apps/kanbn/metadata/logo.jpg" width="64"> | [kan.bn](https://github.com/kanbn/kan) | Available here : https://github.com/steveiliop56/runtipi-appstore |
+|                          Logo                           | Name                                              | Details                                                           |
+| :-----------------------------------------------------: | ------------------------------------------------- | ----------------------------------------------------------------- |
+| <img src="apps/ironmount/metadata/logo.jpg" width="64"> | [Ironmount](https://github.com/nicotsx/ironmount) | Replaced by Zerobyte                                              |
+|   <img src="apps/kanbn/metadata/logo.jpg" width="64">   | [kan.bn](https://github.com/kanbn/kan)            | Available here : https://github.com/steveiliop56/runtipi-appstore |
 
 ---
 
