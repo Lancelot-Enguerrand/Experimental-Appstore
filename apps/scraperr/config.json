@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schemas.runtipi.io/app-info.json",
   "name": "Scraperr",
   "available": true,
   "exposable": true,

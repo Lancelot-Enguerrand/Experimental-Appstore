@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
+  "services": [
+    {
+      "name": "zerobyte",
+      "image": "ghcr.io/nicotsx/zerobyte:v0.12.0",
+      "isMain": true,
+      "internalPort": 4096,
+      "volumes": [
+        {
+          "hostPath": "/var/lib/zerobyte/",
+          "containerPath": "/var/lib/zerobyte"
+        },
+        {
+          "hostPath": "/etc/localtime",
+          "containerPath": "/etc/localtime",
+          "readOnly": true
+        }
+      ],
+      "devices": ["/dev/fuse:/dev/fuse"],
+      "capAdd": ["SYS_ADMIN"]
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+<div align="center">
+  <h1>Zerobyte</h1>
+  <h3>Powerful backup automation for your remote storage<br />Encrypt, compress, and protect your data with ease</h3>
+  <figure>
+    <img src="https://github.com/nicotsx/zerobyte/blob/main/screenshots/volume-details.png?raw=true" alt="Demo" />
+    <figcaption>
+      <p align="center">
+        Backup management with scheduling and monitoring
+      </p>
+    </figcaption>
+  </figure>
+</div>
+
+> ⚠️ WARNING ⚠️
+> Zerobyte is still in version 0.x.x and is subject to major changes from version to version. [@nicotsx](https://github.com/nicotsx) is developing the core features and collecting feedbacks. Expect bugs! Please open issues or feature requests
+
+# Intro
+
+Zerobyte is a backup automation tool that helps you save your data across multiple storage backends. Built on top of Restic, it provides an modern web interface to schedule, manage, and monitor encrypted backups of your remote storage.
+
+### Features
+
+- **Automated backups** with encryption, compression and retention policies powered by Restic
+- **Flexible scheduling** For automated backup jobs with fine-grained retention policies
+- **End-to-end encryption** ensuring your data is always protected
+- **Multi-protocol support**: Backup from NFS, SMB, WebDAV, or local directories
+
+# How to use
+
+## Adding your first volume
+
+Zerobyte supports multiple volume backends including NFS, SMB, WebDAV, and local directories. A volume represents the source data you want to back up and monitor.
+
+To add your first volume, navigate to the "Volumes" section in the web interface and click on "Create volume". Fill in the required details such as volume name, type, and connection settings.
+
+If you want to track a local directory on the same server where Zerobyte is running, you'll first need to mount that directory into the Zerobyte container. For example, to mount `/path/to/your/directory` from the host to `/mydata` in the container, you would add the following lines in your `user-config` file:
+
+```diff
+services:
+  zerobyte:
+    volumes:
++     - /path/to/your/directory:/mydata
+```
+*Restart Zerobyte to apply the changes.*
+
+Now, when adding a new volume in the Zerobyte web interface, you can select "Directory" as the volume type and search for your mounted path (e.g., `/mydata`) as the source path.
+
+![Preview](https://github.com/nicotsx/zerobyte/blob/main/screenshots/add-volume.png?raw=true)
+
+## Creating a repository
+
+A repository is where your backups will be securely stored encrypted. Zerobyte supports multiple storage backends for your backup repositories:
+
+- **Local directories** - Store backups on local disk at `/var/lib/zerobyte/repositories/<repository-name>`
+- **S3-compatible storage** - Amazon S3, MinIO, Wasabi, DigitalOcean Spaces, etc.
+- **Google Cloud Storage** - Google's cloud storage service
+- **Azure Blob Storage** - Microsoft Azure storage
+- **rclone remotes** - 40+ cloud storage providers via rclone (see below)
+
+Repositories are optimized for storage efficiency and data integrity, leveraging Restic's deduplication and encryption features.
+
+To create a repository, navigate to the "Repositories" section in the web interface and click on "Create repository". Fill in the required details such as repository name, type, and connection settings.
+
+## Using rclone for cloud storage
+
+Zerobyte can use [rclone](https://rclone.org/) to support 40+ cloud storage providers including Google Drive, Dropbox, OneDrive, Box, pCloud, Mega, and many more. This gives you the flexibility to store your backups on virtually any cloud storage service.
+
+**Setup instructions:**
+
+1. **Install rclone on your host system** (if not already installed):
+   ```bash
+   curl https://rclone.org/install.sh | sudo bash
+   ```
+
+2. **Configure your cloud storage remote** using rclone's interactive config:
+   ```bash
+   rclone config
+   ```
+   Follow the prompts to set up your cloud storage provider. For OAuth providers (Google Drive, Dropbox, etc.), rclone will guide you through the authentication flow.
+
+3. **Verify your remote is configured**:
+   ```bash
+   rclone listremotes
+   ```
+
+4. **Mount the rclone config into the Zerobyte container** by updating your `user-config`:
+   ```diff
+   services:
+     zerobyte:
+   +     - ~/.config/rclone:/root/.config/rclone
+   ```
+
+5. **Restart the Zerobyte**:
+
+6. **Create a repository** in Zerobyte:
+   - Select "rclone" as the repository type
+   - Choose your configured remote from the dropdown
+   - Specify the path within your remote (e.g., `backups/zerobyte`)
+
+For a complete list of supported providers, see the [rclone documentation](https://rclone.org/).
+
+
+## Your first backup job
+
+Once you have added a volume and created a repository, you can create your first backup job. A backup job defines the schedule and parameters for backing up a specific volume to a designated repository.
+
+When creating a backup job, you can specify the following settings:
+- **Schedule**: Define how often the backup should run (e.g., daily, weekly)
+- **Retention Policy**: Set rules for how long backups should be retained (e.g., keep daily backups for 7 days, weekly backups for 4 weeks)
+- **Paths**: Specify which files or directories to include in the backup
+
+After configuring the backup job, save it and Zerobyte will automatically execute the backup according to the defined schedule.
+You can monitor the progress and status of your backup jobs in the "Backups" section of the web interface.
+
+![Preview](https://github.com/nicotsx/zerobyte/blob/main/screenshots/backups-list.png?raw=true)
+
+
+## Restoring data
+
+Zerobyte allows you to easily restore your data from backups. To restore data, navigate to the "Backups" section and select the backup job from which you want to restore data. You can then choose a specific backup snapshot and select the files or directories you wish to restore. The data you select will be restored to their original location.
+
+![Preview](https://github.com/nicotsx/zerobyte/blob/main/screenshots/restoring.png?raw=true)
+
+## Propagating mounts to host
+
+Zerobyte is capable of propagating mounted volumes from within the container to the host system. This is particularly useful when you want to access the mounted data directly from the host to use it with other applications or services.
+
+> In order to enable this feature, you need to run Zerobyte with privileged mode and mount /proc from the host. 
+
+You can edit your `user-config` file:
+```diff
+services:
+  zerobyte:
++   privileged: true
+    volumes:
++     - /proc:/host/proc
+```
+*Restart Zerobyte to apply the changes.*
+
+## Docker plugin
+
+Zerobyte can also be used as a Docker volume plugin, allowing you to mount your volumes directly into other Docker containers. This enables seamless integration with your containerized applications.
+
+> In order to enable this feature, you need to run Zerobyte with privileged mode and mount several items from the host.
+
+You can edit your `user-config` file:
+```diff
+services:
+  zerobyte:
++   privileged: true
+    volumes:
++     - /proc:/host/proc
++     - /run/docker/plugins:/run/docker/plugins
++     - /var/run/docker.sock:/var/run/docker.sock
+```
+*Restart Zerobyte to apply the changes.*
+
+Your Zerobyte volumes will now be available as Docker volumes that you can mount into other containers using the `--volume` flag:
+
+```bash
+docker run -v im-nfs:/path/in/container nginx:latest
+```
+
+Or update any of your Runtipi app `user-config` :
+
+```yaml
+services:
+  myservice:
+    volumes:
+      - im-nfs:/path/in/container
+volumes:
+  im-nfs:
+    external: true
+```
+
+The volume name format is `im-<volume-name>` where `<volume-name>` is the name you assigned to the volume in Zerobyte. You can verify that the volume is available by running:
+
+```bash
+docker volume ls
+```
+
+## Docker volume usage
+
+![Preview](https://github.com/nicotsx/zerobyte/blob/main/screenshots/backups.png?raw=true)
+
+# Third-Party Software
+This project includes the following third-party software components:
+
+### Restic
+Zerobyte includes [Restic](https://github.com/restic/restic) for backup functionality.
+- **License**: BSD 2-Clause License
+- **Copyright**: Copyright (c) 2014, Alexander Neumann <alexander@bumpern.de>
+- **Status**: Included unchanged
+- **License Text**: See [LICENSES/BSD-2-Clause-Restic.txt](LICENSES/BSD-2-Clause-Restic.txt)
+
+For a complete list of third-party software licenses and attributions, please refer to the [NOTICES.md](NOTICES.md) file.

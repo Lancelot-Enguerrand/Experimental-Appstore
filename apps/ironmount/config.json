@@ -1,17 +1,19 @@
 {
+  "$schema": "https://schemas.runtipi.io/app-info.json",
   "name": "Ironmount",
   "available": true,
   "exposable": true,
   "dynamic_config": true,
+  "deprecated": true,
   "port": 4096,
   "id": "ironmount",
-  "tipi_version": 17,
+  "tipi_version": 18,
   "version": "v0.11.0",
   "categories": [
     "data",
     "utilities"
   ],
-  "description": "Powerful backup automation for your remote storage. Encrypt, compress, and protect your data with ease.",
+  "description": "Replaced by Zerobyte",
   "short_desc": "Storage Mount Manager",
   "author": "nicotsx",
   "source": "https://github.com/nicotsx/ironmount",
@@ -21,6 +23,6 @@
     "amd64"
   ],
   "created_at": 1691943801422,
-  "updated_at": 1763412935956,
+  "updated_at": 1763730444444,
   "min_tipi_version": "4.5.0"
 }

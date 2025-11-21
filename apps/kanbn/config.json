@@ -2,7 +2,7 @@
   "schema": "https://schemas.runtipi.io/config.json",
   "name": "kan.bn",
   "id": "kanbn",
-  "available": false,
+  "available":true,
   "deprecated": true,
   "dynamic_config": true,
   "exposable": true,
@@ -11,7 +11,7 @@
   "port": 11114,
   "categories": ["utilities"],
   "description": "Available here : https://github.com/steveiliop56/runtipi-appstore",
-  "tipi_version": 17,
+  "tipi_version": 18,
   "version": "main",
   "source": "https://github.com/kanbn/kan",
   "form_fields": [
