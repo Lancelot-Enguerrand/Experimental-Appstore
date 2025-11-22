@@ -13,7 +13,7 @@ This appstore in **5** points :
 > [!TIP]  
 > For an appstore with high quality stable apps, [check here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
-## Apps available ✨ 16 ✨
+## Apps available ✨ 17 ✨
 
 |                             Logo                              | Name                                                               | Description                                  |
 | :-----------------------------------------------------------: | ------------------------------------------------------------------ | -------------------------------------------- |
@@ -32,6 +32,7 @@ This appstore in **5** points :
 |     <img src="apps/spotdl/metadata/logo.jpg" width="64">      | [Spotify Downloader](https://github.com/spotDL/spotify-downloader) | Music downloader for Spotify.                |
 |      <img src="apps/stash/metadata/logo.jpg" width="64">      | [Stash](https://github.com/stashapp/stash)                         | Organize and serve media.                    |
 |    <img src="apps/tasktrove/metadata/logo.jpg" width="64">    | [TaskTrove](https://github.com/dohsimpson/TaskTrove)               | Task Manager                                 |
+|    <img src="apps/tipimate/metadata/logo.jpg" width="64">     | [Tipimate](https://github.com/steveiliop56/tipimate)               | Runtipi app updates notifier                 |
 |    <img src="apps/zerobyte/metadata/logo.jpg" width="64">     | [Zerobyte](https://github.com/nicotsx/zerobyte)                    | Backup Automation                            |
 
 <br>
