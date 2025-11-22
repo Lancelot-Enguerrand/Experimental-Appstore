@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "Tipimate",
+  "available": true,
+  "exposable": false,
+  "no_gui": true,
+  "dynamic_config": true,
+  "id": "tipimate",
+  "tipi_version": 1,
+  "version": "v2.1.0",
+  "categories": ["utilities"],
+  "description": "The easiest way to get notified about updates for your Runtipi apps!",
+  "short_desc": "Runtipi app updates notifier",
+  "author": "steveiliop56",
+  "source": "https://github.com/steveiliop56/tipimate",
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Notification URL",
+      "hint": "See app description",
+      "required": true,
+      "env_variable": "TIPIMATE_NOTIFICATION_URL"
+    },
+    {
+      "type": "text",
+      "label": "Custom Tipimate server name",
+      "default": "Tipimate",
+      "placeholder": "Tipimate",
+      "required": false,
+      "env_variable": "TIPIMATE_SERVER_NAME"
+    },
+    {
+      "type": "text",
+      "label": "Runtipi URL",
+      "default": "http://runtipi:3000",
+      "placeholder": "http://runtipi:3000",
+      "required": false,
+      "env_variable": "TIPIMATE_RUNTIPI_URL"
+    },
+    {
+      "type": "number",
+      "label": "Time interval between checks (minutes)",
+      "default": 30,
+      "placeholder": "30",
+      "required": false,
+      "env_variable": "TIPIMATE_INTERVAL"
+    },
+    {
+      "type": "boolean",
+      "label": "Insecure connection for notifications",
+      "hint": "Enable this if you use HTTP",
+      "env_variable": "TIPIMATE_INSECURE"
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1763811111110,
+  "updated_at": 1763811111111,
+  "min_tipi_version": "4.5.0"
+}
