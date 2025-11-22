@@ -31,7 +31,7 @@
         },
         {
           "key": "TIPIMATE_INSECURE",
-          "value": "false"
+          "value": "${TIPIMATE_INSECURE}"
         },
         {
           "key": "TIPIMATE_LOG_LEVEL",
@@ -43,7 +43,7 @@
         },
         {
           "key": "TIPIMATE_JWT_SECRET",
-          "value": "${TIPIMATE_JWT_SECRET}"
+          "value": "${JWT_SECRET}"
         }
       ]
     }

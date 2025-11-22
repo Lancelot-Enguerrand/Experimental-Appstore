@@ -5,7 +5,6 @@
   "exposable": false,
   "no_gui": true,
   "dynamic_config": true,
-  "port": 7191,
   "id": "tipimate",
   "tipi_version": 1,
   "version": "v2.1.0",
@@ -24,7 +23,7 @@
     },
     {
       "type": "text",
-      "label": "Tipimate server name",
+      "label": "Custom Tipimate server name",
       "default": "Tipimate",
       "placeholder": "Tipimate",
       "required": false,
@@ -32,17 +31,17 @@
     },
     {
       "type": "number",
-      "label": "Time interval between checks",
+      "label": "Time interval between checks (minutes)",
       "default": 30,
       "placeholder": "30",
       "required": false,
       "env_variable": "TIPIMATE_INTERVAL"
     },
     {
-      "type": "random",
-      "min": 32,
-      "label": "Tipimate JWT Secret",
-      "env_variable": "TIPIMATE_JWT_SECRET"
+      "type": "boolean",
+      "label": "Insecure connection for notifications",
+      "hint": "Enable this if you use HTTP",
+      "env_variable": "TIPIMATE_INSECURE"
     }
   ],
   "supported_architectures": [
