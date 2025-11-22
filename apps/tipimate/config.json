@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "Tipimate",
+  "available": true,
+  "exposable": false,
+  "no_gui": true,
+  "dynamic_config": true,
+  "port": 7191,
+  "id": "tipimate",
+  "tipi_version": 1,
+  "version": "v2.1.0",
+  "categories": ["utilities"],
+  "description": "The easiest way to get notified about updates for your Runtipi apps!",
+  "short_desc": "Runtipi app updates notifier",
+  "author": "steveiliop56",
+  "source": "https://github.com/steveiliop56/tipimate",
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Notification URL",
+      "hint": "See app description",
+      "required": true,
+      "env_variable": "TIPIMATE_NOTIFICATION_URL"
+    },
+    {
+      "type": "text",
+      "label": "Tipimate server name",
+      "default": "Tipimate",
+      "placeholder": "Tipimate",
+      "required": false,
+      "env_variable": "TIPIMATE_SERVER_NAME"
+    },
+    {
+      "type": "number",
+      "label": "Time interval between checks",
+      "default": 30,
+      "placeholder": "30",
+      "required": false,
+      "hint": "https://api.immich.app/getting-started",
+      "env_variable": "TIPIMATE_INTERVAL"
+    },
+    {
+      "type": "random",
+      "min": 32,
+      "label": "Tipimate JWT Secret",
+      "env_variable": "TIPIMATE_JWT_SECRET"
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1763811111110,
+  "updated_at": 1763811111111,
+  "min_tipi_version": "4.5.0"
+}
