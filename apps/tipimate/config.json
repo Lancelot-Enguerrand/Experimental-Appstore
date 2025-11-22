@@ -30,6 +30,14 @@
       "env_variable": "TIPIMATE_SERVER_NAME"
     },
     {
+      "type": "text",
+      "label": "Runtipi URL",
+      "default": "http://runtipi:3000",
+      "placeholder": "http://runtipi:3000",
+      "required": false,
+      "env_variable": "TIPIMATE_RUNTIPI_URL"
+    },
+    {
       "type": "number",
       "label": "Time interval between checks (minutes)",
       "default": 30,

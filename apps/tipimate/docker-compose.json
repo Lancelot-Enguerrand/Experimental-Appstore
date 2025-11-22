@@ -27,7 +27,7 @@
         },
         {
           "key": "TIPIMATE_RUNTIPI_URL",
-          "value": "http://runtipi:3000"
+          "value": "${TIPIMATE_RUNTIPI_URL}"
         },
         {
           "key": "TIPIMATE_INSECURE",
