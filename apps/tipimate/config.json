@@ -36,7 +36,6 @@
       "default": 30,
       "placeholder": "30",
       "required": false,
-      "hint": "https://api.immich.app/getting-started",
       "env_variable": "TIPIMATE_INTERVAL"
     },
     {
