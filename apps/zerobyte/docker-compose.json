@@ -7,6 +7,12 @@
       "image": "ghcr.io/nicotsx/zerobyte:v0.14.0",
       "isMain": true,
       "internalPort": 4096,
+      "environment": [
+        {
+          "key": "TZ",
+          "value": "${TZ}"
+        }
+      ],
       "volumes": [
         {
           "hostPath": "/var/lib/zerobyte/",
