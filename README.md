@@ -15,25 +15,25 @@ This appstore in **5** points :
 
 ## Apps available ✨ 17 ✨
 
-|                             Logo                              | Name                                                               | Description                                  |
-| :-----------------------------------------------------------: | ------------------------------------------------------------------ | -------------------------------------------- |
-|   <img src="apps/airstation/metadata/logo.jpg" width="64">    | [Airstation](https://github.com/cheatsnake/airstation)             | Your own online radio station                |
-|    <img src="apps/asset-rpo/metadata/logo.jpg" width="64">    | [Asset RPO](https://github.com/Red-Panda-One/asset)                | A simple way to manage assets.               |
-|     <img src="apps/blinko/metadata/logo.jpg" width="64">      | [Blinko](https://github.com/blinko-space/blinko)                   | Note taking, to-do and moodboard application |
-|     <img src="apps/cobalt/metadata/logo.jpg" width="64">      | [Cobalt](https://github.com/imputnet/cobalt)                       | Media Downloader                             |
-|     <img src="apps/ctfreak/metadata/logo.jpg" width="64">     | [CTFreak](https://ctfreak.com/)                                    | Simple task scheduler                        |
-|   <img src="apps/dumbassets/metadata/logo.jpg" width="64">    | [DumbAssets](https://github.com/DumbWareio/DumbAssets)             | Hierarchical assets tracker                  |
-|   <img src="apps/fluffychat/metadata/logo.jpg" width="64">    | [Fluffy Chat](https://github.com/krille-chan/fluffychat)           | Fluffy Matrix Client                         |
-|    <img src="apps/ghosthub/metadata/logo.jpg" width="64">     | [GhostHub](https://github.com/BleedingXiko/GhostHub)               | Tiktok-like media reader                     |
-|      <img src="apps/jpjr/metadata/logo.jpg" width="64">       | [JPJR](https://github.com/lfpoulain/jpjr)                          | Je prends, je rends                          |
-| <img src="apps/medical-records/metadata/logo.jpg" width="64"> | [Medikeep](https://github.com/afairgiant/Medikeep)                 | Medical Records Management System            |
-|    <img src="apps/monica-5/metadata/logo.jpg" width="64">     | [Monica (v5)](https://github.com/monicahq/monica)                  | Personal Relationship Management tool        |
-|    <img src="apps/scraperr/metadata/logo.jpg" width="64">     | [Scraperr](https://github.com/jaypyles/Scraperr)                   | Web scraping tool                            |
-|     <img src="apps/spotdl/metadata/logo.jpg" width="64">      | [Spotify Downloader](https://github.com/spotDL/spotify-downloader) | Music downloader for Spotify.                |
-|      <img src="apps/stash/metadata/logo.jpg" width="64">      | [Stash](https://github.com/stashapp/stash)                         | Organize and serve media.                    |
-|    <img src="apps/tasktrove/metadata/logo.jpg" width="64">    | [TaskTrove](https://github.com/dohsimpson/TaskTrove)               | Task Manager                                 |
-|    <img src="apps/tipimate/metadata/logo.jpg" width="64">     | [Tipimate](https://github.com/steveiliop56/tipimate)               | Runtipi app updates notifier                 |
-|    <img src="apps/zerobyte/metadata/logo.jpg" width="64">     | [Zerobyte](https://github.com/nicotsx/zerobyte)                    | Backup Automation                            |
+|                             Logo                              | Name                                                                                          | Description                                  |
+| :-----------------------------------------------------------: | --------------------------------------------------------------------------------------------- | -------------------------------------------- |
+|   <img src="apps/airstation/metadata/logo.jpg" width="64">    | [Airstation](https://github.com/cheatsnake/airstation)<br/><sub>music</sub>                   | Your own online radio station                |
+|    <img src="apps/asset-rpo/metadata/logo.jpg" width="64">    | [Asset RPO](https://github.com/Red-Panda-One/asset)<br/><sub>data</sub>                       | A simple way to manage assets.               |
+|     <img src="apps/blinko/metadata/logo.jpg" width="64">      | [Blinko](https://github.com/blinko-space/blinko)<br/><sub>utilities</sub>                     | Note taking, to-do and moodboard application |
+|     <img src="apps/cobalt/metadata/logo.jpg" width="64">      | [Cobalt](https://github.com/imputnet/cobalt)<br/><sub>media,data</sub>                        | Media Downloader                             |
+|     <img src="apps/ctfreak/metadata/logo.jpg" width="64">     | [CTFreak](https://ctfreak.com/)<br/><sub>utilities</sub>                                      | Simple task scheduler                        |
+|   <img src="apps/dumbassets/metadata/logo.jpg" width="64">    | [DumbAssets](https://github.com/DumbWareio/DumbAssets)<br/><sub>utilities</sub>               | Hierarchical assets tracker                  |
+|   <img src="apps/fluffychat/metadata/logo.jpg" width="64">    | [Fluffy Chat](https://github.com/krille-chan/fluffychat)<br/><sub>social</sub>                | Fluffy Matrix Client                         |
+|    <img src="apps/ghosthub/metadata/logo.jpg" width="64">     | [GhostHub](https://github.com/BleedingXiko/GhostHub)<br/><sub>media</sub>                     | Tiktok-like media reader                     |
+|      <img src="apps/jpjr/metadata/logo.jpg" width="64">       | [JPJR](https://github.com/lfpoulain/jpjr)<br/><sub>utilities</sub>                            | Je prends, je rends                          |
+| <img src="apps/medical-records/metadata/logo.jpg" width="64"> | [Medikeep](https://github.com/afairgiant/Medikeep)<br/><sub>utilities,data</sub>              | Medical Records Management System            |
+|    <img src="apps/monica-5/metadata/logo.jpg" width="64">     | [Monica (v5)](https://github.com/monicahq/monica)<br/><sub>data,social</sub>                  | Personal Relationship Management tool        |
+|    <img src="apps/scraperr/metadata/logo.jpg" width="64">     | [Scraperr](https://github.com/jaypyles/Scraperr)<br/><sub>data</sub>                          | Web scraping tool                            |
+|     <img src="apps/spotdl/metadata/logo.jpg" width="64">      | [Spotify Downloader](https://github.com/spotDL/spotify-downloader)<br/><sub>media,music</sub> | Music downloader for Spotify.                |
+|      <img src="apps/stash/metadata/logo.jpg" width="64">      | [Stash](https://github.com/stashapp/stash)<br/><sub>media</sub>                               | Organize and serve media.                    |
+|    <img src="apps/tasktrove/metadata/logo.jpg" width="64">    | [TaskTrove](https://github.com/dohsimpson/TaskTrove)<br/><sub>data,utilities</sub>            | Task Manager                                 |
+|    <img src="apps/tipimate/metadata/logo.jpg" width="64">     | [Tipimate](https://github.com/steveiliop56/tipimate)<br/><sub>utilities</sub>                 | Runtipi app updates notifier                 |
+|    <img src="apps/zerobyte/metadata/logo.jpg" width="64">     | [Zerobyte](https://github.com/nicotsx/zerobyte)<br/><sub>data,utilities</sub>                 | Backup Automation                            |
 
 <br>
 
@@ -41,10 +41,10 @@ This appstore in **5** points :
 
 The following apps won't receive anymore updates here, check the linked appstore in the details for a continuous support.
 
-|                          Logo                           | Name                                              | Details                                                           |
-| :-----------------------------------------------------: | ------------------------------------------------- | ----------------------------------------------------------------- |
-| <img src="apps/ironmount/metadata/logo.jpg" width="64"> | [Ironmount](https://github.com/nicotsx/ironmount) | Replaced by Zerobyte                                              |
-|   <img src="apps/kanbn/metadata/logo.jpg" width="64">   | [kan.bn](https://github.com/kanbn/kan)            | Available here : https://github.com/steveiliop56/runtipi-appstore |
+|                          Logo                           | Name                                                                            | Details                                                           |
+| :-----------------------------------------------------: | ------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| <img src="apps/ironmount/metadata/logo.jpg" width="64"> | [Ironmount](https://github.com/nicotsx/ironmount)<br/><sub>data,utilities</sub> | Replaced by Zerobyte                                              |
+|   <img src="apps/kanbn/metadata/logo.jpg" width="64">   | [kan.bn](https://github.com/kanbn/kan)<br/><sub>utilities</sub>                 | Available here : https://github.com/steveiliop56/runtipi-appstore |
 
 ---
 
