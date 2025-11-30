@@ -4,6 +4,7 @@ import fs from "node:fs";
 type App = {
   id: string;
   name: string;
+  categories: string;
   description: string;
   source: string;
   port: number;
@@ -28,6 +29,7 @@ const getAppsList = async () => {
         apps[app] = {
           id: appConfigJson.id,
           name: appConfigJson.name,
+          categories: appConfigJson.categories,
           description: appConfigJson.short_desc,
           source: appConfigJson.source,
           port: appConfigJson.port
@@ -36,6 +38,7 @@ const getAppsList = async () => {
         appsNotReady[app] = {
           id: appConfigJson.id,
           name: appConfigJson.name,
+          categories: appConfigJson.categories,
           description: appConfigJson.description,
           source: appConfigJson.source,
           port: appConfigJson.port
@@ -50,7 +53,7 @@ const getAppsList = async () => {
 };
 
 const appToReadme = async (app: App) => {
-  return `| <img src="apps/${app.id}/metadata/logo.jpg" width="64"> | [${app.name}](${app.source}) | ${app.description} |`;
+  return `| <img src="apps/${app.id}/metadata/logo.jpg" width="64"> | [${app.name}](${app.source})<br/><sub>${app.categories}</sub>| ${app.description} |`;
 };
 
 const writeToReadme = (appsList: string, count: number, appsNotReadyList: string, countNotReady: number) => {
