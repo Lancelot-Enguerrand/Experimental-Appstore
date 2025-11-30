@@ -4,7 +4,7 @@ import fs from "node:fs";
 type App = {
   id: string;
   name: string;
-  categories: string[];
+  categories: string;
   description: string;
   source: string;
 };
@@ -50,10 +50,9 @@ const getAppsList = async () => {
 };
 
 const appToReadme = async (app: App) => {
-  const categories = Array.isArray(app.categories)
-  ? app.categories.join(" ")
-  : app.categories;
-  return `| <img src="apps/${app.id}/metadata/logo.jpg" width="56"> | *[${app.name}](${app.source})*<br/><sub>*${app.categories}*</sub>| ${app.description} |`;
+  const categories = app.categories.split(",").join(" ");
+  
+  return `| <img src="apps/${app.id}/metadata/logo.jpg" width="56"> | **[${app.name}](${app.source})**<br/><sub>*${app.categories}*</sub>| ${app.description} |`;
 };
 
 const writeToReadme = (appsList: string, count: number, appsDeprecatedList: string, countDeprecated: number) => {

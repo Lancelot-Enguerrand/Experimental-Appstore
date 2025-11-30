@@ -13,8 +13,8 @@ This appstore in **5** points :
 
 ## Apps available ✨ <!appsCount> ✨
 
-| Logo | App | Description | 
-| :--: | --- | ----------- |
+| App | Name | Description | 
+| :-: | ---- | ----------- |
 <!appsList>
 
 <br>
@@ -23,9 +23,9 @@ This appstore in **5** points :
 
  The following apps won't receive anymore updates here, check the linked appstore in the details for a continuous support.
 
-| Logo | Name | Details |
-| :--: | ---- | ------- |
-<!appsNotReadyList>
+| App | Name | Details |
+| :-: | ---- | ------- |
+<!appsDeprecated>
 
 ---
 
