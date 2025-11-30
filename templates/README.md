@@ -13,8 +13,8 @@ This appstore in **5** points :
 
 ## Apps available ✨ <!appsCount> ✨
 
-| Logo | Name | Description | 
-| :--: | ---- | ----------- |
+| Logo | App | Description | 
+| :--: | --- | ----------- |
 <!appsList>
 
 <br>

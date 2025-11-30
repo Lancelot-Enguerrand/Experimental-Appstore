@@ -7,7 +7,6 @@ type App = {
   categories: string;
   description: string;
   source: string;
-  port: number;
 };
 
 const appsDir = `${__dirname}/../apps`;
@@ -16,7 +15,7 @@ const finalReadmePath = `${__dirname}/../README.md`;
 
 const getAppsList = async () => {
   const apps: Record<string, App> = {};
-  const appsNotReady: Record<string, App> = {};
+  const appsDeprecated: Record<string, App> = {};
 
   const appNames = fs.readdirSync(appsDir);
 
@@ -32,16 +31,14 @@ const getAppsList = async () => {
           categories: appConfigJson.categories,
           description: appConfigJson.short_desc,
           source: appConfigJson.source,
-          port: appConfigJson.port
         };
       } else if (appConfigJson.deprecated) {
-        appsNotReady[app] = {
+        appsDeprecated[app] = {
           id: appConfigJson.id,
           name: appConfigJson.name,
           categories: appConfigJson.categories,
           description: appConfigJson.description,
           source: appConfigJson.source,
-          port: appConfigJson.port
         };
       }
     } catch (e) {
@@ -49,43 +46,43 @@ const getAppsList = async () => {
     }
   }
 
-  return { apps, appsNotReady };
+  return { apps, appsDeprecated };
 };
 
 const appToReadme = async (app: App) => {
-  return `| <img src="apps/${app.id}/metadata/logo.jpg" width="64"> | [${app.name}](${app.source})<br/><sub>${app.categories}</sub>| ${app.description} |`;
+  return `| <img src="apps/${app.id}/metadata/logo.jpg" width="56"> | *[${app.name}](${app.source})*<br/><sub>*${app.categories.replace(/,/g, " ")}*</sub>| ${app.description} |`;
 };
 
-const writeToReadme = (appsList: string, count: number, appsNotReadyList: string, countNotReady: number) => {
+const writeToReadme = (appsList: string, count: number, appsDeprecatedList: string, countDeprecated: number) => {
   const baseReadme = fs.readFileSync(baseReadmePath, "utf8");
   let finalReadme = baseReadme.replace("<!appsList>", appsList);
   finalReadme = finalReadme.replace("<!appsCount>", count.toString());
-  finalReadme = finalReadme.replace("<!appsNotReadyList>", appsNotReadyList);
-  finalReadme = finalReadme.replace("<!appsNotReadyCount>", countNotReady.toString());
+  finalReadme = finalReadme.replace("<!appsDeprecatedList>", appsDeprecatedList);
+  finalReadme = finalReadme.replace("<!appsDeprecatedCount>", countDeprecated.toString());
   fs.writeFileSync(finalReadmePath, finalReadme);
 };
 
 const main = async () => {
-  const { apps, appsNotReady } = await getAppsList();
+  const { apps, appsDeprecated } = await getAppsList();
   const appKeys = Object.keys(apps).sort();
-  const appKeysNotReady = Object.keys(appsNotReady).sort();
+  const appKeysDeprecated = Object.keys(appsDeprecated).sort();
   let appsList = "";
-  let appsNotReadyList = "";
+  let appsDeprecatedList = "";
 
   for (let i = 0; i < appKeys.length; i++) {
     const appFinal = await appToReadme(apps[appKeys[i]]);
     appsList = `${appsList}${appFinal}\n`;
   }
 
-  for (let i = 0; i < appKeysNotReady.length; i++) {
-    const appNotReadyFinal = await appToReadme(appsNotReady[appKeysNotReady[i]]);
-    appsNotReadyList = `${appsNotReadyList}${appNotReadyFinal}\n`;
+  for (let i = 0; i < appKeysDeprecated.length; i++) {
+    const appDeprecatedFinal = await appToReadme(appsDeprecated[appKeysDeprecated[i]]);
+    appsDeprecatedList = `${appsDeprecatedList}${appDeprecatedFinal}\n`;
   }
 
   const count = appKeys.length;
-  const countNotReady = appKeysNotReady.length;
+  const countDeprecated = appKeysDeprecated.length;
 
-  writeToReadme(appsList, count, appsNotReadyList, countNotReady);
+  writeToReadme(appsList, count, appsDeprecatedList, countDeprecated);
 
   exec(`npx prettier ${finalReadmePath} --write`, (stdout, stderr) => {
     if (stderr) {
