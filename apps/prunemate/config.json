@@ -1,0 +1,29 @@
+{
+  "schema": "https://schemas.runtipi.io/config.json",
+  "name": "Prunemate",
+  "id": "prunemate",
+  "available": true,
+  "dynamic_config": true,
+  "short_desc": "Automatic Docker resources clean up",
+  "author": "https://github.com/anoniemerd",
+  "port": 16845,
+  "categories": ["utilities"],
+  "description": "Web interface to automatically clean up Docker resources on a schedule.",
+  "tipi_version": 1,
+  "version": "1.2.7",
+  "source": "https://github.com/anoniemerd/PruneMate",
+  "exposable": true,
+  "supported_architectures": ["amd64"],
+  "form_fields": [
+    {
+      "type": "boolean",
+      "label": "Use 24h time format",
+      "hint": "disable to use 12h format",
+      "default": true,
+      "env_variable": "PRUNEMATE_TIME_24H"
+    }
+  ],
+  "created_at": 1764769614252,
+  "updated_at": 1764770000000,
+  "min_tipi_version": "4.5.0"
+}
