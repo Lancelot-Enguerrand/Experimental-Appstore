@@ -121,67 +121,8 @@ Zerobyte allows you to easily restore your data from backups. To restore data, n
 
 ![Preview](https://github.com/nicotsx/zerobyte/blob/main/screenshots/restoring.png?raw=true)
 
-## Propagating mounts to host
-
-Zerobyte is capable of propagating mounted volumes from within the container to the host system. This is particularly useful when you want to access the mounted data directly from the host to use it with other applications or services.
-
-> In order to enable this feature, you need to run Zerobyte with privileged mode and mount /proc from the host. 
-
-You can edit your `user-config` file:
-```diff
-services:
-  zerobyte:
-+   privileged: true
-    volumes:
-+     - /proc:/host/proc
-```
-*Restart Zerobyte to apply the changes.*
-
-## Docker plugin
-
-Zerobyte can also be used as a Docker volume plugin, allowing you to mount your volumes directly into other Docker containers. This enables seamless integration with your containerized applications.
-
-> In order to enable this feature, you need to run Zerobyte with privileged mode and mount several items from the host.
-
-You can edit your `user-config` file:
-```diff
-services:
-  zerobyte:
-+   privileged: true
-    volumes:
-+     - /proc:/host/proc
-+     - /run/docker/plugins:/run/docker/plugins
-+     - /var/run/docker.sock:/var/run/docker.sock
-```
-*Restart Zerobyte to apply the changes.*
-
-Your Zerobyte volumes will now be available as Docker volumes that you can mount into other containers using the `--volume` flag:
-
-```bash
-docker run -v im-nfs:/path/in/container nginx:latest
-```
-
-Or update any of your Runtipi app `user-config` :
-
-```yaml
-services:
-  myservice:
-    volumes:
-      - im-nfs:/path/in/container
-volumes:
-  im-nfs:
-    external: true
-```
-
-The volume name format is `im-<volume-name>` where `<volume-name>` is the name you assigned to the volume in Zerobyte. You can verify that the volume is available by running:
-
-```bash
-docker volume ls
-```
-
-## Docker volume usage
-
-![Preview](https://github.com/nicotsx/zerobyte/blob/main/screenshots/backups.png?raw=true)
+## Propagating mounts to host & Docker plugin
+This functionnality has been removed since `v0.18.4`, [details here](https://github.com/nicotsx/zerobyte/pull/137).
 
 # Third-Party Software
 This project includes the following third-party software components:
