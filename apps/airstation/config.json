@@ -5,8 +5,8 @@
   "dynamic_config": true,
   "port": 7331,
   "id": "airstation",
-  "tipi_version": 5,
-  "version": "1.2.1",
+  "tipi_version": 6,
+  "version": "1.3.0",
   "categories": [
     "music"
   ],
@@ -31,8 +31,11 @@
       "env_variable": "AIRSTATION_JWT_SIGN"
     }
   ],
-  "supported_architectures": [ "arm64", "amd64" ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
   "created_at": 1737379503315,
-  "updated_at": 1762615555555,
+  "updated_at": 1767408214357,
   "min_tipi_version": "4.5.0"
 }
