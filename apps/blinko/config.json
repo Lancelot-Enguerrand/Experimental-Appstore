@@ -6,8 +6,8 @@
   "dynamic_config": true,
   "port": 8114,
   "id": "blinko",
-  "tipi_version": 27,
-  "version": "1.8.1",
+  "tipi_version": 28,
+  "version": "1.8.2",
   "categories": [
     "utilities"
   ],
@@ -37,6 +37,6 @@
     "amd64"
   ],
   "created_at": 1737379503315,
-  "updated_at": 1767322160281,
+  "updated_at": 1767408199798,
   "min_tipi_version": "4.5.0"
 }
