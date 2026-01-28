@@ -11,6 +11,10 @@
         {
           "key": "TZ",
           "value": "${TZ}"
+        },
+        {
+          "key": "BASE_URL",
+          "value": "${APP_PROTOCOL}://${APP_DOMAIN}"
         }
       ],
       "volumes": [
@@ -29,3 +33,4 @@
     }
   ]
 }
+
