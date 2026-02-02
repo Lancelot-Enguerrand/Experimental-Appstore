@@ -5,8 +5,8 @@
   "available": true,
   "exposable": true,
   "dynamic_config": true,
-  "tipi_version": 17,
-  "version": "v0.48.0",
+  "tipi_version": 18,
+  "version": "v0.49.1",
   "short_desc": "Medical Records Management System",
   "description": "A medical records management system with React frontend and FastAPI backend.",
   "source": "https://github.com/afairgiant/Medikeep",
@@ -49,6 +49,6 @@
     }
   ],
   "created_at": 1758273499999,
-  "updated_at": 1769915612619,
+  "updated_at": 1770002022397,
   "min_tipi_version": "4.5.0"
 }
