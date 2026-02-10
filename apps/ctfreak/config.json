@@ -6,8 +6,8 @@
   "dynamic_config": true,
   "port": 6700,
   "id": "ctfreak",
-  "tipi_version": 14,
-  "version": "1.35.0",
+  "tipi_version": 15,
+  "version": "1.36.1",
   "categories": [
     "utilities"
   ],
@@ -21,6 +21,6 @@
     "amd64"
   ],
   "created_at": 1748368269955,
-  "updated_at": 1769482493854,
+  "updated_at": 1770693259048,
   "min_tipi_version": "4.5.0"
 }
