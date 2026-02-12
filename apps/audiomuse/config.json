@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.runtipi.io/v2/app-info.json",
-  "name": "AudioMuse-AI ",
+  "name": "AudioMuse-AI",
   "id": "audiomuse",
   "available": true,
   "dynamic_config": true,
@@ -57,7 +57,7 @@
       "required": false
     },
     {
-      "type": "text",
+      "type": "password",
       "label": "Music server API Token",
       "hint": "For navidrome, use password",
       "env_variable": "AUDIOMUSE_SERVER_TOKEN",
@@ -101,7 +101,7 @@
       "required": false
     },
     {
-      "type": "text",
+      "type": "password",
       "label": "Music server API Token",
       "hint": "For navidrome, use password",
       "env_variable": "AUDIOMUSE_AI_API_TOKEN",

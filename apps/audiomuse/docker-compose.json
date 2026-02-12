@@ -81,7 +81,7 @@
         },
         {
           "key": "REDIS_URL",
-          "value": "audiomuse-redis://redis:6379/0}"
+          "value": "redis://audiomuse-redis:6379/0}"
         },
         {
           "key": "AI_MODEL_PROVIDER",
@@ -209,7 +209,7 @@
         },
         {
           "key": "REDIS_URL",
-          "value": "audiomuse-redis://redis:6379/0}"
+          "value": "redis://audiomuse-redis:6379/0}"
         },
         {
           "key": "AI_MODEL_PROVIDER",
