@@ -65,7 +65,7 @@
         },
         {
           "key": "POSTGRES_PASSWORD",
-          "value": "${AUDIOMUSE_SERVER_POSTGRES_PASSWORD}"
+          "value": "${AUDIOMUSE_POSTGRES_PASSWORD}"
         },
         {
           "key": "POSTGRES_DB",

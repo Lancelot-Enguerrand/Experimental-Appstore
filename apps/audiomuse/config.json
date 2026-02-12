@@ -113,6 +113,12 @@
       "hint": "For navidrome, use password",
       "env_variable": "AUDIOMUSE_AI_MODEL",
       "required": false
+    },
+    {
+      "type": "random",
+      "label": "AUDIOMUSE_POSTGRES_PASSWORD",
+      "min": 32,
+      "env_variable": "AUDIOMUSE_POSTGRES_PASSWORD"
     }
   ],
   "created_at": 1745082405284,

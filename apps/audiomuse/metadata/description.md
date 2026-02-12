@@ -1,9 +1,6 @@
-![Media Server Support: Jellyfin 10.11.3, Navidrome 0.58.0, LMS v3.69.0, Lyrion 9.0.2, Emby 4.9.1.80](https://img.shields.io/badge/Media%20Server-Jellyfin%2010.11.3%2C%20Navidrome%200.58.0%2C%20LMS%20v3.69.0%2C%20Lyrion%209.0.2%2C%20Emby%204.9.1.80-blue?style=flat-square&logo=server&logoColor=white)
-
-
 # **AudioMuse-AI - Where Music Takes Shape** 
 
-AudioMuse-AI is an open-source, Dockerized environment that brings **automatic playlist generation** to your self-hosted music library. Using tools such as [Librosa](https://github.com/librosa/librosa) and [ONNX](https://onnx.ai/), it performs **sonic analysis** on your audio files locally, allowing you to curate playlists for any mood or occasion without relying on external APIs.
+AudioMuse-AI is an open-source, Dockerized environment that brings **automatic playlist generation** to your self-hosted music library. It performs **sonic analysis** on your audio files locally, allowing you to curate playlists for any mood or occasion without relying on external APIs.
 
 It integrates with the main music servers' APIs such as :
  - [Jellyfin](https://jellyfin.org) *10.11.3*
@@ -22,14 +19,6 @@ AudioMuse-AI lets you explore your music library in innovative ways, just **star
 * **Song Alchemy**: Mix your ideal vibe, mark tracks as "ADD" or "SUBTRACT" to get a curated playlist and a 2D preview. Export the final selection directly to your media server.
 * **Text Search**: search your song with simple text that can contains mood, instruments and genre like calm piano songs.
 
-
-**The full list or AudioMuse-AI related repository are:** 
-  > * [AudioMuse-AI](https://github.com/NeptuneHub/AudioMuse-AI): the core application, it run Flask and Worker containers to actually run all the feature;
-  > * [AudioMuse-AI Helm Chart](https://github.com/NeptuneHub/AudioMuse-AI-helm): helm chart for easy installation on Kubernetes;
-  > * [AudioMuse-AI Plugin for Jellyfin](https://github.com/NeptuneHub/audiomuse-ai-plugin): Jellyfin Plugin;
-  > * [AudioMuse-AI Plugin for Navidrome](https://github.com/NeptuneHub/AudioMuse-AI-NV-plugin): Navidrome Plugin;
-  > * [AudioMuse-AI MusicServer](https://github.com/NeptuneHub/AudioMuse-AI-MusicServer): Open Subosnic like Music Sever with integrated sonic functionality.
-
 ## Disclaimer
 
 **Important:** Despite the similar name, this project (**AudioMuse-AI**) is an independent, community-driven effort. It has no official connection to the website audiomuse.ai.
@@ -44,16 +33,7 @@ We are **not affiliated with, endorsed by, or sponsored by** the owners of `audi
 - [Key Technologies](#key-technologies)
 - [How To Contribute](#how-to-contribute)
 
-## Quick Start Deployment
-
-Get AudioMuse-AI running in minutes with Docker Compose. 
-
-If you need more deployment example take a look at [DEPLOYMENT](docs/DEPLOYMENT.md) page.
-
-For a full list of configuration parameter take a look at [PARAMETERS](docs/PARAMETERS.md) page.
-
-For the architecture design of AudioMuse-AI, take a look to the [ARCHITECTURE](docs/ARCHITECTURE.md) page.
-
+## Quick Start 
 **Prerequisites:**
 * A running media server (Jellyfin, Navidrome, Lyrion, or Emby)
 * See [Hardware Requirements](#hardware-requirements)
@@ -77,31 +57,6 @@ Suggested requirements:
 You can check the [Tested Hardware and Configuration](docs/HARDWARE.md) notes to see which hardware has already been validated.
 
 For more information about the GPU deployment requirements have a look to the [GPU](docs/GPU.md) page.
-
-## **Docker Image Tagging Strategy**
-
-Our GitHub Actions workflow automatically builds and publishes Docker images with the following tags:
-
-* **`:latest`**
-  Stable build from the **main** branch.
-  **Recommended for most users.**
-
-* **`:devel`**
-  Development build from the **devel** branch.
-  May be unstable — **for testing and development only.**
-
-* **`:vX.Y.Z`** (e.g. `:v1.0.0`, `:v0.1.4-alpha`)
-  Immutable images built from **Git release tags**.
-  **Ideal for reproducible or pinned deployments.**
-
-* **`-noavx2`** variants
-  Experimental images for CPUs **without AVX2 support**, using legacy dependencies.
-  **Not recommended** unless required for compatibility.
-
-* **`-nvidia`** variants
-  Images that support the use of GPU for both Analysis and Clustering.
-  **Not recommended** for old GPU.
-
 
 ## **Key Technologies**
 
@@ -127,3 +82,10 @@ AudioMuse AI is built upon a robust stack of open-source technologies:
 Contributions, issues, and feature requests are welcome\!  
 
 For more details on how to contribute please follow the [Contributing Guidelines](https://github.com/NeptuneHub/AudioMuse-AI/blob/main/CONTRIBUTING.md)
+
+**The full list or AudioMuse-AI related repository are:** 
+  > * [AudioMuse-AI](https://github.com/NeptuneHub/AudioMuse-AI): the core application, it run Flask and Worker containers to actually run all the feature;
+  > * [AudioMuse-AI Helm Chart](https://github.com/NeptuneHub/AudioMuse-AI-helm): helm chart for easy installation on Kubernetes;
+  > * [AudioMuse-AI Plugin for Jellyfin](https://github.com/NeptuneHub/audiomuse-ai-plugin): Jellyfin Plugin;
+  > * [AudioMuse-AI Plugin for Navidrome](https://github.com/NeptuneHub/AudioMuse-AI-NV-plugin): Navidrome Plugin;
+  > * [AudioMuse-AI MusicServer](https://github.com/NeptuneHub/AudioMuse-AI-MusicServer): Open Subosnic like Music Sever with integrated sonic functionality.
