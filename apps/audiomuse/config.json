@@ -129,7 +129,7 @@
       "env_variable": "AUDIOMUSE_POSTGRES_PASSWORD"
     }
   ],
-  "created_at": 1745082405284,
-  "updated_at": 1762615555555,
+  "created_at": 1770916999999,
+  "updated_at": 1762617000000,
   "min_tipi_version": "4.5.0"
 }
