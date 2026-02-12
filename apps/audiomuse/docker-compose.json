@@ -5,6 +5,7 @@
     {
       "name": "audiomuse",
       "image": "ghcr.io/neptunehub/audiomuse-ai:0.8.9",
+      "isMain": true,
       "internalPort": 8000,
       "environment": [
         {
@@ -93,19 +94,35 @@
         },
         {
           "key": "OPENAI_MODEL_NAME",
-          "value": "${AUDIOMUSE_AI_MODEL_NAME}"
+          "value": "${AUDIOMUSE_AI_MODEL_NAME:-openai/gpt-4}"
+        },
+        {
+          "key": "OPENAI_SERVER_URL",
+          "value": "${AUDIOMUSE_AI_SERVER_URL}"
         },
         {
           "key": "GEMINI_API_KEY",
           "value": "${AUDIOMUSE_AI_API_KEY}"
         },
         {
+          "key": "GEMINI_MODEL_NAME",
+          "value": "${AUDIOMUSE_AI_MODEL_NAME:-gemini-1.5-flash-latest}"
+        },
+        {
           "key": "MISTRAL_API_KEY",
           "value": "${AUDIOMUSE_AI_API_KEY}"
         },
         {
-          "key": "CLAP_ENABLED",
-          "value": "${AUDIOMUSE_CLAP_ENABLED}"
+          "key": "MISTRAL_MODEL_NAME",
+          "value": "${AUDIOMUSE_AI_MODEL_NAME:-ministral-3b-latest}"
+        },
+        {
+          "key": "OLLAMA_SERVER_URL",
+          "value": "${AUDIOMUSE_AI_SERVER_URL}"
+        },
+        {
+          "key": "OLLAMA_MODEL_NAME",
+          "value": "${AUDIOMUSE_AI_MODEL_NAME:-ministral:3b}"
         },
         {
           "key": "CLAP_ENABLED",
@@ -221,15 +238,35 @@
         },
         {
           "key": "OPENAI_MODEL_NAME",
-          "value": "${AUDIOMUSE_AI_MODEL_NAME}"
+          "value": "${AUDIOMUSE_AI_MODEL_NAME:-openai/gpt-4}"
+        },
+        {
+          "key": "OPENAI_SERVER_URL",
+          "value": "${AUDIOMUSE_AI_SERVER_URL}"
         },
         {
           "key": "GEMINI_API_KEY",
           "value": "${AUDIOMUSE_AI_API_KEY}"
         },
         {
+          "key": "GEMINI_MODEL_NAME",
+          "value": "${AUDIOMUSE_AI_MODEL_NAME:-gemini-1.5-flash-latest}"
+        },
+        {
           "key": "MISTRAL_API_KEY",
           "value": "${AUDIOMUSE_AI_API_KEY}"
+        },
+        {
+          "key": "MISTRAL_MODEL_NAME",
+          "value": "${AUDIOMUSE_AI_MODEL_NAME:-ministral-3b-latest}"
+        },
+        {
+          "key": "OLLAMA_SERVER_URL",
+          "value": "${AUDIOMUSE_AI_SERVER_URL}"
+        },
+        {
+          "key": "OLLAMA_MODEL_NAME",
+          "value": "${AUDIOMUSE_AI_MODEL_NAME:-ministral:3b}"
         },
         {
           "key": "CLAP_ENABLED",

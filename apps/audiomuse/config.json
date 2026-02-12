@@ -73,7 +73,7 @@
     },
     {
       "type": "text",
-      "label": "AI Model Provider",
+      "label": "AI provider",
       "env_variable": "AI_MODEL_PROVIDER",
       "options": [
         {
@@ -102,15 +102,14 @@
     },
     {
       "type": "password",
-      "label": "Music server API Token",
-      "hint": "For navidrome, use password",
+      "label": "AI provider API Token",
       "env_variable": "AUDIOMUSE_AI_API_TOKEN",
       "required": false
     },
     {
       "type": "text",
-      "label": "Music server API Token",
-      "hint": "For navidrome, use password",
+      "label": "AI model",
+      "hint": "Only if you need a specific model, depending on your provider",
       "env_variable": "AUDIOMUSE_AI_MODEL",
       "required": false
     },

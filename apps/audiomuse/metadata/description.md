@@ -2,13 +2,14 @@
 
 AudioMuse-AI is an open-source, Dockerized environment that brings **automatic playlist generation** to your self-hosted music library. It performs **sonic analysis** on your audio files locally, allowing you to curate playlists for any mood or occasion without relying on external APIs.
 
-It integrates with the main music servers' APIs such as :
+## Music server compatibility :
  - [Jellyfin](https://jellyfin.org) *10.11.3*
- - [Navidrome](https://www.navidrome.org/) 0.58.0*
+ - [Navidrome](https://www.navidrome.org/) *0.58.0*
  - [LMS](https://github.com/epoupon/lms/tree/master) *v3.69.0*
  - [Lyrion](https://lyrion.org/) *9.0.2*
  - [Emby](https://emby.media) *4.9.1.80*
 
+## Features :
 AudioMuse-AI lets you explore your music library in innovative ways, just **start with an initial analysis**, and you’ll unlock features like:
 * **Clustering**: Automatically groups sonically similar songs, creating genre-defying playlists based on the music's actual sound.
 * **Instant Playlists**: Simply tell the AI what you want to hear—like "high-tempo, low-energy music" and it will instantly generate a playlist for you.
@@ -18,30 +19,6 @@ AudioMuse-AI lets you explore your music library in innovative ways, just **star
 * **Sonic Fingerprint**: Generates playlists based on your listening habits, finding tracks similar to what you've been playing most often.
 * **Song Alchemy**: Mix your ideal vibe, mark tracks as "ADD" or "SUBTRACT" to get a curated playlist and a 2D preview. Export the final selection directly to your media server.
 * **Text Search**: search your song with simple text that can contains mood, instruments and genre like calm piano songs.
-
-## Disclaimer
-
-**Important:** Despite the similar name, this project (**AudioMuse-AI**) is an independent, community-driven effort. It has no official connection to the website audiomuse.ai.
-
-We are **not affiliated with, endorsed by, or sponsored by** the owners of `audiomuse.ai`.
-
-## **Table of Contents**
-
-- [Quick Start Deployment](#quick-start-deployment)
-- [Hardware Requirements](#hardware-requirements)
-- [Docker Image Tagging Strategy](#docker-image-tagging-strategy)
-- [Key Technologies](#key-technologies)
-- [How To Contribute](#how-to-contribute)
-
-## Quick Start 
-**Prerequisites:**
-* A running media server (Jellyfin, Navidrome, Lyrion, or Emby)
-* See [Hardware Requirements](#hardware-requirements)
-
-**Run your first analysis:**
-   - Navigate to "Analysis and Clustering" page
-   - Click "Start Analysis" to scan your library
-   - Wait for completion, then explore features like clustering and music map
 
 ## **Hardware Requirements**
 
@@ -54,10 +31,13 @@ Suggested requirements:
 * 8 GB RAM
 * NVME SSD storage
 
-You can check the [Tested Hardware and Configuration](docs/HARDWARE.md) notes to see which hardware has already been validated.
+## Quick Start 
+**Run your first analysis:**
+   - Navigate to "Analysis and Clustering" page
+   - Click "Start Analysis" to scan your library
+   - Wait for completion, then explore features like clustering and music map
 
-For more information about the GPU deployment requirements have a look to the [GPU](docs/GPU.md) page.
-
+# Technical informations
 ## **Key Technologies**
 
 AudioMuse AI is built upon a robust stack of open-source technologies:
@@ -89,3 +69,9 @@ For more details on how to contribute please follow the [Contributing Guidelines
   > * [AudioMuse-AI Plugin for Jellyfin](https://github.com/NeptuneHub/audiomuse-ai-plugin): Jellyfin Plugin;
   > * [AudioMuse-AI Plugin for Navidrome](https://github.com/NeptuneHub/AudioMuse-AI-NV-plugin): Navidrome Plugin;
   > * [AudioMuse-AI MusicServer](https://github.com/NeptuneHub/AudioMuse-AI-MusicServer): Open Subosnic like Music Sever with integrated sonic functionality.
+
+## Disclaimer
+
+**Important:** Despite the similar name, this project (**AudioMuse-AI**) is an independent, community-driven effort. It has no official connection to the website audiomuse.ai.
+
+We are **not affiliated with, endorsed by, or sponsored by** the owners of `audiomuse.ai`.
