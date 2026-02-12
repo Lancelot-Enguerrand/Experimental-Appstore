@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
+  "services": [
+    {
+      "name": "audiomuse",
+      "image": "ghcr.io/neptunehub/audiomuse-ai:0.8.9",
+      "internalPort": 8000,
+      "environment": [
+        {
+          "key": "SERVICE_TYPE",
+          "value": "flask"
+        },
+        {
+          "key": "MEDIASERVER_TYPE",
+          "value": "${AUDIOMUSE_SERVER_TYPE}"
+        },
+        {
+          "key": "TZ",
+          "value": "${TZ}"
+        },
+        {
+          "key": "JELLYFIN_USER_ID",
+          "value": "${AUDIOMUSE_SERVER_USER}"
+        },
+        {
+          "key": "JELLYFIN_TOKEN",
+          "value": "${AUDIOMUSE_SERVER_TOKEN}"
+        },
+        {
+          "key": "JELLYFIN_URL",
+          "value": "${AUDIOMUSE_SERVER_URL}"
+        },
+        {
+            "key": "NAVIDROME_USER",
+            "value": "${AUDIOMUSE_SERVER_USER}"
+        },
+        {
+            "key": "NAVIDROME_PASSWORD",
+            "value": "${AUDIOMUSE_SERVER_TOKEN}"
+        },
+        {
+            "key": "NAVIDROME_URL",
+            "value": "${AUDIOMUSE_SERVER_URL}"
+        },
+        {
+            "key": "EMBY_USER_ID",
+            "value": "${AUDIOMUSE_SERVER_USER}"
+        },
+        {
+            "key": "EMBY_TOKEN",
+            "value": "${AUDIOMUSE_SERVER_TOKEN}"
+        },
+        {
+            "key": "EMBY_URL",
+            "value": "${AUDIOMUSE_SERVER_URL}"
+        },
+        {
+            "key": "LYRION_URL",
+            "value": "${AUDIOMUSE_SERVER_URL}"
+        },
+        {
+          "key": "POSTGRES_USER",
+          "value": "audiomuse"
+        },
+        {
+          "key": "POSTGRES_PASSWORD",
+          "value": "${AUDIOMUSE_SERVER_POSTGRES_PASSWORD}"
+        },
+        {
+          "key": "POSTGRES_DB",
+          "value": "audiomusedb"
+        },
+        {
+          "key": "POSTGRES_HOST",
+          "value": "audiomuse-postgres"
+        },
+        {
+          "key": "POSTGRES_PORT",
+          "value": "5432"
+        },
+        {
+          "key": "REDIS_URL",
+          "value": "audiomuse-redis://redis:6379/0}"
+        },
+        {
+          "key": "AI_MODEL_PROVIDER",
+          "value": "${AUDIOMUSE_AI_MODEL_PROVIDER}"
+        },
+        {
+          "key": "OPENAI_API_KEY",
+          "value": "${AUDIOMUSE_AI_API_KEY}"
+        },
+        {
+          "key": "OPENAI_MODEL_NAME",
+          "value": "${AUDIOMUSE_AI_MODEL_NAME}"
+        },
+        {
+          "key": "GEMINI_API_KEY",
+          "value": "${AUDIOMUSE_AI_API_KEY}"
+        },
+        {
+          "key": "MISTRAL_API_KEY",
+          "value": "${AUDIOMUSE_AI_API_KEY}"
+        },
+        {
+          "key": "CLAP_ENABLED",
+          "value": "${AUDIOMUSE_CLAP_ENABLED}"
+        },
+        {
+          "key": "CLAP_ENABLED",
+          "value": "${AUDIOMUSE_CLAP_ENABLED}"
+        },
+        {
+          "key": "TEMP_DIR",
+          "value": "/app/temp_audio"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/temp/flask",
+          "containerPath": "/app/temp_audio"
+        }
+      ],
+      "dependsOn": [
+        "audiomuse-redis",
+        "audiomuse-postgres"
+      ]
+    },
+    {
+      "name": "audiomuse-worker",
+      "image": "ghcr.io/neptunehub/audiomuse-ai:0.8.9",
+      "environment": [
+        {
+          "key": "SERVICE_TYPE",
+          "value": "worker"
+        },
+        {
+          "key": "MEDIASERVER_TYPE",
+          "value": "${AUDIOMUSE_SERVER_TYPE}"
+        },
+        {
+          "key": "TZ",
+          "value": "${TZ}"
+        },
+        {
+          "key": "JELLYFIN_USER_ID",
+          "value": "${AUDIOMUSE_SERVER_USER}"
+        },
+        {
+          "key": "JELLYFIN_TOKEN",
+          "value": "${AUDIOMUSE_SERVER_TOKEN}"
+        },
+        {
+          "key": "JELLYFIN_URL",
+          "value": "${AUDIOMUSE_SERVER_URL}"
+        },
+        {
+            "key": "NAVIDROME_USER",
+            "value": "${AUDIOMUSE_SERVER_USER}"
+        },
+        {
+            "key": "NAVIDROME_PASSWORD",
+            "value": "${AUDIOMUSE_SERVER_TOKEN}"
+        },
+        {
+            "key": "NAVIDROME_URL",
+            "value": "${AUDIOMUSE_SERVER_URL}"
+        },
+        {
+            "key": "EMBY_USER_ID",
+            "value": "${AUDIOMUSE_SERVER_USER}"
+        },
+        {
+            "key": "EMBY_TOKEN",
+            "value": "${AUDIOMUSE_SERVER_TOKEN}"
+        },
+        {
+            "key": "EMBY_URL",
+            "value": "${AUDIOMUSE_SERVER_URL}"
+        },
+        {
+            "key": "LYRION_URL",
+            "value": "${AUDIOMUSE_SERVER_URL}"
+        },
+        {
+            "key": "POSTGRES_USER",
+            "value": "audiomuse"
+        },
+        {
+          "key": "POSTGRES_USER",
+          "value": "audiomuse"
+        },
+        {
+          "key": "POSTGRES_PASSWORD",
+          "value": "${AUDIOMUSE_POSTGRES_PASSWORD}"
+        },
+        {
+          "key": "POSTGRES_DB",
+          "value": "audiomusedb"
+        },
+        {
+          "key": "POSTGRES_HOST",
+          "value": "audiomuse-postgres"
+        },
+        {
+          "key": "POSTGRES_PORT",
+          "value": "5432"
+        },
+        {
+          "key": "REDIS_URL",
+          "value": "audiomuse-redis://redis:6379/0}"
+        },
+        {
+          "key": "AI_MODEL_PROVIDER",
+          "value": "${AUDIOMUSE_AI_MODEL_PROVIDER}"
+        },
+        {
+          "key": "OPENAI_API_KEY",
+          "value": "${AUDIOMUSE_AI_API_KEY}"
+        },
+        {
+          "key": "OPENAI_MODEL_NAME",
+          "value": "${AUDIOMUSE_AI_MODEL_NAME}"
+        },
+        {
+          "key": "GEMINI_API_KEY",
+          "value": "${AUDIOMUSE_AI_API_KEY}"
+        },
+        {
+          "key": "MISTRAL_API_KEY",
+          "value": "${AUDIOMUSE_AI_API_KEY}"
+        },
+        {
+          "key": "CLAP_ENABLED",
+          "value": "${AUDIOMUSE_CLAP_ENABLED}"
+        },
+        {
+          "key": "TEMP_DIR",
+          "value": "/app/temp_audio"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/temp/worker",
+          "containerPath": "/app/temp_audio"
+        }
+      ],
+      "dependsOn": [
+        "audiomuse-redis",
+        "audiomuse-postgres"
+      ]
+    },
+    {
+        "name": "audiomuse-redis",
+        "image": "redis:7-alpine",
+        "volumes": [
+          {
+            "hostPath": "${APP_DATA_DIR}/data/redis",
+            "containerPath": "/data"
+          }
+        ]
+      },
+      {
+        "name": "audiomuse-postgres",
+        "image": "postgres:18-alpine",
+        "environment": [
+          {
+            "key": "POSTGRES_USER",
+            "value": "audiomuse"
+          },
+          {
+            "key": "POSTGRES_PASSWORD",
+            "value": "${AUDIOMUSE_POSTGRES_PASSWORD}"
+          },
+          {
+            "key": "POSTGRES_DB",
+            "value": "audiomusedb"
+          }
+        ],
+        "volumes": [
+          {
+            "hostPath": "${APP_DATA_DIR}/data/postgres",
+            "containerPath": "/var/lib/postgresql/data"
+          }
+        ]
+      }
+  ]
+}

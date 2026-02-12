@@ -1,0 +1,121 @@
+{
+  "$schema": "https://schemas.runtipi.io/v2/app-info.json",
+  "name": "AudioMuse-AI ",
+  "id": "audiomuse",
+  "available": true,
+  "dynamic_config": true,
+  "short_desc": "Automatic playlist generation",
+  "author": "NeptuneHub",
+  "port": 12495,
+  "categories": [
+    "music"
+  ],
+  "description": "AudioMuse-AI is an open-source, Dockerized environment that brings automatic playlist generation to your self-hosted music library",
+  "tipi_version": 1,
+  "version": "0.8.9",
+  "source": "https://github.com/NeptuneHub/AudioMuse-AI",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Music server type",
+      "env_variable": "AUDIOMUSE_SERVER_TYPE",
+      "required": true,
+      "options": [
+        {
+          "label": "Jellyfin",
+          "value": "jellyfin"
+        },
+        {
+          "label": "Navidrome",
+          "value": "navidrome"
+        },
+        {
+          "label": "Emby",
+          "value": "emby"
+        },
+        {
+          "label": "Lyrion",
+          "value": "lyrion"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "Music server URL",
+      "env_variable": "AUDIOMUSE_SERVER_URL",
+      "required": true
+    },
+    {
+      "type": "text",
+      "label": "Music server User",
+      "env_variable": "AUDIOMUSE_SERVER_USER",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Music server API Token",
+      "hint": "For navidrome, use password",
+      "env_variable": "AUDIOMUSE_SERVER_TOKEN",
+      "required": false
+    },
+    {
+      "type": "boolean",
+      "label": "CLAP Text search enabled",
+      "hint": "500MB of additional memory needed",
+      "env_variable": "AUDIOMUSE_CLAP_ENABLED",
+      "default": false,
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "AI Model Provider",
+      "env_variable": "AI_MODEL_PROVIDER",
+      "options": [
+        {
+          "label": "OpenAI",
+          "value": "OPENAI"
+        },
+        {
+          "label": "Gemini",
+          "value": "GEMINI"
+        },
+        {
+          "label": "Mistral",
+          "value": "emby"
+        },
+        {
+          "label": "Ollama",
+          "value": "OLLAMA"
+        },
+        {
+          "label": "none",
+          "value": "NONE"
+        }
+      ],
+      "default": "NONE",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Music server API Token",
+      "hint": "For navidrome, use password",
+      "env_variable": "AUDIOMUSE_AI_API_TOKEN",
+      "required": false
+    },
+    {
+      "type": "text",
+      "label": "Music server API Token",
+      "hint": "For navidrome, use password",
+      "env_variable": "AUDIOMUSE_AI_MODEL",
+      "required": false
+    }
+  ],
+  "created_at": 1745082405284,
+  "updated_at": 1762615555555,
+  "min_tipi_version": "4.5.0"
+}
