@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "Projets",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 5188,
+  "id": "projets",
+  "tipi_version": 1,
+  "version": "latest",
+  "categories": [
+    "utilities"
+  ],
+  "description": "Projets is the project management tool for La Suite territoriale.",
+  "short_desc": "Project management tool",
+  "author": "blinko-space",
+  "source": "https://github.com/suitenumerique/projects",
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "APP SECRET KEY",
+      "min": 32,
+      "env_variable": "PROJETS_APP_SECRET_KEY"
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1737379503315,
+  "updated_at": 1770433482811,
+  "min_tipi_version": "4.5.0"
+}

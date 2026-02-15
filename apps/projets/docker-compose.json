@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "projets",
+      "image": "ghcr.io/lancelot-enguerrand/lasuite-projects:latest",
+      "isMain": true,
+      "internalPort": 1337,
+      "environment": [
+        {
+          "key": "BASE_URL",
+          "value": "${APP_DOMAIN}"
+        },
+        {
+          "key": "DATABASE_URL",
+          "value": "postgresql://postgres@projets-postgres/projets"
+        },
+        {
+          "key": "SECRET_KEY",
+          "value": "${PROJETS_APP_SECRET_KEY}"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/user-avatars",
+          "containerPath": "/app/public/user-avatars"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/attachments",
+          "containerPath": "/app/private/attachments"
+        }
+      ],
+      "dependsOn": {
+        "projets-postgres": {
+          "condition": "service_healthy"
+        }
+      }
+    },
+    {
+      "name": "projets-postgres",
+      "image": "postgres:18-alpine",
+      "environment": [
+        {
+          "key": "POSTGRES_DB",
+          "value": "projets"
+        },
+        {
+          "key": "POSTGRES_HOST_AUTH_METHOD",
+          "value": "trust"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/db",
+          "containerPath": "/var/lib/postgresql"
+        }
+      ],
+      "healthCheck": {
+        "test": "pg_isready -U postgres -d projets",
+        "interval": "10s",
+        "timeout": "5s",
+        "retries": 5
+      }
+    }
+  ]
+}
