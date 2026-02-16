@@ -4,7 +4,7 @@
   "services": [
     {
       "name": "audiomuse",
-      "image": "ghcr.io/neptunehub/audiomuse-ai:0.8.9",
+      "image": "ghcr.io/neptunehub/audiomuse-ai:0.8.10",
       "isMain": true,
       "internalPort": 8000,
       "environment": [
@@ -146,7 +146,7 @@
     },
     {
       "name": "audiomuse-worker",
-      "image": "ghcr.io/neptunehub/audiomuse-ai:0.8.9",
+      "image": "ghcr.io/neptunehub/audiomuse-ai:0.8.10",
       "environment": [
         {
           "key": "SERVICE_TYPE",
