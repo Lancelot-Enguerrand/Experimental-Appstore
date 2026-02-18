@@ -4,7 +4,7 @@
   "services": [
     {
       "name": "ctfreak",
-      "image": "jypsoftware/ctfreak:1.36.1",
+      "image": "jypsoftware/ctfreak:1.37.0",
       "isMain": true,
       "environment": [
           { "key": "TZ", "value": "${TZ}" }
