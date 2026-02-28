@@ -4,7 +4,7 @@
   "services": [
     {
       "name": "medical-records",
-      "image": "ghcr.io/afairgiant/medikeep:v0.54.0",
+      "image": "ghcr.io/afairgiant/medikeep:v0.55.0",
       "isMain": true,
       "internalPort": 8000,
       "environment": [
