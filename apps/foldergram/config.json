@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "Foldergram",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 4141,
+  "id": "foldergram",
+  "tipi_version": 1,
+  "version": "1.0.3",
+  "categories": [
+    "media", "photography"
+  ],
+  "description": "Self-hosted folder-based Instagram-style photo and video gallery app. ",
+  "short_desc": "Folder-based Instagram-style gallery app. ",
+  "author": "foldergram",
+  "source": "https://github.com/foldergram/foldergram ",
+  "website": "https://foldergram.github.io/",
+  "form_fields": [
+    {
+      "name": "Image Gallery Path",
+      "type": "text",
+      "hint": "Check Readme for details",
+      "placeholder": "/opt/runtipi/media/data/images/",
+      "required": true,
+      "env_variable": "FOLDERGRAM_GALLERY_ROOT_PATH"
+    },
+    {
+      "label": "Allow write access to your medias",
+      "type": "text",
+      "hint": "This will allow Foldergram to delete your media",
+      "required": true,
+      "options": [
+        {
+          "label": "Yes",
+          "value": "rw"
+        },
+        {
+          "label": "No",
+          "value": "ro"
+        }
+      ],
+      "env_variable": "FOLDERGRAM_GALLERY_ACCESS"
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1774013299999,
+  "updated_at": 1774013300000,
+  "min_tipi_version": "4.5.0"
+}
