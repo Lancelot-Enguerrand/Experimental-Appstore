@@ -39,7 +39,7 @@
         }
       ],
       "dependsOn": [
-        "open-notebook-db"
+        "open-notebook-surreal-db"
       ]
     },
     {

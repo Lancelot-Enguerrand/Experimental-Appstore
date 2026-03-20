@@ -13,7 +13,7 @@
   ],
   "description": "An Open Source implementation of Notebook LM with more flexibility and features",
   "short_desc": "Open Source implementation of Notebook LM",
-  "author": "blinko-space",
+  "author": "lfnovo",
   "source": "https://github.com/lfnovo/open-notebook",
   "website": "https://www.open-notebook.ai/",
   "form_fields": [
