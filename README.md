@@ -13,7 +13,7 @@ This appstore in **5** points :
 > [!TIP]  
 > For an appstore with high quality stable apps, [check here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
-## Apps available ✨ 18 ✨
+## Apps available ✨ 19 ✨
 
 |                             Logo                              | Name                                                               | Description                                  |
 | :-----------------------------------------------------------: | ------------------------------------------------------------------ | -------------------------------------------- |
@@ -29,6 +29,7 @@ This appstore in **5** points :
 |      <img src="apps/jpjr/metadata/logo.jpg" width="64">       | [JPJR](https://github.com/lfpoulain/jpjr)                          | Je prends, je rends                          |
 | <img src="apps/medical-records/metadata/logo.jpg" width="64"> | [Medikeep](https://github.com/afairgiant/Medikeep)                 | Medical Records Management System            |
 |    <img src="apps/monica-5/metadata/logo.jpg" width="64">     | [Monica (v5)](https://github.com/monicahq/monica)                  | Personal Relationship Management tool        |
+|  <img src="apps/open-notebook/metadata/logo.jpg" width="64">  | [Open Notebook](https://github.com/lfnovo/open-notebook)           | Open Source implementation of Notebook LM    |
 |    <img src="apps/scraperr/metadata/logo.jpg" width="64">     | [Scraperr](https://github.com/jaypyles/Scraperr)                   | Web scraping tool                            |
 |     <img src="apps/spotdl/metadata/logo.jpg" width="64">      | [Spotify Downloader](https://github.com/spotDL/spotify-downloader) | Music downloader for Spotify.                |
 |      <img src="apps/stash/metadata/logo.jpg" width="64">      | [Stash](https://github.com/stashapp/stash)                         | Organize and serve media.                    |
