@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "Open Notebook",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 8502,
+  "id": "open-notebook",
+  "tipi_version": 1,
+  "version": "1.8.1",
+  "categories": [
+    "data", "ai"
+  ],
+  "description": "An Open Source implementation of Notebook LM with more flexibility and features",
+  "short_desc": "Open Source implementation of Notebook LM",
+  "author": "lfnovo",
+  "source": "https://github.com/lfnovo/open-notebook",
+  "website": "https://www.open-notebook.ai/",
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "OPEN_NOTEBOOK_ENCRYPTION_KEY",
+      "min": 32,
+      "env_variable": "OPEN_NOTEBOOK_ENCRYPTION_KEY"
+    },
+    {
+      "type": "random",
+      "label": "OPEN_NOTEBOOK_DB_PASSWORD",
+      "min": 32,
+      "env_variable": "OPEN_NOTEBOOK_DB_PASSWORD"
+    }
+  ],
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1774033955554,
+  "updated_at": 1774033955555,
+  "min_tipi_version": "4.5.0"
+}
