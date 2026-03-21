@@ -1,0 +1,65 @@
+name: "ente"
+services:
+  ente:
+    image: "11notes/ente"
+    container_name: "ente"
+    depends_on:
+      ente-postgres:
+        condition: "service_healthy"
+        restart: true
+    environment:
+      TZ: ${TZ}
+      POSTGRES_PASSWORD: ${ENTE_POSTGRES_PASSWORD}
+      MINIO_ACCESS_KEY: ${ENTE_MINIO_ACCESS_KEY}
+      MINIO_SECRET_KEY: ${ENTE_MINIO_SECRET_KEY}
+    volumes:
+      - "${APP_DATA_DIR}/data/ente:/ente/etc"
+    x-runtipi:
+      internal_port: 6700
+      is_main: true
+
+  ente-postgres:
+    image: "11notes/postgres:16"
+    environment:
+      TZ: ${TZ}
+      POSTGRES_PASSWORD: ${ENTE_POSTGRES_PASSWORD}
+    volumes:
+      - "${APP_DATA_DIR}/data/db/etc:/postgres/etc"
+      - "${APP_DATA_DIR}/data/db/var:/postgres/var"
+      - "${APP_DATA_DIR}/data/db/backup:/postgres/backup"
+
+  ente-minio:
+    image: "minio/minio"
+    environment:
+      TZ: ${TZ}
+      MINIO_ACCESS_KEY: ${ENTE_MINIO_ACCESS_KEY}
+      MINIO_SECRET_KEY: ${ENTE_MINIO_SECRET_KEY}
+      MINIO_ROOT_USER: "root"
+      MINIO_ROOT_PASSWORD: "minio1234"
+    command: 
+      - "server"
+      - "/data"
+      - "--console-address"
+      - ":9001"
+    volumes:
+      - "${APP_DATA_DIR}/data/s3/etc:/root/.minio"
+      - "${APP_DATA_DIR}/data/s3/data:/data"
+
+  ente-mc:
+    image: "minio/mc"
+    depends_on:
+      - "ente-minio"
+    environment:
+      TZ: ${TZ}
+      MINIO_ACCESS_KEY: ${ENTE_MINIO_ACCESS_KEY}
+      MINIO_SECRET_KEY: ${ENTE_MINIO_SECRET_KEY}
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc config host add ente http://ente-minio:9000 ${MINIO_ACCESS_KEY} ${MINIO_SECRET_KEY};
+      /usr/bin/mc mb --ignore-existing ente/default;
+      exit 0;"
+    volumes:
+      - "${APP_DATA_DIR}/data/s3/mc:/root/.mc"
+
+x-runtipi:
+  schema_version: 2
