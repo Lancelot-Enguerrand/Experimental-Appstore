@@ -49,7 +49,7 @@
     },
     {
       "name": "open-notebook-surreal-db",
-      "image": "surrealdb/surrealdb:v2",
+      "image": "surrealdb/surrealdb:v3",
       "command": "start --log info --user tipi --pass ${OPEN_NOTEBOOK_DB_PASSWORD} rocksdb:/mydata/mydatabase.db",
       "environment": [
         {
