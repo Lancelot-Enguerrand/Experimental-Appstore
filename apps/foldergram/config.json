@@ -24,23 +24,6 @@
       "placeholder": "/opt/runtipi/media/data/images/",
       "required": true,
       "env_variable": "FOLDERGRAM_GALLERY_ROOT_PATH"
-    },
-    {
-      "name": "Allow write access to your medias",
-      "type": "text",
-      "hint": "This will allow Foldergram to delete your media",
-      "required": true,
-      "options": [
-        {
-          "label": "Yes",
-          "value": "true"
-        },
-        {
-          "label": "No",
-          "value": "false"
-        }
-      ],
-      "env_variable": "FOLDERGRAM_GALLERY_ACCESS"
     }
   ],
   "supported_architectures": [
