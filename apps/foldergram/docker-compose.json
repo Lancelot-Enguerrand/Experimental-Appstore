@@ -33,8 +33,7 @@
       "volumes": [
         {
           "hostPath": "${FOLDERGRAM_GALLERY_ROOT_PATH}",
-          "containerPath": "/app/data/gallery",
-          "readOnly": "${FOLDERGRAM_GALLERY_ACCESS:-false}"
+          "containerPath": "/app/data/gallery"
         },
         {
           "hostPath": "${APP_DATA_DIR}/data/db",
