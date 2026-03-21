@@ -1,0 +1,10 @@
+services:
+  tasktrove:
+    image: 'ghcr.io/dohsimpson/tasktrove:v0.12.4'
+    volumes:
+      - '${APP_DATA_DIR}/data/app:/app/data'
+    x-runtipi:
+      internal_port: 3000
+      is_main: true
+x-runtipi:
+  schema_version: 2

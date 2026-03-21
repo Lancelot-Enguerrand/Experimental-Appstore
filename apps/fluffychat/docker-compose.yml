@@ -1,0 +1,8 @@
+services:
+  fluffychat:
+    image: 'aceberg/fluffychat:2.0.0'
+    x-runtipi:
+      internal_port: 80
+      is_main: true
+x-runtipi:
+  schema_version: 2
