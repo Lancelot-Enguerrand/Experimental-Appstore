@@ -1,0 +1,14 @@
+services:
+  dumbassets:
+    image: 'dumbwareio/dumbassets:1.0.11'
+    volumes:
+      - '${APP_DATA_DIR}/data/data:/app/data'
+    environment:
+      - 'NODE_ENV=production'
+      - 'BASE_URL=${APP_PROTOCOL:-http}://{APP_DOMAIN}'
+      - 'TZ=${TZ}'
+    x-runtipi:
+      internal_port: 3000
+      is_main: true
+x-runtipi:
+  schema_version: 2

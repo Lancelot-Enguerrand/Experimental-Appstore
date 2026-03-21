@@ -1,0 +1,12 @@
+services:
+  ctfreak:
+    image: 'jypsoftware/ctfreak:1.38.0'
+    volumes:
+      - '${APP_DATA_DIR}/data/data:/data'
+    environment:
+      - 'TZ=${TZ}'
+    x-runtipi:
+      internal_port: 6700
+      is_main: true
+x-runtipi:
+  schema_version: 2

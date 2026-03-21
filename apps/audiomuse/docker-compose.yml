@@ -1,0 +1,97 @@
+services:
+  audiomuse:
+    image: 'ghcr.io/neptunehub/audiomuse-ai:0.9.3'
+    volumes:
+      - '${APP_DATA_DIR}/data/temp/flask:/app/temp_audio'
+    environment:
+      - 'SERVICE_TYPE=flask'
+      - 'MEDIASERVER_TYPE=${AUDIOMUSE_SERVER_TYPE}'
+      - 'TZ=${TZ}'
+      - 'JELLYFIN_USER_ID=${AUDIOMUSE_SERVER_USER}'
+      - 'JELLYFIN_TOKEN=${AUDIOMUSE_SERVER_TOKEN}'
+      - 'JELLYFIN_URL=${AUDIOMUSE_SERVER_URL}'
+      - 'NAVIDROME_USER=${AUDIOMUSE_SERVER_USER}'
+      - 'NAVIDROME_PASSWORD=${AUDIOMUSE_SERVER_TOKEN}'
+      - 'NAVIDROME_URL=${AUDIOMUSE_SERVER_URL}'
+      - 'EMBY_USER_ID=${AUDIOMUSE_SERVER_USER}'
+      - 'EMBY_TOKEN=${AUDIOMUSE_SERVER_TOKEN}'
+      - 'EMBY_URL=${AUDIOMUSE_SERVER_URL}'
+      - 'LYRION_URL=${AUDIOMUSE_SERVER_URL}'
+      - 'POSTGRES_USER=audiomuse'
+      - 'POSTGRES_PASSWORD=${AUDIOMUSE_POSTGRES_PASSWORD}'
+      - 'POSTGRES_DB=audiomusedb'
+      - 'POSTGRES_HOST=audiomuse-postgres'
+      - 'POSTGRES_PORT=5432'
+      - 'REDIS_URL=redis://audiomuse-redis:6379/0}'
+      - 'AI_MODEL_PROVIDER=${AUDIOMUSE_AI_MODEL_PROVIDER}'
+      - 'OPENAI_API_KEY=${AUDIOMUSE_AI_API_KEY}'
+      - 'OPENAI_MODEL_NAME=${AUDIOMUSE_AI_MODEL_NAME:-openai/gpt-4}'
+      - 'OPENAI_SERVER_URL=${AUDIOMUSE_AI_SERVER_URL}'
+      - 'GEMINI_API_KEY=${AUDIOMUSE_AI_API_KEY}'
+      - 'GEMINI_MODEL_NAME=${AUDIOMUSE_AI_MODEL_NAME:-gemini-1.5-flash-latest}'
+      - 'MISTRAL_API_KEY=${AUDIOMUSE_AI_API_KEY}'
+      - 'MISTRAL_MODEL_NAME=${AUDIOMUSE_AI_MODEL_NAME:-ministral-3b-latest}'
+      - 'OLLAMA_SERVER_URL=${AUDIOMUSE_AI_SERVER_URL}'
+      - 'OLLAMA_MODEL_NAME=${AUDIOMUSE_AI_MODEL_NAME:-ministral:3b}'
+      - 'CLAP_ENABLED=${AUDIOMUSE_CLAP_ENABLED}'
+      - 'TEMP_DIR=/app/temp_audio'
+    depends_on:
+      - 'audiomuse-redis'
+      - 'audiomuse-postgres'
+    x-runtipi:
+      internal_port: 8000
+      is_main: true
+  audiomuse-worker:
+    image: 'ghcr.io/neptunehub/audiomuse-ai:0.9.3'
+    volumes:
+      - '${APP_DATA_DIR}/data/temp/worker:/app/temp_audio'
+    environment:
+      - 'SERVICE_TYPE=worker'
+      - 'MEDIASERVER_TYPE=${AUDIOMUSE_SERVER_TYPE}'
+      - 'TZ=${TZ}'
+      - 'JELLYFIN_USER_ID=${AUDIOMUSE_SERVER_USER}'
+      - 'JELLYFIN_TOKEN=${AUDIOMUSE_SERVER_TOKEN}'
+      - 'JELLYFIN_URL=${AUDIOMUSE_SERVER_URL}'
+      - 'NAVIDROME_USER=${AUDIOMUSE_SERVER_USER}'
+      - 'NAVIDROME_PASSWORD=${AUDIOMUSE_SERVER_TOKEN}'
+      - 'NAVIDROME_URL=${AUDIOMUSE_SERVER_URL}'
+      - 'EMBY_USER_ID=${AUDIOMUSE_SERVER_USER}'
+      - 'EMBY_TOKEN=${AUDIOMUSE_SERVER_TOKEN}'
+      - 'EMBY_URL=${AUDIOMUSE_SERVER_URL}'
+      - 'LYRION_URL=${AUDIOMUSE_SERVER_URL}'
+      - 'POSTGRES_USER=audiomuse'
+      - 'POSTGRES_USER=audiomuse'
+      - 'POSTGRES_PASSWORD=${AUDIOMUSE_POSTGRES_PASSWORD}'
+      - 'POSTGRES_DB=audiomusedb'
+      - 'POSTGRES_HOST=audiomuse-postgres'
+      - 'POSTGRES_PORT=5432'
+      - 'REDIS_URL=redis://audiomuse-redis:6379/0}'
+      - 'AI_MODEL_PROVIDER=${AUDIOMUSE_AI_MODEL_PROVIDER}'
+      - 'OPENAI_API_KEY=${AUDIOMUSE_AI_API_KEY}'
+      - 'OPENAI_MODEL_NAME=${AUDIOMUSE_AI_MODEL_NAME:-openai/gpt-4}'
+      - 'OPENAI_SERVER_URL=${AUDIOMUSE_AI_SERVER_URL}'
+      - 'GEMINI_API_KEY=${AUDIOMUSE_AI_API_KEY}'
+      - 'GEMINI_MODEL_NAME=${AUDIOMUSE_AI_MODEL_NAME:-gemini-1.5-flash-latest}'
+      - 'MISTRAL_API_KEY=${AUDIOMUSE_AI_API_KEY}'
+      - 'MISTRAL_MODEL_NAME=${AUDIOMUSE_AI_MODEL_NAME:-ministral-3b-latest}'
+      - 'OLLAMA_SERVER_URL=${AUDIOMUSE_AI_SERVER_URL}'
+      - 'OLLAMA_MODEL_NAME=${AUDIOMUSE_AI_MODEL_NAME:-ministral:3b}'
+      - 'CLAP_ENABLED=${AUDIOMUSE_CLAP_ENABLED}'
+      - 'TEMP_DIR=/app/temp_audio'
+    depends_on:
+      - 'audiomuse-redis'
+      - 'audiomuse-postgres'
+  audiomuse-redis:
+    image: 'redis:7-alpine'
+    volumes:
+      - '${APP_DATA_DIR}/data/redis:/data'
+  audiomuse-postgres:
+    image: 'postgres:18-alpine'
+    volumes:
+      - '${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data'
+    environment:
+      - 'POSTGRES_USER=audiomuse'
+      - 'POSTGRES_PASSWORD=${AUDIOMUSE_POSTGRES_PASSWORD}'
+      - 'POSTGRES_DB=audiomusedb'
+x-runtipi:
+  schema_version: 2

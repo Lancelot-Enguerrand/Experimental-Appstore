@@ -1,0 +1,18 @@
+services:
+  tipimate:
+    image: 'ghcr.io/steveiliop56/tipimate:v2.1.0'
+    volumes:
+      - '${APP_DATA_DIR}/data/:/data'
+    environment:
+      - 'TIPIMATE_NOTIFICATION_URL=${TIPIMATE_NOTIFICATION_URL}'
+      - 'TIPIMATE_SERVER_NAME=${TIPIMATE_SERVER_NAME:-Tipimate}'
+      - 'TIPIMATE_INTERVAL=${TIPIMATE_INTERVAL:-30}'
+      - 'TIPIMATE_RUNTIPI_URL=${TIPIMATE_RUNTIPI_URL}'
+      - 'TIPIMATE_INSECURE=${TIPIMATE_INSECURE}'
+      - 'TIPIMATE_LOG_LEVEL=info'
+      - 'TIPIMATE_DATABASE_PATH=/data/tipimate.db'
+      - 'TIPIMATE_JWT_SECRET=${JWT_SECRET}'
+    x-runtipi:
+      is_main: true
+x-runtipi:
+  schema_version: 2

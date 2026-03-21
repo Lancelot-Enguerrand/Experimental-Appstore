@@ -1,0 +1,22 @@
+services:
+  scraperr:
+    image: 'jpyles0524/scraperr:1.1.7'
+    command:
+      - 'npm'
+      - 'run'
+      - 'start'
+    environment:
+      - 'NEXT_PUBLIC_API_URL=http://scraperr-api:8000'
+      - 'SERVER_URL=http://scraperr-api:8000'
+    x-runtipi:
+      internal_port: 3000
+      is_main: true
+  scraperr-api:
+    image: 'jpyles0524/scraperr_api:1.1.7'
+    volumes:
+      - '${APP_DATA_DIR}/data/data:/project/app/data'
+      - '${APP_DATA_DIR}/data/media:/project/app/media'
+    environment:
+      - 'LOG_LEVEL=INFO'
+x-runtipi:
+  schema_version: 2
