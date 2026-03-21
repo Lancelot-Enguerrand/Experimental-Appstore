@@ -3,10 +3,6 @@ services:
   ente:
     image: "11notes/ente"
     container_name: "ente"
-    depends_on:
-      ente-postgres:
-        condition: "service_healthy"
-        restart: true
     environment:
       TZ: ${TZ}
       POSTGRES_PASSWORD: ${ENTE_POSTGRES_PASSWORD}
@@ -47,8 +43,6 @@ services:
 
   ente-mc:
     image: "minio/mc"
-    depends_on:
-      - "ente-minio"
     environment:
       TZ: ${TZ}
       MINIO_ACCESS_KEY: ${ENTE_MINIO_ACCESS_KEY}
