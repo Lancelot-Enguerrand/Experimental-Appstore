@@ -1,0 +1,28 @@
+services:
+  open-notebook:
+    image: 'lfnovo/open_notebook:v1-latest'
+    volumes:
+      - '${APP_DATA_DIR}/data/notebook:/app/data'
+    environment:
+      - 'OPEN_NOTEBOOK_ENCRYPTION_KEY=${OPEN_NOTEBOOK_ENCRYPTION_KEY}'
+      - 'SURREAL_URL=ws://open-notebook-surreal-db:8000/rpc'
+      - 'SURREAL_USER=tipi'
+      - 'SURREAL_PASSWORD=${OPEN_NOTEBOOK_DB_PASSWORD}'
+      - 'SURREAL_NAMESPACE=open_notebook'
+      - 'SURREAL_DATABASE=open_notebook'
+      - 'API_URL=${APP_PROTOCOL:-http}://${APP_DOMAIN}'
+    depends_on:
+      - 'open-notebook-surreal-db'
+    x-runtipi:
+      internal_port: 8502
+      is_main: true
+  open-notebook-surreal-db:
+    image: 'surrealdb/surrealdb:v2'
+    command: 'start --log info --user tipi --pass ${OPEN_NOTEBOOK_DB_PASSWORD} rocksdb:/mydata/mydatabase.db'
+    volumes:
+      - '${APP_DATA_DIR}/data/db:/mydata'
+    environment:
+      - 'SURREAL_USER=tipi'
+      - 'SURREAL_PASS=${OPEN_NOTEBOOK_DB_PASSWORD}'
+x-runtipi:
+  schema_version: 2

@@ -1,0 +1,15 @@
+services:
+  ironmount:
+    image: 'ghcr.io/nicotsx/ironmount:v0.11.0'
+    volumes:
+      - '/var/lib/ironmount/:/var/lib/ironmount'
+      - '/etc/localtime:/etc/localtime:ro'
+    cap_add:
+      - 'SYS_ADMIN'
+    devices:
+      - '/dev/fuse:/dev/fuse'
+    x-runtipi:
+      internal_port: 4096
+      is_main: true
+x-runtipi:
+  schema_version: 2

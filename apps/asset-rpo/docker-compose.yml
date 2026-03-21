@@ -1,0 +1,66 @@
+services:
+  asset-rpo:
+    image: 'zurielbax/asset-rpo:latest'
+    volumes:
+      - '${APP_DATA_DIR}/data/data:/data'
+      - '${APP_DATA_DIR}/data/conf:/conf'
+    environment:
+      - 'APP_KEY=${ASSET_APP_KEY}'
+      - 'DB_HOST=asset-rpo-db'
+      - 'DB_USERNAME=tipi'
+      - 'DB_PASSWORD=${ASSET_DB_PASS}'
+      - 'DB_CONNECTION=pgsql'
+      - 'DB_PORT=5432'
+      - 'PHP_TZ=${TZ}'
+      - 'TIMEZONE=${TZ}'
+      - 'PUID=1000'
+      - 'PGID=1000'
+      - 'APP_NAME=Asset RPO'
+      - 'APP_ENV=production'
+      - 'APP_DEBUG=false'
+      - 'APP_URL=${APP_PROTOCOL-http}://${APP_DOMAIN}'
+      - 'ASSET_URL=${APP_PROTOCOL-http}://${APP_DOMAIN}'
+      - 'DB_DATABASE=asset'
+      - 'DB_PASSWORD_FILE=rootpass'
+      - 'CACHE_STORE=file'
+      - 'SESSION_DRIVER=file'
+      - 'SESSION_LIFETIME=240'
+      - 'SESSION_ENCRYPT=true'
+      - 'SESSION_PATH=/'
+      - 'SESSION_DOMAIN=${APP_DOMAIN}'
+      - 'SANCTUM_STATEFUL_DOMAINS=${APP_DOMAIN}'
+      - 'STARTUP_DELAY=5'
+      - 'TRUSTED_PROXIES=*'
+      - 'MAIL_MAILER=smtp'
+      - 'MAIL_HOST=${ASSET_MAIL_HOST}'
+      - 'MAIL_PORT=${ASSET_MAIL_PORT}'
+      - 'MAIL_USERNAME=${ASSET_MAIL_USERNAME}'
+      - 'MAIL_PASSWORD=${ASSET_MAIL_PASSWORD}'
+      - 'MAIL_ENCRYPTION=${ASSET_MAIL_ENCRYPTION:-tls}'
+      - 'MAIL_FROM_ADDRESS=${ASSET_MAIL_FROM_ADDRESS:-noreply@rpo.com}'
+      - 'MAIL_FROM_NAME=${ASSET_MAIL_FROM_NAME:-Asset RPO}'
+    depends_on:
+      asset-rpo-db:
+        condition: 'service_healthy'
+    x-runtipi:
+      internal_port: 80
+      is_main: true
+  asset-rpo-db:
+    image: 'postgres:17'
+    hostname: 'asset-rpo-db'
+    volumes:
+      - '${APP_DATA_DIR}/db:/var/lib/postgresql/data'
+    environment:
+      - 'TZ=${TZ}'
+      - 'POSTGRES_DB=asset'
+      - 'POSTGRES_USER=tipi'
+      - 'POSTGRES_PASSWORD=${ASSET_DB_PASS}'
+    healthcheck:
+      test: 'pg_isready -q -d asset -U tipi'
+      interval: '10s'
+      timeout: '45s'
+      retries: 10
+    security_opt:
+      - 'no-new-privileges:true'
+x-runtipi:
+  schema_version: 2

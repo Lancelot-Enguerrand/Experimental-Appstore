@@ -1,0 +1,18 @@
+services:
+  zerobyte:
+    image: 'ghcr.io/nicotsx/zerobyte:v0.32.0'
+    volumes:
+      - '/var/lib/zerobyte/:/var/lib/zerobyte'
+      - '/etc/localtime:/etc/localtime:ro'
+    environment:
+      - 'TZ=${TZ}'
+      - 'BASE_URL=${APP_PROTOCOL}://${APP_DOMAIN}'
+    cap_add:
+      - 'SYS_ADMIN'
+    devices:
+      - '/dev/fuse:/dev/fuse'
+    x-runtipi:
+      internal_port: 4096
+      is_main: true
+x-runtipi:
+  schema_version: 2

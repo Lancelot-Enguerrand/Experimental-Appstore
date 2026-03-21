@@ -1,0 +1,24 @@
+services:
+  kanbn:
+    image: 'ghcr.io/kanbn/kan:main'
+    environment:
+      - 'NEXT_PUBLIC_BASE_URL=${APP_PROTOCOL:-http}://${APP_DOMAIN}'
+      - 'BETTER_AUTH_SECRET=${KANBN_AUTH_SECRET}'
+      - 'POSTGRES_URL=postgresql://kan:${KANBN_DB_PASSWORD}@kanbn-db:5432/kan_db'
+      - 'NEXT_PUBLIC_ALLOW_CREDENTIALS=true'
+    depends_on:
+      kanbn-db:
+        condition: 'service_started'
+    x-runtipi:
+      internal_port: 3000
+      is_main: true
+  kanbn-db:
+    image: 'postgres:15'
+    volumes:
+      - '${APP_DATA_DIR}/data/db:/var/lib/postgresql/data'
+    environment:
+      - 'POSTGRES_DB=kan_db'
+      - 'POSTGRES_USER=kan'
+      - 'POSTGRES_PASSWORD=${KANBN_DB_PASSWORD}'
+x-runtipi:
+  schema_version: 2

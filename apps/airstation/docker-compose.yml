@@ -1,0 +1,19 @@
+services:
+  airstation:
+    image: 'cheatsnake/airstation:1.4.0'
+    volumes:
+      - '${APP_DATA_DIR}/data/storage:/app/storage'
+      - '${APP_DATA_DIR}/data/static:/app/static'
+    environment:
+      - 'AIRSTATION_SECRET_KEY=${AIRSTATION_SECRET_KEY}'
+      - 'AIRSTATION_JWT_SIGN=${AIRSTATION_JWT_SIGN}'
+    healthcheck:
+      test: 'wget --spider -q http://localhost:7331/'
+      interval: '10s'
+      timeout: '5s'
+      retries: 3
+    x-runtipi:
+      internal_port: 7331
+      is_main: true
+x-runtipi:
+  schema_version: 2
