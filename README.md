@@ -38,17 +38,6 @@ This appstore in **5** points :
 |    <img src="apps/tipimate/metadata/logo.jpg" width="64">     | [Tipimate](https://github.com/steveiliop56/tipimate)               | Runtipi app updates notifier                 |
 |    <img src="apps/zerobyte/metadata/logo.jpg" width="64">     | [Zerobyte](https://github.com/nicotsx/zerobyte)                    | Backup Automation                            |
 
-<br>
-
-## 🪦 Apps deprecated
-
-The following apps won't receive anymore updates here, check the linked appstore in the details for a continuous support.
-
-| Logo | Name | Details |
-| :--: | ---- | ------- |
-
----
-
 ### How to use ?
 
 > [!IMPORTANT]
