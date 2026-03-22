@@ -6,10 +6,11 @@
   "dynamic_config": true,
   "port": 4141,
   "id": "foldergram",
-  "tipi_version": 1,
-  "version": "1.0.3",
+  "tipi_version": 2,
+  "version": "1.0.4",
   "categories": [
-    "media", "photography"
+    "media",
+    "photography"
   ],
   "description": "Self-hosted folder-based Instagram-style photo and video gallery app. ",
   "short_desc": "Folder-based Instagram-style gallery app. ",
@@ -48,6 +49,6 @@
     "amd64"
   ],
   "created_at": 1774013299999,
-  "updated_at": 1774013300000,
+  "updated_at": 1774149244077,
   "min_tipi_version": "4.5.0"
 }
