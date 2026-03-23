@@ -1,6 +1,6 @@
 services:
   foldergram:
-    image: ghcr.io/foldergram/foldergram:1.0.4
+    image: ghcr.io/foldergram/foldergram:1.0.5
     x-runtipi:
       is_main: true
       internal_port: 4141
