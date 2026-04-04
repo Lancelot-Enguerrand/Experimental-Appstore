@@ -1,6 +1,6 @@
 services:
   medical-records:
-    image: 'ghcr.io/afairgiant/medikeep:v0.61.0'
+    image: 'ghcr.io/afairgiant/medikeep:v0.61.1'
     volumes:
       - '${APP_DATA_DIR}/data/uploads:/app/uploads'
       - '${APP_DATA_DIR}/data/logs:/app/logs'
