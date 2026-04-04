@@ -6,8 +6,8 @@
   "dynamic_config": true,
   "port": 4141,
   "id": "foldergram",
-  "tipi_version": 6,
-  "version": "1.0.9",
+  "tipi_version": 7,
+  "version": "1.1.0",
   "categories": [
     "media",
     "photography"
@@ -49,6 +49,6 @@
     "amd64"
   ],
   "created_at": 1774013299999,
-  "updated_at": 1774754151097,
+  "updated_at": 1775272311218,
   "min_tipi_version": "4.5.0"
 }
