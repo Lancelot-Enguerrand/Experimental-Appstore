@@ -5,8 +5,8 @@
   "dynamic_config": true,
   "port": 7331,
   "id": "airstation",
-  "tipi_version": 8,
-  "version": "1.4.0",
+  "tipi_version": 9,
+  "version": "1.4.1",
   "categories": [
     "music"
   ],
@@ -36,6 +36,6 @@
     "amd64"
   ],
   "created_at": 1737379503315,
-  "updated_at": 1768791328999,
+  "updated_at": 1775358938198,
   "min_tipi_version": "4.5.0"
 }

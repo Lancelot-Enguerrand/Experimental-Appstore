@@ -1,6 +1,6 @@
 services:
   airstation:
-    image: 'cheatsnake/airstation:1.4.0'
+    image: 'cheatsnake/airstation:1.4.1'
     volumes:
       - '${APP_DATA_DIR}/data/storage:/app/storage'
       - '${APP_DATA_DIR}/data/static:/app/static'
