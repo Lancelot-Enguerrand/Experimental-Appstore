@@ -6,10 +6,11 @@
   "dynamic_config": true,
   "port": 8502,
   "id": "open-notebook",
-  "tipi_version": 1,
-  "version": "1.8.1",
+  "tipi_version": 2,
+  "version": "1.8.3",
   "categories": [
-    "data", "ai"
+    "data",
+    "ai"
   ],
   "description": "An Open Source implementation of Notebook LM with more flexibility and features",
   "short_desc": "Open Source implementation of Notebook LM",
@@ -35,6 +36,6 @@
     "amd64"
   ],
   "created_at": 1774033955554,
-  "updated_at": 1774033955555,
+  "updated_at": 1775618170314,
   "min_tipi_version": "4.5.0"
 }
