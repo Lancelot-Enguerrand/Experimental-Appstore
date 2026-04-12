@@ -1,6 +1,6 @@
 services:
   ctfreak:
-    image: 'jypsoftware/ctfreak:1.38.0'
+    image: 'jypsoftware/ctfreak:1.38.1'
     volumes:
       - '${APP_DATA_DIR}/data/data:/data'
     environment:
