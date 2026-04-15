@@ -1,6 +1,6 @@
 services:
   open-notebook:
-    image: 'lfnovo/open_notebook:1.8.4'
+    image: 'lfnovo/open_notebook:1.8.5'
     volumes:
       - '${APP_DATA_DIR}/data/notebook:/app/data'
     environment:
