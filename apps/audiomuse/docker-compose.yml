@@ -1,6 +1,6 @@
 services:
   audiomuse:
-    image: 'ghcr.io/neptunehub/audiomuse-ai:1.0.3'
+    image: 'ghcr.io/neptunehub/audiomuse-ai:1.0.4'
     volumes:
       - '${APP_DATA_DIR}/data/temp/flask:/app/temp_audio'
     environment:
@@ -42,7 +42,7 @@ services:
       internal_port: 8000
       is_main: true
   audiomuse-worker:
-    image: 'ghcr.io/neptunehub/audiomuse-ai:1.0.3'
+    image: 'ghcr.io/neptunehub/audiomuse-ai:1.0.4'
     volumes:
       - '${APP_DATA_DIR}/data/temp/worker:/app/temp_audio'
     environment:
