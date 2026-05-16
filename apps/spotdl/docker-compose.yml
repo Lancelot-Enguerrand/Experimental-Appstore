@@ -1,6 +1,6 @@
 services:
   spotdl:
-    image: 'spotdl/spotify-downloader:v4.4.3'
+    image: 'spotdl/spotify-downloader:v4.5.0'
     entrypoint:
       - 'uv'
       - 'run'
