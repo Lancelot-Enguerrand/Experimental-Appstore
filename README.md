@@ -9,17 +9,19 @@ This appstore in **5** points :
 - 🧪 Can explode at any moment
 - 🙈 Broken apps stay hidden
 - 🤫 _QA department has been layed off_
+- 🤫 Stash & AudioMuse now have variants with gpu support!!I
 
 > [!TIP]  
 > For an appstore with high quality stable apps, [check here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
-## Apps available ✨ 20 ✨
+## Apps available ✨ 22 (kinda) ✨
 
 |                             Logo                              | Name                                                               | Description                                  |
 | :-----------------------------------------------------------: | ------------------------------------------------------------------ | -------------------------------------------- |
 |   <img src="apps/airstation/metadata/logo.jpg" width="64">    | [Airstation](https://github.com/cheatsnake/airstation)             | Your own online radio station                |
 |    <img src="apps/asset-rpo/metadata/logo.jpg" width="64">    | [Asset RPO](https://github.com/Red-Panda-One/asset)                | A simple way to manage assets.               |
-|    <img src="apps/audiomuse/metadata/logo.jpg" width="64">    | [AudioMuse-AI](https://github.com/NeptuneHub/AudioMuse-AI)         | Automatic playlist generation                |
+|    <img src="apps/audiomuse-cuda/metadata/logo.jpg" width="64">    | [AudioMuse-AI](https://github.com/NeptuneHub/AudioMuse-AI)         | Automatic playlist generation                |
+|    <img src="apps/audiomuse-cuda/metadata/logo.jpg" width="64">    | [AudioMuse-AI](https://github.com/NeptuneHub/AudioMuse-AI)         | Automatic playlist generation (Now with Cuda!!)                |
 |     <img src="apps/blinko/metadata/logo.jpg" width="64">      | [Blinko](https://github.com/blinko-space/blinko)                   | Note taking, to-do and moodboard application |
 |     <img src="apps/cobalt/metadata/logo.jpg" width="64">      | [Cobalt](https://github.com/imputnet/cobalt)                       | Media Downloader                             |
 |     <img src="apps/ctfreak/metadata/logo.jpg" width="64">     | [CTFreak](https://ctfreak.com/)                                    | Simple task scheduler                        |
@@ -34,6 +36,7 @@ This appstore in **5** points :
 |    <img src="apps/scraperr/metadata/logo.jpg" width="64">     | [Scraperr](https://github.com/jaypyles/Scraperr)                   | Web scraping tool                            |
 |     <img src="apps/spotdl/metadata/logo.jpg" width="64">      | [Spotify Downloader](https://github.com/spotDL/spotify-downloader) | Music downloader for Spotify.                |
 |      <img src="apps/stash/metadata/logo.jpg" width="64">      | [Stash](https://github.com/stashapp/stash)                         | Organize and serve media.                    |
+|      <img src="apps/nerethos-stash-jellyfin-ffmpeg/metadata/logo.jpg" width="64">      | [Stash](https://github.com/stashapp/stash)                         | Organize and serve media. (stash fork with builtin jellyfin-ffmpeg for HW acceleration!)                   |
 |    <img src="apps/tasktrove/metadata/logo.jpg" width="64">    | [TaskTrove](https://github.com/dohsimpson/TaskTrove)               | Task Manager                                 |
 |    <img src="apps/tipimate/metadata/logo.jpg" width="64">     | [Tipimate](https://github.com/steveiliop56/tipimate)               | Runtipi app updates notifier                 |
 |    <img src="apps/zerobyte/metadata/logo.jpg" width="64">     | [Zerobyte](https://github.com/nicotsx/zerobyte)                    | Backup Automation                            |

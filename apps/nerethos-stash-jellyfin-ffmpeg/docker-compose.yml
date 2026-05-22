@@ -1,6 +1,6 @@
 services:
   stash:
-    image: 'stashapp/stash:latest'
+    image: 'nerethos/stash:latest'
     volumes:
       - '/etc/localtime:/etc/localtime:ro'
       - '${APP_DATA_DIR}/data/config:/root/.stash'
@@ -9,7 +9,10 @@ services:
       - '${APP_DATA_DIR}/data/cache:/cache'
       - '${APP_DATA_DIR}/data/blobs:/blobs'
       - '${APP_DATA_DIR}/data/generated:/generated'
+    gpus: all
     environment:
+      - 'NVIDIA_VISIBLE_DEVICES=all'
+      - 'NVIDIA_DRIVER_CAPABILITIES=all'
       - 'STASH_STASH=/data/'
       - 'STASH_GENERATED=/generated/'
       - 'STASH_METADATA=/metadata/'
