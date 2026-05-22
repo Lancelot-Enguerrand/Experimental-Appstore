@@ -1,6 +1,6 @@
 services:
   zerobyte:
-    image: 'ghcr.io/nicotsx/zerobyte:v0.37.0'
+    image: 'ghcr.io/nicotsx/zerobyte:v0.37.1'
     volumes:
       - '/var/lib/zerobyte/:/var/lib/zerobyte'
       - '/etc/localtime:/etc/localtime:ro'
