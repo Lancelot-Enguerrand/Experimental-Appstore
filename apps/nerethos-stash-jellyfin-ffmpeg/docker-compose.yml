@@ -1,0 +1,27 @@
+services:
+  stash:
+    image: 'stashapp/stash:latest'
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+      - '${APP_DATA_DIR}/data/config:/root/.stash'
+      - '${APP_DATA_DIR}/data/data:/data'
+      - '${APP_DATA_DIR}/data/metadata:/metadata'
+      - '${APP_DATA_DIR}/data/cache:/cache'
+      - '${APP_DATA_DIR}/data/blobs:/blobs'
+      - '${APP_DATA_DIR}/data/generated:/generated'
+    environment:
+      - 'STASH_STASH=/data/'
+      - 'STASH_GENERATED=/generated/'
+      - 'STASH_METADATA=/metadata/'
+      - 'STASH_CACHE=/cache/'
+      - 'STASH_PORT=9999'
+    logging:
+      driver: 'json-file'
+      options:
+        max-file: '10'
+        max-size: '2m'
+    x-runtipi:
+      internal_port: 9999
+      is_main: true
+x-runtipi:
+  schema_version: 2
