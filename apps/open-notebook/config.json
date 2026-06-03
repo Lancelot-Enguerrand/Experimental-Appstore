@@ -6,8 +6,8 @@
   "dynamic_config": true,
   "port": 8502,
   "id": "open-notebook",
-  "tipi_version": 4,
-  "version": "1.8.5",
+  "tipi_version": 5,
+  "version": "1.9.0",
   "categories": [
     "data",
     "ai"
@@ -36,6 +36,6 @@
     "amd64"
   ],
   "created_at": 1774033955554,
-  "updated_at": 1776222982264,
+  "updated_at": 1780457076552,
   "min_tipi_version": "4.5.0"
 }
