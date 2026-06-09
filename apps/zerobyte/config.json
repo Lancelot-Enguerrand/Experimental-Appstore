@@ -6,8 +6,8 @@
   "dynamic_config": true,
   "port": 4096,
   "id": "zerobyte",
-  "tipi_version": 44,
-  "version": "v0.38.1",
+  "tipi_version": 45,
+  "version": "v0.39.0",
   "categories": [
     "data",
     "utilities"
@@ -22,6 +22,6 @@
     "amd64"
   ],
   "created_at": 1763733333333,
-  "updated_at": 1780629767437,
+  "updated_at": 1780975319665,
   "min_tipi_version": "4.5.0"
 }
