@@ -1,0 +1,129 @@
+{
+  "services": [
+    {
+      "name": "romm",
+      "image": "ghcr.io/rommapp/romm:4.9.2",
+      "isMain": true,
+      "internalPort": 8080,
+      "environment": [
+        {
+          "key": "DB_HOST",
+          "value": "romm-db"
+        },
+        {
+          "key": "DB_NAME",
+          "value": "romm"
+        },
+        {
+          "key": "DB_USER",
+          "value": "tipi"
+        },
+        {
+          "key": "LAUNCHBOX_API_ENABLED",
+          "value": "true"
+        },
+        {
+          "key": "ENABLE_SCHEDULED_UPDATE_LAUNCHBOX_METADATA",
+          "value": "true"
+        },
+        {
+          "key": "HASHEOUS_API_ENABLED",
+          "value": "true"
+        },
+        {
+          "key": "PLAYMATCH_API_ENABLED",
+          "value": "true"
+        },
+        {
+          "key": "DB_PASSWD",
+          "value": "${ROMM_MYSQL_PASSWORD}"
+        },
+        {
+          "key": "ROMM_AUTH_SECRET_KEY",
+          "value": "${ROMM_AUTH_SECRET_KEY}"
+        },
+        {
+          "key": "IGDB_CLIENT_ID",
+          "value": "${ROMM_IGDB_CLIENT_ID}"
+        },
+        {
+          "key": "IGDB_CLIENT_SECRET",
+          "value": "${ROMM_IGDB_CLIENT_SECRET}"
+        },
+        {
+          "key": "MOBYGAMES_API_KEY",
+          "value": "${ROMM_MOBYGAMES_API_KEY}"
+        },
+        {
+          "key": "STEAMGRIDDB_API_KEY",
+          "value": "${ROMM_STEAMGRIDDB_API_KEY}"
+        },
+        {
+          "key": "SCREENSCRAPER_USER",
+          "value": "${ROMM_SCREENSCRAPER_USER}"
+        },
+        {
+          "key": "SCREENSCRAPER_PASSWORD",
+          "value": "${ROMM_SCREENSCRAPER_PASSWORD}"
+        },
+        {
+          "key": "RETROACHIEVEMENTS_API_KEY",
+          "value": "${ROMM_RETROACHIEVEMENTS_API_KEY}"
+        }
+      ],
+      "dependsOn": ["romm-db"],
+      "volumes": [
+        {
+          "hostPath": "${ROMM_LIBRARY_PATH}",
+          "containerPath": "/romm/library"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/redis",
+          "containerPath": "/redis-data"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/romm-resources",
+          "containerPath": "/romm/resources"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/config",
+          "containerPath": "/romm/config"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/assets",
+          "containerPath": "/romm/assets"
+        }
+      ]
+    },
+    {
+      "name": "romm-db",
+      "image": "lscr.io/linuxserver/mariadb:11.4.4",
+      "environment": [
+        {
+          "key": "MYSQL_ROOT_PASSWORD",
+          "value": "${ROMM_MYSQL_ROOT_PASSWORD}"
+        },
+        {
+          "key": "MYSQL_DATABASE",
+          "value": "romm"
+        },
+        {
+          "key": "MYSQL_USER",
+          "value": "tipi"
+        },
+        {
+          "key": "MYSQL_PASSWORD",
+          "value": "${ROMM_MYSQL_PASSWORD}"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/mysql/config",
+          "containerPath": "/config"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json"
+}
