@@ -1,0 +1,23 @@
+x-runtipi:
+  schema_version: 2
+services:
+  airtrail:
+    image: johly/airtrail:latest
+    x-runtipi:
+      internal_port: 3000
+      is_main: true
+    volumes:
+      - ${APP_DATA_DIR}/data/uploads:/app/uploads
+    environment:
+      - DB_DATABASE_NAME=airtrail
+      - DB_USERNAME=airtrail
+      - DB_PASSWORD=${AIRTRAIL_DB_PASSWORD}
+      - DB_URL=postgres://airtrail:${AIRTRAIL_DB_PASSWORD}@airtrail-db:5432/airtrail
+  airtrail-db:
+    image: postgres:18-alpine
+    volumes:
+      - ${APP_DATA_DIR}/db:/var/lib/postgresql
+    environment:
+      - POSTGRES_DB=airtrail
+      - POSTGRES_USER=airtrail
+      - POSTGRES_PASSWORD=${AIRTRAIL_DB_PASSWORD}

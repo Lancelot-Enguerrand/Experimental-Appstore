@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "AirTrail",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 15411,
+  "id": "airtrail",
+  "tipi_version": 1,
+  "version": "main",
+  "categories": ["data"],
+  "description": "Track your flights",
+  "short_desc": "Track your flights",
+  "author": "JohanOhly",
+  "source": "https://github.com/JohanOhly/AirTrail",
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "Database password",
+      "required": false,
+      "min": 32,
+      "max": 32,
+      "env_variable": "AIRTRAIL_DB_PASSWORD"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1783753451999,
+  "updated_at": 1783753452000,
+  "min_tipi_version": "4.5.0"
+}
