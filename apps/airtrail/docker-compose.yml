@@ -9,6 +9,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/uploads:/app/uploads
     environment:
+      - ORIGIN=${APP_PROTOCOL}://${APP_DOMAIN}
       - DB_DATABASE_NAME=airtrail
       - DB_USERNAME=airtrail
       - DB_PASSWORD=${AIRTRAIL_DB_PASSWORD}
