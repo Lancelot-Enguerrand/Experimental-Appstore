@@ -13,11 +13,12 @@ This appstore in **5** points :
 > [!TIP]  
 > For an appstore with high quality stable apps, [check here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
-## Apps available ✨ 20 ✨
+## Apps available ✨ 21 ✨
 
 |                             Logo                              | Name                                                               | Description                                  |
 | :-----------------------------------------------------------: | ------------------------------------------------------------------ | -------------------------------------------- |
 |   <img src="apps/airstation/metadata/logo.jpg" width="64">    | [Airstation](https://github.com/cheatsnake/airstation)             | Your own online radio station                |
+|    <img src="apps/airtrail/metadata/logo.jpg" width="64">     | [AirTrail](https://github.com/JohanOhly/AirTrail)                  | Track your flights                           |
 |    <img src="apps/asset-rpo/metadata/logo.jpg" width="64">    | [Asset RPO](https://github.com/Red-Panda-One/asset)                | A simple way to manage assets.               |
 |    <img src="apps/audiomuse/metadata/logo.jpg" width="64">    | [AudioMuse-AI](https://github.com/NeptuneHub/AudioMuse-AI)         | Automatic playlist generation                |
 |     <img src="apps/blinko/metadata/logo.jpg" width="64">      | [Blinko](https://github.com/blinko-space/blinko)                   | Note taking, to-do and moodboard application |
