@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "ConvertX",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 3223,
+  "id": "convertx",
+  "tipi_version": 1,
+  "version": "v0.18.0",
+  "categories": ["utilities"],
+  "description": "Self-hosted file converter",
+  "short_desc": "File converter",
+  "author": "c4illin",
+  "source": "https://github.com/c4illin/ConvertX",
+  "form_fields": [
+    {
+      "type": "boolean",
+      "label": "Allow unauthenticated access",
+      "required": false,
+      "env_variable": "CONVERTX_ALLOW_UNAUTHENTICATED"
+    },
+    {
+      "type": "boolean",
+      "label": "Open account registration",
+      "required": false,
+      "env_variable": "CONVERTX_ACCOUNT_REGISTRATION"
+    },
+    {
+      "type": "boolean",
+      "label": "Show unauthenticated conversions history to everyone",
+      "required": false,
+      "env_variable": "CONVERTX_UNAUTHENTICATED_USER_SHARING"
+    },
+    {
+      "type": "number",
+      "label": "Auto delete files after X number of hours",
+      "default": 24,
+      "required": true,
+      "hint": "0 to disable",
+      "env_variable": "CONVERTX_HTTP_ALLOWED"
+    },
+    {
+      "type": "boolean",
+      "label": "Allow non-secured HTTP",
+      "required": false,
+      "env_variable": "CONVERTX_HTTP_ALLOWED"
+    },
+    {
+      "type": "random",
+      "label": "JWT Secret",
+      "required": false,
+      "min": 32,
+      "max": 32,
+      "env_variable": "CONVERTX_JWT_SECRET"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1784981848771,
+  "updated_at": 1784981848777,
+  "min_tipi_version": "4.5.0"
+}
