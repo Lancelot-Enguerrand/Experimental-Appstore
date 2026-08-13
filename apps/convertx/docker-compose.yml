@@ -1,0 +1,17 @@
+services:
+  convertx:
+    image: ghcr.io/c4illin/convertx:v0.18.0
+    environment:
+      - ALLOW_UNAUTHENTICATED=${CONVERTX_ALLOW_UNAUTHENTICATED}
+      - ACCOUNT_REGISTRATION=${CONVERTX_ACCOUNT_REGISTRATION}
+      - UNAUTHENTICATED_USER_SHARING=${CONVERTX_UNAUTHENTICATED_USER_SHARING}
+      - AUTO_DELETE_EVERY_N_HOURS=${CONVERTX_AUTO_DELETE_EVERY_N_HOURS}
+      - HTTP_ALLOWED=${CONVERTX_HTTP_ALLOWED}
+      - JWT_SECRET=${CONVERTX_JWT_SECRET}
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data
+    x-runtipi:
+      internal_port: 3000
+      is_main: true
+x-runtipi:
+  schema_version: 2

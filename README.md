@@ -14,16 +14,18 @@ This appstore in **5** points :
 > [!TIP]  
 > For an appstore with high quality stable apps, [check here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
-## Apps available ✨ 22 (kinda) ✨
+## Apps available ✨ 22 ✨
 
 |                             Logo                              | Name                                                               | Description                                  |
 | :-----------------------------------------------------------: | ------------------------------------------------------------------ | -------------------------------------------- |
 |   <img src="apps/airstation/metadata/logo.jpg" width="64">    | [Airstation](https://github.com/cheatsnake/airstation)             | Your own online radio station                |
+|    <img src="apps/airtrail/metadata/logo.jpg" width="64">     | [AirTrail](https://github.com/JohanOhly/AirTrail)                  | Track your flights                           |
 |    <img src="apps/asset-rpo/metadata/logo.jpg" width="64">    | [Asset RPO](https://github.com/Red-Panda-One/asset)                | A simple way to manage assets.               |
 |    <img src="apps/audiomuse-cuda/metadata/logo.jpg" width="64">    | [AudioMuse-AI](https://github.com/NeptuneHub/AudioMuse-AI)         | Automatic playlist generation                |
 |    <img src="apps/audiomuse-cuda/metadata/logo.jpg" width="64">    | [AudioMuse-AI](https://github.com/NeptuneHub/AudioMuse-AI)         | Automatic playlist generation (Now with Cuda!!)                |
 |     <img src="apps/blinko/metadata/logo.jpg" width="64">      | [Blinko](https://github.com/blinko-space/blinko)                   | Note taking, to-do and moodboard application |
 |     <img src="apps/cobalt/metadata/logo.jpg" width="64">      | [Cobalt](https://github.com/imputnet/cobalt)                       | Media Downloader                             |
+|    <img src="apps/convertx/metadata/logo.jpg" width="64">     | [ConvertX](https://github.com/c4illin/ConvertX)                    | File converter                               |
 |     <img src="apps/ctfreak/metadata/logo.jpg" width="64">     | [CTFreak](https://ctfreak.com/)                                    | Simple task scheduler                        |
 |   <img src="apps/dumbassets/metadata/logo.jpg" width="64">    | [DumbAssets](https://github.com/DumbWareio/DumbAssets)             | Hierarchical assets tracker                  |
 |   <img src="apps/fluffychat/metadata/logo.jpg" width="64">    | [Fluffy Chat](https://github.com/krille-chan/fluffychat)           | Fluffy Matrix Client                         |
