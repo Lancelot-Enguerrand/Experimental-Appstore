@@ -1,6 +1,6 @@
 services:
   convertx:
-    image: ghcr.io/c4illin/convertx:v0.18.0
+    image: ghcr.io/c4illin/convertx:v0.19.0
     environment:
       - ALLOW_UNAUTHENTICATED=${CONVERTX_ALLOW_UNAUTHENTICATED}
       - ACCOUNT_REGISTRATION=${CONVERTX_ACCOUNT_REGISTRATION}
