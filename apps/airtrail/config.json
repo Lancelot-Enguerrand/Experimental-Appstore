@@ -6,8 +6,8 @@
   "dynamic_config": true,
   "port": 15411,
   "id": "airtrail",
-  "tipi_version": 3,
-  "version": "v3.12.0",
+  "tipi_version": 4,
+  "version": "v3.13.0",
   "categories": [
     "data"
   ],
@@ -30,6 +30,6 @@
     "amd64"
   ],
   "created_at": 1783753451999,
-  "updated_at": 1786334677333,
+  "updated_at": 1790563040171,
   "min_tipi_version": "4.5.0"
 }
