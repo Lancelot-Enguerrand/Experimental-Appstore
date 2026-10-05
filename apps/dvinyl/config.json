@@ -1,0 +1,75 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "DVinyl",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 3099,
+  "id": "dvinyl",
+  "tipi_version": 1,
+  "version": "3.2.1",
+  "categories": ["data"],
+  "description": "Catalog, organize and track physical media and collectibles like CDs, Vinyls, Tapes, Books DVDs, Video Games, LEGO and Board Games.",
+  "short_desc": "Management platform for physical collectors",
+  "author": "Kyonew",
+  "source": "https://github.com/Kyonew/DVinyl",
+  "website": "https://kyonew.me/dvinyl",
+  "form_fields": [
+    {
+      "type": "password",
+      "label": "Music - Discogs Token",
+      "required": false,
+      "env_variable": "DVINYL_DISCOGS_TOKEN"
+    },
+    {
+      "type": "password",
+      "label": "Books - Hardcover API Key",
+      "required": false,
+      "env_variable": "DVINYL_HARDCOVER_API_KEY"
+    },
+    {
+      "type": "password",
+      "label": "Movies -  TMDB API KEY",
+      "required": false,
+      "env_variable": "DVINYL_TMDB_API_KEY"
+    },
+    {
+      "type": "password",
+      "label": "Games - Twitch Client ID",
+      "required": false,
+      "env_variable": "DVINYL_TWITCH_CLIENT_ID"
+    },
+    {
+      "type": "password",
+      "label": "Games - Twitch Client Secret",
+      "required": false,
+      "env_variable": "DVINYL_TWITCH_CLIENT_SECRET"
+    },
+    {
+      "type": "password",
+      "label": "LEGO - Rebrickable API Key",
+      "required": false,
+      "env_variable": "DVINYL_REBRICKABLE_API_KEY"
+    },
+    {
+      "type": "random",
+      "label": "PASSJWT",
+      "required": false,
+      "min": 32,
+      "max": 32,
+      "env_variable": "DVINYL_PASSJWT"
+    },
+    {
+      "type": "random",
+      "label": "SESSION_SECRET",
+      "required": false,
+      "min": 32,
+      "max": 32,
+      "env_variable": "DVINYL_SESSION_SECRET"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1691943801422,
+  "updated_at": 1762615555555,
+  "min_tipi_version": "4.7.0"
+}
