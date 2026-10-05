@@ -1,0 +1,27 @@
+services:
+  dvinyl:
+    image: ghcr.io/kyonew/dvinyl:3.2.1
+    volumes:
+      - ${APP_DATA_DIR}/data/public/uploads:/app/public/upload
+    environment:
+      - MONGODB_URL=mongodb://dvinyl-db:27017/dvinyl
+      - PASSJWT=${DVINYL_PASSJWT}
+      - SESSION_SECRET={DVINYL_SESSION_SECRET}
+      - VINYL_PORT=3099
+      - DISCOGS_TOKEN=${DVINYL_DISCOGS_TOKEN}
+      - HARDCOVER_API_KEY=${DVINYL_HARDCOVER_API_KEY}
+      - TMDB_API_KEY=${DVINYL_TMDB_API_KEY}
+      - TWITCH_CLIENT_ID=${DVINYL_TWITCH_CLIENT_ID}
+      - TWITCH_CLIENT_SECRET=${DVINYL_TWITCH_CLIENT_SECRET}
+      - REBRICKABLE_API_KEY=${DVINYL_REBRICKABLE_API_KEY}
+    depends_on:
+      - dvinyl-db
+    x-runtipi:
+      internal_port: 3099
+      is_main: true
+  dvinyl-db:
+    image: mongo:9
+    volumes:
+      - ${APP_DATA_DIR}/db:/data/db
+x-runtipi:
+  schema_version: 2
