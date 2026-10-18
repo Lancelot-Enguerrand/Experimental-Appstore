@@ -1,6 +1,6 @@
 services:
   dvinyl:
-    image: ghcr.io/kyonew/dvinyl:3.2.1
+    image: ghcr.io/kyonew/dvinyl:3.3.0
     volumes:
       - ${APP_DATA_DIR}/data/public/uploads:/app/public/upload
     environment:
