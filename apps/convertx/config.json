@@ -6,8 +6,8 @@
   "dynamic_config": true,
   "port": 3223,
   "id": "convertx",
-  "tipi_version": 2,
-  "version": "v0.19.0",
+  "tipi_version": 3,
+  "version": "v0.20.0",
   "categories": [
     "utilities"
   ],
@@ -62,6 +62,6 @@
     "amd64"
   ],
   "created_at": 1784981848771,
-  "updated_at": 1790389585712,
+  "updated_at": 1793240383525,
   "min_tipi_version": "4.5.0"
 }
