@@ -1,0 +1,6 @@
+{
+    "applicationName": "${FLUFFYCHAT_APPLICATION_NAME:-FluffyChat}",
+    "defaultHomeserver": "${FLUFFYCHAT_DEFAULT_SERVER:-matrix.org}",
+    "presetHomeserver": "",
+    "welcomeText": "${FLUFFYCHAT_WELCOME_TEXT}"
+}

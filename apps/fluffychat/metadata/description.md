@@ -19,3 +19,10 @@
 - 🔐 End to end encryption
 - 🔒 Encrypted chat backup
 - 😀 Emoji verification & cross signing
+
+## Edit settings
+
+If you need to change settings after installation, you can edit the following file : *(Restart app to apply changes.)*
+```app-data/experimental/fluffychat/config.json```
+
+See [default config](https://github.com/krille-chan/fluffychat/blob/main/config.sample.json)
