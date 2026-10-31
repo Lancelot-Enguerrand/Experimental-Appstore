@@ -22,7 +22,8 @@
 
 ## Edit settings
 
-If you need to change settings after installation, you can edit the following file : *(Restart app to apply changes.)*
+If you need to change settings after installation, you can edit the following file : 
 ```app-data/experimental/fluffychat/config.json```
+*(Restart app to apply changes.)*
 
 See [default config](https://github.com/krille-chan/fluffychat/blob/main/config.sample.json)

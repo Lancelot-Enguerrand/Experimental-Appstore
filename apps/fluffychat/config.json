@@ -13,31 +13,7 @@
   "short_desc": "Matrix Client",
   "author": "https://github.com/krille-chan",
   "source": "https://github.com/etkecc/fluffychat-web/",
-  "form_fields": [
-    {
-      "type": "text",
-      "label": "Your Matrix Server URL",
-      "hint": "add a custom server to the list of available ones",
-      "default": "matrix.org",
-      "required": false,
-      "env_variable": "FLUFFYCHAT_DEFAULT_SERVER"
-    },
-    {
-      "type": "text",
-      "label": "Application Name",
-      "hint": "Title on top of the page",
-      "required": false,
-      "default": "FluffyChat",
-      "env_variable": "FLUFFYCHAT_APPLICATION_NAME"
-    },
-    {
-      "type": "text",
-      "label": "Welcome Text",
-      "hint": "Message on Login Page",
-      "required": false,
-      "env_variable": "FLUFFYCHAT_WELCOME_TEXT"
-    }
-  ],
+  "form_fields": [],
   "supported_architectures": [
     "arm64",
     "amd64"
