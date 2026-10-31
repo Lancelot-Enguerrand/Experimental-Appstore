@@ -2,7 +2,7 @@ services:
   fluffychat:
     image: 'ghcr.io/etkecc/fluffychat-web:latest'
     volumes:
-        - ${APP_DATA_DIR}/config.json:/var/public/config.json:ro
+        - ${APP_DATA_DIR}/data/config.json:/var/public/config.json:ro
     x-runtipi:
       internal_port: 8080
       is_main: true
