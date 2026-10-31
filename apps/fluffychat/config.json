@@ -6,19 +6,20 @@
   "dynamic_config": true,
   "port": 8133,
   "id": "fluffychat",
-  "tipi_version": 2,
-  "version": "2.0.0",
+  "tipi_version": 3,
+  "version": "latest",
   "categories": [ "social" ],
   "description": "Open source, nonprofit and cute [matrix] client written in Flutter",
-  "short_desc": "Fluffy Matrix Client",
+  "short_desc": "Matrix Client",
   "author": "https://github.com/krille-chan",
-  "source": "https://github.com/krille-chan/fluffychat",
+  "source": "https://github.com/etkecc/fluffychat-web/",
   "form_fields": [],
   "supported_architectures": [
     "arm64",
     "amd64"
   ],
+  "force_pull": true,
   "created_at": 1755453844444,
-  "updated_at": 1762615555555,
-  "min_tipi_version": "4.5.0"
+  "updated_at": 1793437266666,
+  "min_tipi_version": "4.8.0"
 }

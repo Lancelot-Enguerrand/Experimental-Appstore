@@ -1,8 +1,10 @@
 services:
   fluffychat:
-    image: 'aceberg/fluffychat:2.0.0'
+    image: 'ghcr.io/etkecc/fluffychat-web:latest'
+    volumes:
+        - ${APP_DATA_DIR}/data/config.json:/var/public/config.json:ro
     x-runtipi:
-      internal_port: 80
+      internal_port: 8080
       is_main: true
 x-runtipi:
   schema_version: 2
