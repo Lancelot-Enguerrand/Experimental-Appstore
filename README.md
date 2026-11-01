@@ -13,7 +13,7 @@ This appstore in **5** points :
 > [!TIP]  
 > For an appstore with high quality stable apps, [check here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
-## Apps available ✨ 22 ✨
+## Apps available ✨ 23 ✨
 
 |                             Logo                              | Name                                                               | Description                                  |
 | :-----------------------------------------------------------: | ------------------------------------------------------------------ | -------------------------------------------- |
@@ -26,7 +26,8 @@ This appstore in **5** points :
 |    <img src="apps/convertx/metadata/logo.jpg" width="64">     | [ConvertX](https://github.com/c4illin/ConvertX)                    | File converter                               |
 |     <img src="apps/ctfreak/metadata/logo.jpg" width="64">     | [CTFreak](https://ctfreak.com/)                                    | Simple task scheduler                        |
 |   <img src="apps/dumbassets/metadata/logo.jpg" width="64">    | [DumbAssets](https://github.com/DumbWareio/DumbAssets)             | Hierarchical assets tracker                  |
-|   <img src="apps/fluffychat/metadata/logo.jpg" width="64">    | [Fluffy Chat](https://github.com/krille-chan/fluffychat)           | Fluffy Matrix Client                         |
+|     <img src="apps/dvinyl/metadata/logo.jpg" width="64">      | [DVinyl](https://github.com/Kyonew/DVinyl)                         | Management platform for physical collectors  |
+|   <img src="apps/fluffychat/metadata/logo.jpg" width="64">    | [Fluffy Chat](https://github.com/etkecc/fluffychat-web/)           | Matrix Client                                |
 |   <img src="apps/foldergram/metadata/logo.jpg" width="64">    | [Foldergram](https://github.com/foldergram/foldergram)             | Folder-based Instagram-style gallery app.    |
 |    <img src="apps/ghosthub/metadata/logo.jpg" width="64">     | [GhostHub](https://github.com/BleedingXiko/GhostHub)               | Tiktok-like media reader                     |
 |      <img src="apps/jpjr/metadata/logo.jpg" width="64">       | [JPJR](https://github.com/lfpoulain/jpjr)                          | Je prends, je rends                          |
@@ -39,6 +40,17 @@ This appstore in **5** points :
 |    <img src="apps/tasktrove/metadata/logo.jpg" width="64">    | [TaskTrove](https://github.com/dohsimpson/TaskTrove)               | Task Manager                                 |
 |    <img src="apps/tipimate/metadata/logo.jpg" width="64">     | [Tipimate](https://github.com/steveiliop56/tipimate)               | Runtipi app updates notifier                 |
 |    <img src="apps/zerobyte/metadata/logo.jpg" width="64">     | [Zerobyte](https://github.com/nicotsx/zerobyte)                    | Backup Automation                            |
+
+<br>
+
+## 🪦 Apps deprecated
+
+The following apps won't receive anymore updates here, check the linked appstore in the details for a continuous support.
+
+| Logo | Name | Details |
+| :--: | ---- | ------- |
+
+---
 
 ### How to use ?
 
