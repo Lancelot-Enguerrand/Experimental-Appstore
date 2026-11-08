@@ -17,16 +17,6 @@ This appstore in **5** points :
 | :--: | ---- | ----------- |
 <!appsList>
 
-<br>
-
-## 🪦 Apps deprecated
-
- The following apps won't receive anymore updates here, check the linked appstore in the details for a continuous support.
-
-| Logo | Name | Details |
-| :--: | ---- | ------- |
-<!appsNotReadyList>
-
 ---
 
 ### How to use ?

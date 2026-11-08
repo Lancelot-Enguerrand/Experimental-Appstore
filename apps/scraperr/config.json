@@ -4,9 +4,10 @@
   "available": true,
   "exposable": true,
   "dynamic_config": true,
+  "deprecated": true,
   "port": 37887,
   "id": "scraperr",
-  "tipi_version": 12,
+  "tipi_version": 13,
   "version": "1.1.7",
   "categories": [
     "data"
@@ -22,5 +23,5 @@
   ],
   "created_at": 1691943801422,
   "updated_at": 1762615555555,
-  "min_tipi_version": "4.5.0"
+  "min_tipi_version": "4.8.0"
 }
