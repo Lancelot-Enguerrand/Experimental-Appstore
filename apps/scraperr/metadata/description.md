@@ -1,3 +1,9 @@
+# Deprecation Notice
+This app is now deprecated, the repo has been archived. It will be removed at the end of the year.
+If you are still using it, you can:
+ - Create a `Custom app`
+ - Add it to [your own Appstore](https://runtipi.io/docs/guides/create-your-own-app-store)
+
 <div align="center">
   <img src="https://github.com/jaypyles/www-scrape/raw/master/docs/logo_picture.png" alt="Scraperr Logo" width="250px">
   
