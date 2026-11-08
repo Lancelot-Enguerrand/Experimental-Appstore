@@ -13,32 +13,33 @@ This appstore in **5** points :
 > [!TIP]  
 > For an appstore with high quality stable apps, [check here](https://github.com/Lancelot-Enguerrand/Runtipi-Appstore)
 
-## Apps available ✨ 22 ✨
+## Apps available ✨ 21 ✨
 
 |                             Logo                              | Name                                                               | Description                                  |
 | :-----------------------------------------------------------: | ------------------------------------------------------------------ | -------------------------------------------- |
 |   <img src="apps/airstation/metadata/logo.jpg" width="64">    | [Airstation](https://github.com/cheatsnake/airstation)             | Your own online radio station                |
 |    <img src="apps/airtrail/metadata/logo.jpg" width="64">     | [AirTrail](https://github.com/JohanOhly/AirTrail)                  | Track your flights                           |
-|    <img src="apps/asset-rpo/metadata/logo.jpg" width="64">    | [Asset RPO](https://github.com/Red-Panda-One/asset)                | A simple way to manage assets.               |
 |    <img src="apps/audiomuse/metadata/logo.jpg" width="64">    | [AudioMuse-AI](https://github.com/NeptuneHub/AudioMuse-AI)         | Automatic playlist generation                |
 |     <img src="apps/blinko/metadata/logo.jpg" width="64">      | [Blinko](https://github.com/blinko-space/blinko)                   | Note taking, to-do and moodboard application |
 |     <img src="apps/cobalt/metadata/logo.jpg" width="64">      | [Cobalt](https://github.com/imputnet/cobalt)                       | Media Downloader                             |
 |    <img src="apps/convertx/metadata/logo.jpg" width="64">     | [ConvertX](https://github.com/c4illin/ConvertX)                    | File converter                               |
 |     <img src="apps/ctfreak/metadata/logo.jpg" width="64">     | [CTFreak](https://ctfreak.com/)                                    | Simple task scheduler                        |
 |   <img src="apps/dumbassets/metadata/logo.jpg" width="64">    | [DumbAssets](https://github.com/DumbWareio/DumbAssets)             | Hierarchical assets tracker                  |
-|   <img src="apps/fluffychat/metadata/logo.jpg" width="64">    | [Fluffy Chat](https://github.com/krille-chan/fluffychat)           | Fluffy Matrix Client                         |
+|     <img src="apps/dvinyl/metadata/logo.jpg" width="64">      | [DVinyl](https://github.com/Kyonew/DVinyl)                         | Management platform for physical collectors  |
+|   <img src="apps/fluffychat/metadata/logo.jpg" width="64">    | [Fluffy Chat](https://github.com/etkecc/fluffychat-web/)           | Matrix Client                                |
 |   <img src="apps/foldergram/metadata/logo.jpg" width="64">    | [Foldergram](https://github.com/foldergram/foldergram)             | Folder-based Instagram-style gallery app.    |
 |    <img src="apps/ghosthub/metadata/logo.jpg" width="64">     | [GhostHub](https://github.com/BleedingXiko/GhostHub)               | Tiktok-like media reader                     |
 |      <img src="apps/jpjr/metadata/logo.jpg" width="64">       | [JPJR](https://github.com/lfpoulain/jpjr)                          | Je prends, je rends                          |
 | <img src="apps/medical-records/metadata/logo.jpg" width="64"> | [Medikeep](https://github.com/afairgiant/Medikeep)                 | Medical Records Management System            |
 |    <img src="apps/monica-5/metadata/logo.jpg" width="64">     | [Monica (v5)](https://github.com/monicahq/monica)                  | Personal Relationship Management tool        |
 |  <img src="apps/open-notebook/metadata/logo.jpg" width="64">  | [Open Notebook](https://github.com/lfnovo/open-notebook)           | Open Source implementation of Notebook LM    |
-|    <img src="apps/scraperr/metadata/logo.jpg" width="64">     | [Scraperr](https://github.com/jaypyles/Scraperr)                   | Web scraping tool                            |
 |     <img src="apps/spotdl/metadata/logo.jpg" width="64">      | [Spotify Downloader](https://github.com/spotDL/spotify-downloader) | Music downloader for Spotify.                |
 |      <img src="apps/stash/metadata/logo.jpg" width="64">      | [Stash](https://github.com/stashapp/stash)                         | Organize and serve media.                    |
 |    <img src="apps/tasktrove/metadata/logo.jpg" width="64">    | [TaskTrove](https://github.com/dohsimpson/TaskTrove)               | Task Manager                                 |
 |    <img src="apps/tipimate/metadata/logo.jpg" width="64">     | [Tipimate](https://github.com/steveiliop56/tipimate)               | Runtipi app updates notifier                 |
 |    <img src="apps/zerobyte/metadata/logo.jpg" width="64">     | [Zerobyte](https://github.com/nicotsx/zerobyte)                    | Backup Automation                            |
+
+---
 
 ### How to use ?
 
