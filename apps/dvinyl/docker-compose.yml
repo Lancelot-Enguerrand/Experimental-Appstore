@@ -3,6 +3,7 @@ services:
     image: ghcr.io/kyonew/dvinyl:4.0.0
     volumes:
       - ${APP_DATA_DIR}/data/public/uploads:/app/public/upload
+      - ${APP_DATA_DIR}/data/app:/app/data
     environment:
       - MONGODB_URL=mongodb://dvinyl-db:27017/dvinyl
       - PASSJWT=${DVINYL_PASSJWT}
