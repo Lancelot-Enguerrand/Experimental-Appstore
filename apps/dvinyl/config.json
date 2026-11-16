@@ -6,8 +6,8 @@
   "dynamic_config": true,
   "port": 3099,
   "id": "dvinyl",
-  "tipi_version": 2,
-  "version": "3.3.0",
+  "tipi_version": 3,
+  "version": "4.0.0",
   "categories": [
     "data"
   ],
@@ -75,6 +75,6 @@
     "amd64"
   ],
   "created_at": 1691943801422,
-  "updated_at": 1792290390503,
+  "updated_at": 1794795505576,
   "min_tipi_version": "4.7.0"
 }
